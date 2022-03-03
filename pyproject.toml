@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "ciscosupportsdk"
+version = "0.1.1"
+description = "Cisco Support APIs allow Cisco Partner Support Services (PSS) partners and Cisco Smart Net Total Care (SNTC) customers to programmatically access and consume Cisco Support data in the cloud in a simple, secure, and scalable manner."
+authors = ["Manny Garcia <mannygar@cisco.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.27.1"
+Authlib = "^0.15.5"
+pydantic = "^1.9.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.1.0"
+isort = "^5.10.1"
+pytest = "^7.0.0"
+pytest-cov = "^3.0.0"
+pytest-vcr = "^1.0.2"
+Sphinx = "^4.4.0"
+sphinx-autobuild = "^2021.3.14"
+flake8 = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+# make it compatible with black
+profile = "black" 
+
+[tool.black]
+line-length = 79
+
+[tool.coverage.report]
+exclude_lines = [
+    "raise NotImplementedError()",
+    "pragma: nocover",
+    "if __name__ == .__main__.:",
+]
+precision = 2
+show_missing = true
+
+[tool.coverage.run]
+branch = true
+parallel = true
+
+[tool.poetry.extras]
+docs = [
+    "Sphinx",
+    "sphinx-rtd-theme",
+    "sphinxcontrib-napoleon",
+    "sphinx.ext.viewcode",
+    "sphinx.ext.intersphinx"
+    ]

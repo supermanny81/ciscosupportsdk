@@ -1,0 +1,40 @@
+{
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "cSpell.words": [
+        "ACNS",
+        "ACSW",
+        "ALTIGAOS",
+        "ASYNCOS",
+        "CATOS",
+        "ciscosupportsdk",
+        "ECDS",
+        "FWSM",
+        "pids",
+        "PIXOS",
+        "pydantic",
+        "rmas",
+        "rtype",
+        "serialnumbertoinformation",
+        "WAAS",
+        "WANSW",
+        "WEBNS",
+        "WLSE"
+    ],
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/*.pyc": true
+    },
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "python.sortImports.args": [
+        "--profile",
+        "black"
+    ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    }
+}
