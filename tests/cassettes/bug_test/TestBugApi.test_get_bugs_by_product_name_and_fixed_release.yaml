@@ -1,0 +1,151 @@
+interactions:
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"1f0QMBRsME96MQyh25kJW8ywi1y8","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 02:00:57 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=1000
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - PF=sB6EG9LWoSkFFy8Kw5LtSt;Path=/;Secure;HttpOnly;SameSite=None
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      Cookie:
+      - PF=sB6EG9LWoSkFFy8Kw5LtSt
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"o3RPXmoXzpquFVOlpDi2sfViyox2","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 02:00:57 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=981
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: https://api.cisco.com/bug/v2.0/bugs/product_name/Cisco%20Unified%20Communications%20Manager%20(CallManager)/fixed_in_releases/10.5(2)?modified_date=5&page_index=1
+  response:
+    body:
+      string: '{"bugs":[{"id":"1","product_name":"Cisco Unified Communications Manager
+        (CallManager)","bug_id":"CSCur26575","headline":"UCM: Update JDK to 7.0.71
+        to Address Numerous Published Vulnerabilities","description":"$$IGNORE\n\n<B>Symptom:</B>\n\n<B>Conditions:</B>\n\n<B>Workaround:</B>\n\n<B>Further
+        Problem Description:</B>\n\n","severity":"3","status":"F","behavior_changed":"N","last_modified_date":"2020-03-20","product":"Cisco
+        Unified Communications Manager (CallManager)","known_affected_releases":"10.5(1.98000.99)","known_fixed_releases":"10.5(1.98000.387)
+        10.5(1.98000.476) 10.5(1.98050.102) 10.5(2)ES3 10.5(2.10000.5) 10.5(2.173)
+        11.0(0.46) 11.0(0.98000.89) 11.0(0.98100.18) 11.5(0.98000.108) 11.5(0.98000.126)
+        9.1(2.13900.10)","support_case_count":"0"}],"pagination_response_record":{"last_index":1,"page_index":1,"page_records":1,"self_link":"https://api.cisco.com/bug/v2.0/bugs/product_name/Cisco
+        Unified Communications Manager (CallManager)/fixed_in_releases/10.5(2)?page_index=1&modified_date=5&sort_by=modified_date","title":"Bug
+        API - Get Bugs by Product Name and Fixed In Software Releases","total_records":1}}'
+    headers:
+      Cache-Control:
+      - private
+      Date:
+      - Thu, 10 Feb 2022 02:00:58 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Mashery-Message-ID:
+      - 5ea96020-4fea-47db-8967-d86c42f3ac9c
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Content-type, fromPartyID, inputFormat, outputFormat, Authorization, Content-Length,
+        Accept, Origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, PATCH, OPTIONS
+      content-type:
+      - application/json;charset=UTF-8
+      server:
+      - Apache-Coyote/1.1
+      set-cookie:
+      - 2e3b7c7c3322598b3ab8148ccdebc7c8=ccab14508f51dca65622a34f5e2e7003; path=/;
+        HttpOnly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload;
+      x-rp-ssl-name:
+      - cae-prd-alln-prt-ext-kube-rp-1.cisco.com
+    status:
+      code: 200
+      message: OK
+version: 1

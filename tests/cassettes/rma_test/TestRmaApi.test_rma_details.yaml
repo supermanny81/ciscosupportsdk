@@ -1,0 +1,160 @@
+interactions:
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"GUK9QQT3eVJ3XLHPM9nzKU5ue4Gj","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 04:29:09 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=989
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - PF=21AUNj1WpQBzTXtOShHbs8;Path=/;Secure;HttpOnly;SameSite=None
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      Cookie:
+      - PF=21AUNj1WpQBzTXtOShHbs8
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"jGvoCri9mBqKICh2fvBH1IHPJRj7","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 04:29:09 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=997
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: https://api.cisco.com/return/v1.0/returns/rma_numbers/801934965?page_index=1&pageIndex=1
+  response:
+    body:
+      string: '{"APIPagination":{"pageIndex":"1","lastIndex":"1","totalRecords":"1","pageRecords":"1","title":"Service
+        Order RMA API","selfLink":"https://api.cisco.com/return/v1.0/returns/rma_numbers/801934965"},"returns":{"RmaRecord":[{"rmaNo":801934965,"status":"Booked","orderDate":"2021-11-14","caseId":"692541209","requestedShipDate":"2021-11-14","originator":"MOSAHIL","allowPartialShipment":"","failureClass":"Operational
+        Failure","failureCode":"HW Fail - Ether Port","contractId":"92511831","serviceLevel":"Premium
+        Parts & Labor - 4 Hour","customerRefInfo":{"customerPONumber":"13112021-27957","origSalesOrderNumber":"801934965","customerRefNumber":"","customerProvidedSN":""},"shipToInfo":{"customerName":"CISCO
+        SYSTEMS INDIA PVT LTD","address1":"SEZ UNIT, CESSNA BUSINESS PARK KADUBEESANAHALLI
+        VILLAGE, VARTHUR HOBLI MARATHAHALLI, OUTER RING ROAD","address2":"","address3":"","address4":"","city":"BANGALORE","state":"KA","country":"IN","postalCode":"560103","stateProv":"KA","siteUseId":"731985932","ackUserId":"tgulgund","ackPhone":"918044297683","ackEmail":"tgulgund@cisco.com","ackName":"Touseef
+        Ahmed Gulgundi","shipToContactName":"Himanshu Reshamdalal","shipToContactPhone":"917760877451","shipToContactEmail":"hreshamd@cisco.com"},"billToInfo":{"customerName":"CISCO
+        SYSTEMS INTERNAL CONTRACTS","address1":"170 WEST TASMAN DRIVE","address2":"","address3":"","address4":"","city":"SAN
+        JOSE","state":"","country":"US","postalCode":"95134","stateProv":"CA","siteUseId":"417798624"},"replacementParts":{"trackingInfo":{"trackingNumber":"9120871623","courierList":"DHL","shipDate":"2021-11-16"},"partsLineDetails":[{"partsLineRef":"2","partsLineStatus":"Shipped","partsTransactionType":"ARPRM-SHIP-US","shippedPartNo":"QSFP-100G-SM-SR=","partsDescription":"100GBASE
+        CWDM4 Lite QSFP Transceiver, 2km over SMF, 10-60C","partsQtyAuth":"1","partsScheduledShipTime":"2021-11-14","partsqtyShipped":"1","partsShipDate":"2021-11-16","partsShipmentWarehouse":"BLR","partsDispatchStatus":"DISPATCHED","shippedSerialID":"FNS21510WHD"}]},"returnLines":{"returnParts":[{"returnLineRef":"1","returnLineStatus":"Closed","returnTransactionType":"ARPRM-RETURN-US","receivedPartNo":"QSFP-100G-SM-SR=","returnDescription":"100GBASE
+        CWDM4 Lite QSFP Transceiver, 2km over SMF, 10-60C","returnQtyAuth":"1","returnToCiscoBy":"2021-11-24","reqturnQtyReceived":"1","returnDateReceived":"2021-12-08","returnWarehouse":"IN1","receivedSerialNumber":"FNS21510WHD"}]},"laborDetails":{"fieldEngineerName":"","fieldEngineerPhone":"","fieldEngineerOnRouteTime":"","fieldEngineerArrivedTime":"","fieldEngineerReleasedTime":"","laborLines":[{"laborTaskNumber":"","laborStatus":"","primaryProductFamily":"","laborScheduledTime":"","laborDispatch":"","laborDispatchOrCancellationNotes":""}]},"notes":{"addlComments":"","failureDescription":"Created
+        by MOSAHIL at 2021/11/14 16:47:15\r\nUDLD errors are observed on the port","fieldEngineerInstructions":"","partDeliveryInstructions":"","partialShipmentNote":"Created
+        by MOSAHIL at 2021/11/14 16:47:15\r\nPartial Ship","specialInstructions":"Created
+        by MOSAHIL at 2021/11/14 16:47:15\r\nDO NOT DISPATCH. This is a Reconciliation
+        RMA for TEMPORARY SERVICE ORDER NUMBER: 13112021-27957\r\nPlease update RMA
+        as follows:\r\nPart #:  QSFP-100G-SM-SR \tQuantity:  1\r\nTPL: BLR\r\nETA:
+        14-NOV-2021 03:28\r\nReference Number: 1129962825\r\nPOD:"}}]}}'
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '3351'
+      Date:
+      - Thu, 10 Feb 2022 04:29:12 GMT
+      Expires:
+      - Wed, 31 Dec 1969 16:00:00 PST
+      X-Mashery-Message-ID:
+      - 6e501441-16d2-4775-943b-bfce8c5dc3ac
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Content-type, fromPartyID, inputFormat, outputFormat, Authorization, Content-Length,
+        Accept, Origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, PATCH, OPTIONS
+      content-type:
+      - application/json
+      server:
+      - Apache-Coyote/1.1
+      set-cookie:
+      - be6f1583bc7af0d6af8a0704bdd49c17=d94f0a458b527bf54d6bffe78eeed616; path=/;
+        HttpOnly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload;
+      x-rp-ssl-name:
+      - cae-prd-alln-prt-ext-dedicated0-kube-rp-0.cisco.com
+    status:
+      code: 200
+      message: OK
+version: 1

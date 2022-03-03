@@ -1,0 +1,147 @@
+interactions:
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"TT0zTZ4Pc6zEZBEbhokQDQ448xtR","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 04:29:17 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=1000
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - PF=fs3fMdtpAuzeXfIWHjMZuB;Path=/;Secure;HttpOnly;SameSite=None
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      Cookie:
+      - PF=fs3fMdtpAuzeXfIWHjMZuB
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"kGReQNMW1F076ZnhIr5EHr3KHLND","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 04:29:17 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=989
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: https://api.cisco.com/sn2info/v2/coverage/summary/serial_numbers/FXS2130Q286?page_index=1&pageIndex=1
+  response:
+    body:
+      string: '{"pagination_response_record":{"last_index":1,"page_index":1,"page_records":1,"self_link":"https://api.cisco.com/sn2info/v2/coverage/summary/serial_numbers/FXS2130Q286?page_index=1","title":"Get
+        Coverage Summary by Serial Numbers - SN2INFO API","total_records":1},"serial_numbers":[{"base_pid_list":[{"base_pid":"C9410R"}],"contract_site_customer_name":"CISCO
+        IT INTERNAL GLOBAL PRODUCTION NETWORK","contract_site_address1":"400 EAST
+        TASMAN DRIVE","contract_site_city":"SAN JOSE","contract_site_state_province":"CA","contract_site_country":"US","covered_product_line_end_date":"2023-12-31","id":"1","is_covered":"YES","orderable_pid_list":[{"item_description":"Cisco
+        Catalyst 9400 Series 10 slot chassis","item_position":"P","item_type":"CHASSIS","orderable_pid":"C9410R","pillar_code":"1,2,3"}],"parent_sr_no":"","service_contract_number":"203371074","service_line_descr":"CX
+        LEVEL 2 8X5XNBD","sr_no":"FXS2130Q286","warranty_end_date":"2029-04-09","warranty_type":"WARR-ELTD-LIFE-HW","warranty_type_description":"http://www.cisco.com/go/warranty"}]}'
+    headers:
+      Cache-Control:
+      - private
+      Date:
+      - Thu, 10 Feb 2022 04:29:18 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Mashery-Message-ID:
+      - ca5b0069-88e8-475a-9495-26ba2882103f
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Content-type, fromPartyID, inputFormat, outputFormat, Authorization, Content-Length,
+        Accept, Origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, PATCH, OPTIONS
+      content-type:
+      - application/json;charset=UTF-8
+      server:
+      - Apache-Coyote/1.1
+      set-cookie:
+      - 2e3b7c7c3322598b3ab8148ccdebc7c8=ccab14508f51dca65622a34f5e2e7003; path=/;
+        HttpOnly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload;
+      x-rp-ssl-name:
+      - cae-prd-alln-prt-ext-kube-rp-1.cisco.com
+    status:
+      code: 200
+      message: OK
+version: 1

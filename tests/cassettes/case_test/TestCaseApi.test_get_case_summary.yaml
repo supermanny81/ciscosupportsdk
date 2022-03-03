@@ -1,0 +1,148 @@
+interactions:
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"32iArdybvljQD2O4jI8LrgJWUiuf","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 02:01:07 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=975
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - PF=oH14HVJicV30RxjYaCuNhy;Path=/;Secure;HttpOnly;SameSite=None
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      Cookie:
+      - PF=oH14HVJicV30RxjYaCuNhy
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"g6tNR5vbpieGcuz3kI0oTXeWUBF0","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 02:01:07 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=968
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: https://api.cisco.com/case/v3/cases/case_ids/692277140?sort_by=UPDATED_DATE&page_index=1
+  response:
+    body:
+      string: '{"cases":[{"item_entry_id":1,"user_id":"mcamando","case_id":"692277140","title":"rtp
+        campus (rtp10-cd-dtbb-gw1) and others - Not able to respond to RS from a supplicant
+        device in IPv6 - Mostly noticed on MAC","severity":"3","contact_name":"Marcelo
+        Camandona","status_flag":"O","status":"Cisco Pending","creation_date":"2021-09-30T14:46:09.000Z","updated_date":"2022-02-07T16:05:24.000Z","serial_number":"CAT2241L55B","contract_id":"203371074","technology_name":"LAN
+        Switching","sub_technology_name":"Cat9500","rmas":[],"bugs":[]}],"count":1}'
+    headers:
+      Cache-Control:
+      - private
+      Date:
+      - Thu, 10 Feb 2022 02:01:09 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Mashery-Message-ID:
+      - d349c8cc-b4ee-4011-bcf2-a4ad6b435e7e
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Content-type, fromPartyID, inputFormat, outputFormat, Authorization, Content-Length,
+        Accept, Origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, PATCH, OPTIONS
+      access-control-allow-origin:
+      - (null)
+      content-type:
+      - application/json;charset=UTF-8
+      server:
+      - Apache-Coyote/1.1
+      set-cookie:
+      - 2e3b7c7c3322598b3ab8148ccdebc7c8=ccab14508f51dca65622a34f5e2e7003; path=/;
+        HttpOnly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload;
+      x-rp-ssl-name:
+      - cae-prd-alln-prt-ext-kube-rp-1.cisco.com
+    status:
+      code: 200
+      message: OK
+version: 1

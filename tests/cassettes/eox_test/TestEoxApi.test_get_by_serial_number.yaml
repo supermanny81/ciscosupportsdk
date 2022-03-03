@@ -1,0 +1,150 @@
+interactions:
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"1jBFCXfhbIvGLR1TM2KOR9NiD8d8","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 02:01:18 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=992
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - PF=AY1mkM8iyrM08rvAwIcdsN;Path=/;Secure;HttpOnly;SameSite=None
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      Cookie:
+      - PF=AY1mkM8iyrM08rvAwIcdsN
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"HgTqxqNfusFg5YcylEKs48raM82W","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 02:01:18 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=990
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: https://api.cisco.com/supporttools/eox/rest/5/EOXBySerialNumber/1/FHK0933224R?responseencoding=json
+  response:
+    body:
+      string: '{"PaginationResponseRecord":{"PageIndex":1,"LastIndex":1,"TotalRecords":1,"PageRecords":1},"EOXRecord":[{"EOLProductID":"CISCO1811W-AG-A/K9","ProductIDDescription":"Security
+        Router with 802.11a+g FCC Compliant and Analog B/U","ProductBulletinNumber":"EOL5834","LinkToProductBulletinURL":"http://www.cisco.com/en/US/products/ps5853/prod_eol_notice0900aecd8066a188.html","EOXExternalAnnouncementDate":{"value":"2007-06-12","dateFormat":"YYYY-MM-DD"},"EndOfSaleDate":{"value":"2007-06-29","dateFormat":"YYYY-MM-DD"},"EndOfSWMaintenanceReleases":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfSecurityVulSupportDate":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfRoutineFailureAnalysisDate":{"value":"2008-06-29","dateFormat":"YYYY-MM-DD"},"EndOfServiceContractRenewal":{"value":"2012-03-07","dateFormat":"YYYY-MM-DD"},"LastDateOfSupport":{"value":"2012-06-29","dateFormat":"YYYY-MM-DD"},"EndOfSvcAttachDate":{"value":"2008-06-29","dateFormat":"YYYY-MM-DD"},"UpdatedTimeStamp":{"value":"2011-01-03","dateFormat":"YYYY-MM-DD"},"EOXMigrationDetails":{"PIDActiveFlag":"Y","MigrationInformation":"Security
+        Router with 802.11a+g FCC Compliant and Analog B/U","MigrationOption":"Enter
+        PID(s)","MigrationProductId":"CISCO1811W-AG-B/K9","MigrationProductName":"","MigrationStrategy":"","MigrationProductInfoURL":"http://www.cisco.com/en/US/products/hw/routers/products_promotion0900aecd8017150a.html"},"EOXInputType":"ShowEOXBySerialNumber","EOXInputValue":"FHK0933224R"}]}'
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '1458'
+      Date:
+      - Thu, 10 Feb 2022 02:01:20 GMT
+      Expires:
+      - Wed, 31 Dec 1969 16:00:00 PST
+      X-Mashery-Message-ID:
+      - dd8d8cda-5b95-4896-b6d8-30d20d17b5eb
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Content-type, fromPartyID, inputFormat, outputFormat, Authorization, Content-Length,
+        Accept, Origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, PATCH, OPTIONS
+      access-control-allow-origin:
+      - (null)
+      content-type:
+      - application/json;charset=UTF-8
+      server:
+      - Apache-Coyote/1.1
+      set-cookie:
+      - JSESSIONID=F3889D8E8C3020DD92BABFBC019AE0E5; Path=/sswst1; Secure; HttpOnly
+      - 3aa70fdf111bedbf312fb7c9691b7f26=0bd3d68742a13dc92d8701e3fc79bfa0; path=/;
+        HttpOnly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload;
+      x-rp-ssl-name:
+      - cae-prd-alln-prt-ext-kube-rp-1.cisco.com
+    status:
+      code: 200
+      message: OK
+version: 1

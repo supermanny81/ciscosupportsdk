@@ -1,0 +1,154 @@
+interactions:
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"3Ih6P5eOVDdwikkgeH7n9wfqdxfc","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 02:01:16 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=997
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - PF=fyCO0vDYc9RWwa30eBntY8;Path=/;Secure;HttpOnly;SameSite=None
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      Cookie:
+      - PF=fyCO0vDYc9RWwa30eBntY8
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"1KV1lQDVwyIrZwc4HSIWOhbPK2K2","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 02:01:17 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=995
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: https://api.cisco.com/supporttools/eox/rest/5/EOXByProductID/1/WS-C3850-48XS-E,WS-C3850-48XS-E-RF?responseencoding=json
+  response:
+    body:
+      string: '{"PaginationResponseRecord":{"PageIndex":1,"LastIndex":1,"TotalRecords":2,"PageRecords":2},"EOXRecord":[{"EOLProductID":"WS-C3850-48XS-E-RF","ProductIDDescription":"Cat
+        3850 48 Port 10G Fiber Switch IP Services REMANUFACTURED","ProductBulletinNumber":"RFEOL13873","LinkToProductBulletinURL":"","EOXExternalAnnouncementDate":{"value":"2021-04-30","dateFormat":"YYYY-MM-DD"},"EndOfSaleDate":{"value":"2027-04-30","dateFormat":"YYYY-MM-DD"},"EndOfSWMaintenanceReleases":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfSecurityVulSupportDate":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfRoutineFailureAnalysisDate":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfServiceContractRenewal":{"value":"2026-07-29","dateFormat":"YYYY-MM-DD"},"LastDateOfSupport":{"value":"2027-04-30","dateFormat":"YYYY-MM-DD"},"EndOfSvcAttachDate":{"value":"2023-04-30","dateFormat":"YYYY-MM-DD"},"UpdatedTimeStamp":{"value":"2022-01-21","dateFormat":"YYYY-MM-DD"},"EOXMigrationDetails":{"PIDActiveFlag":"Y","MigrationInformation":"","MigrationOption":"No
+        Replacement Available","MigrationProductId":"","MigrationProductName":"No
+        Replacement Product","MigrationStrategy":"","MigrationProductInfoURL":""},"EOXInputType":"ShowEOXByPids","EOXInputValue":"WS-C3850-48XS-E-RF
+        "},{"EOLProductID":"WS-C3850-48XS-E","ProductIDDescription":"Cisco Catalyst
+        3850 48 Port 10G Fiber Switch IP Services","ProductBulletinNumber":"EOL13873","LinkToProductBulletinURL":"https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-3850-series-switches/eos-eol-notice-c51-2438804.html","EOXExternalAnnouncementDate":{"value":"2021-04-30","dateFormat":"YYYY-MM-DD"},"EndOfSaleDate":{"value":"2022-04-30","dateFormat":"YYYY-MM-DD"},"EndOfSWMaintenanceReleases":{"value":"2023-04-30","dateFormat":"YYYY-MM-DD"},"EndOfSecurityVulSupportDate":{"value":"2025-04-29","dateFormat":"YYYY-MM-DD"},"EndOfRoutineFailureAnalysisDate":{"value":"2023-04-30","dateFormat":"YYYY-MM-DD"},"EndOfServiceContractRenewal":{"value":"2026-07-29","dateFormat":"YYYY-MM-DD"},"LastDateOfSupport":{"value":"2027-04-30","dateFormat":"YYYY-MM-DD"},"EndOfSvcAttachDate":{"value":"2023-04-30","dateFormat":"YYYY-MM-DD"},"UpdatedTimeStamp":{"value":"2022-01-21","dateFormat":"YYYY-MM-DD"},"EOXMigrationDetails":{"PIDActiveFlag":"Y","MigrationInformation":"","MigrationOption":"Enter
+        Product Name(s)","MigrationProductId":"","MigrationProductName":"C9500-48Y4C","MigrationStrategy":"","MigrationProductInfoURL":""},"EOXInputType":"ShowEOXByPids","EOXInputValue":"WS-C3850-48XS-E
+        "}]}'
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '2507'
+      Date:
+      - Thu, 10 Feb 2022 02:01:17 GMT
+      Expires:
+      - Wed, 31 Dec 1969 16:00:00 PST
+      X-Mashery-Message-ID:
+      - 1e0bb76c-9ab0-45e2-b6c8-2cbfae79ea0d
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Content-type, fromPartyID, inputFormat, outputFormat, Authorization, Content-Length,
+        Accept, Origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, PATCH, OPTIONS
+      access-control-allow-origin:
+      - (null)
+      content-type:
+      - application/json;charset=UTF-8
+      server:
+      - Apache-Coyote/1.1
+      set-cookie:
+      - JSESSIONID=95AFE029D9E309CB2AF002534D296DE8; Path=/sswst1; Secure; HttpOnly
+      - 3aa70fdf111bedbf312fb7c9691b7f26=f06e32231dad73fcf0df5c7f953f2f3c; path=/;
+        HttpOnly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload;
+      x-rp-ssl-name:
+      - cae-prd-alln-prt-ext-kube-rp-1.cisco.com
+    status:
+      code: 200
+      message: OK
+version: 1

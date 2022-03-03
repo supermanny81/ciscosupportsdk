@@ -1,0 +1,174 @@
+interactions:
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"NYJrJukJkWZHx0P84AHmtIT5bbvq","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 01:59:40 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=987
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - PF=M3fO3T5aOKW7WCbEG9TDK3;Path=/;Secure;HttpOnly;SameSite=None
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      Cookie:
+      - PF=M3fO3T5aOKW7WCbEG9TDK3
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"jZMxmAyr7onHatJqSpxbQDl1fHEE","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 01:59:40 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=1000
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: https://api.cisco.com/bug/v2.0/bugs/bug_ids/CSCvc57217?page_index=1
+  response:
+    body:
+      string: '{"bugs":[{"id":"1","bug_id":"CSCvc57217","headline":"Cisco IOS Software
+        Network Address Translation Denial of Service Vulnerability","description":"\n\n<B>Symptom:</B>\nA
+        vulnerability in the implementation of Network Address Translation (NAT) functionality
+        in Cisco IOS Software could allow an unauthenticated, remote attacker to cause
+        a denial of service (DoS) condition on an affected device.\n\nThe vulnerability
+        is due to the improper translation of H.323 messages that use the Registration,
+        Admission, and Status (RAS) protocol and are sent to an affected device via
+        IPv4 packets. An attacker could exploit this vulnerability by sending a crafted
+        H.323 RAS packet through an affected device. A successful exploit could allow
+        the attacker to cause the affected device to crash and reload, resulting in
+        a DoS condition.\n\nCisco has released software updates that address this
+        vulnerability. There is a workaround that addresses this vulnerability.\n\nThis
+        advisory is available at the following link:\nhttps://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170927-nat\n\nThis
+        advisory is part of the September 27, 2017, release of the Cisco IOS and IOS
+        XE Software Security Advisory Bundled Publication, which includes 12 Cisco
+        Security Advisories that describe 13 vulnerabilities. For a complete list
+        of the advisories and links to them, see the \" Cisco Event Response: September
+        2017 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication\"
+        which is available at http://tools.cisco.com/security/center/viewErp.x?alertId=ERP-63410\n\n<B>Conditions:</B>\nThis
+        vulnerability affects Cisco devices that are running a vulnerable release
+        of a Cisco IOS. See the published advisory for more information.\n\nPlease
+        see the Cisco IOS and Cisco IOS XE Software Checker tool for information on
+        non-vulnerable, vulnerable and fixed releases. This tool is available at http://tools.cisco.com/security/center/selectIOSVersion.x\n\n<B>Workaround:</B>\nSee
+        published advisory\n\n<B>Further Problem Description:</B>\n<b>PSIRT Evaluation:</b>\nThe
+        Cisco PSIRT has assigned this bug the following CVSS version 3 score. The
+        Base CVSS score as of the time of evaluation is 8.6:\n\nhttps://tools.cisco.com/security/center/cvssCalculator.x?version=3.0&vector=CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H/E:X/RL:X/RC:X\n\nCVE
+        ID CVE-2017-12231 has been assigned to document this issue.\n\nAdditional
+        information on Cisco''s security vulnerability policy can be found at the
+        following URL:\n\nhttp://www.cisco.com/en/US/products/products_security_vulnerability_policy.html\n","severity":"2","status":"F","behavior_changed":"false","duplicate_of":"","created_date":"","last_modified_date":"2022-01-31","product":"all_pi_infra_iosxe","known_affected_releases":"15.6(03)M00a
+        15.6(3)M0a","known_fixed_releases":"15.1(04)M12c 15.3(03)M09 15.3(3)M9 15.4(03)M07
+        15.4(3)M7 15.5(03)M05 15.5(03)M10.1 15.5(3)M5 15.6(01)T03 15.6(02)T03 15.6(03)M02
+        15.6(03)M1.2 15.6(03.01b)M 15.6(1)T3 15.6(2)T3 15.6(3)M2 15.7(00.02)M 15.7(03.01.04A)OT
+        15.7(03.01.08A)OT","support_case_count":"38"}]}'
+    headers:
+      Cache-Control:
+      - private
+      Date:
+      - Thu, 10 Feb 2022 01:59:41 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Mashery-Message-ID:
+      - 6e245cf5-93f1-4da6-b437-a141196e4955
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Content-type, fromPartyID, inputFormat, outputFormat, Authorization, Content-Length,
+        Accept, Origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, PATCH, OPTIONS
+      content-type:
+      - application/json;charset=UTF-8
+      server:
+      - Apache-Coyote/1.1
+      set-cookie:
+      - 2e3b7c7c3322598b3ab8148ccdebc7c8=ccab14508f51dca65622a34f5e2e7003; path=/;
+        HttpOnly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload;
+      x-rp-ssl-name:
+      - cae-prd-alln-prt-ext-kube-rp-1.cisco.com
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,30 @@
+import pytest
+
+from authlib.integrations.base_client.errors import OAuthError
+
+from ciscosupportsdk.api import ApiSession
+from ciscosupportsdk.apisession import ApiError
+
+from fixtures import *  # noqa
+
+
+@pytest.mark.usefixtures("vcr_config")
+class TestApiSession:
+    @pytest.mark.vcr()
+    def test_auth_failure(self):
+        with pytest.raises(OAuthError):
+            ApiSession("NOT_A_KEY", "NOT_A_SECRET")
+
+    @pytest.mark.vcr()
+    def test_auth_success(self, CS_API_KEY, CS_API_SECRET):
+        ApiSession(CS_API_KEY, CS_API_SECRET)
+
+    @pytest.mark.vcr()
+    def test_api_error(self, CS_API_KEY, CS_API_SECRET):
+        api = ApiSession(CS_API_KEY, CS_API_SECRET)
+        with pytest.raises(ApiError):
+            api._get(
+                "/bug/v2.0/bugs/product_name/Cisco Unified Communications Manager "
+                "(CallManager)/fixed_in_releases",
+                params={},
+            )

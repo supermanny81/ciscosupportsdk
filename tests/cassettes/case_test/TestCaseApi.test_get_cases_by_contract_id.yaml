@@ -1,0 +1,186 @@
+interactions:
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"RrrfVTLafpSUClTftYwbmGZoz0oJ","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 02:01:05 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=997
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - PF=cS3cTZO0tVGIjIo8oER6a7;Path=/;Secure;HttpOnly;SameSite=None
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      Cookie:
+      - PF=cS3cTZO0tVGIjIo8oER6a7
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"f0jgWzuEY8362QUMgHfi8KivFKBB","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 02:01:05 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=995
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: https://api.cisco.com/case/v3/cases/contracts/contract_ids/92511831?status_flag=O&page_index=1
+  response:
+    body:
+      string: '{"pagination_response_record":{"last_index":1,"page_index":1,"page_records":20,"self_link":"https://api.cisco.com/case/v3/cases/contracts/contract_ids/92511831?page_index=1&sort_by=UPDATED_DATE&status_flag=O","title":"Get
+        Cases By Contract Id","total_records":20},"cases":[{"item_entry_id":1,"user_id":"kgerrits","case_id":"692659470","title":"Cisco
+        CUBE HA Version 03.16.02.S stopped working after uplink GW reloading","severity":"3","contact_name":"Kees
+        Gerritsen","status_flag":"O","status":"Customer Pending","creation_date":"2021-12-02T14:03:07.000Z","updated_date":"2022-01-24T08:12:42.000Z","serial_number":"FXS2011Q3V5","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":2,"user_id":"nfong","case_id":"692883818","title":"ASR1004
+        ESP20 on sngidc-gem-wag-gw3 showing offline","severity":"3","contact_name":"Norman
+        Fong","status_flag":"O","status":"Close Pending","creation_date":"2022-01-16T22:19:01.000Z","updated_date":"2022-01-31T14:14:44.000Z","serial_number":"FOX1624GG2B","contract_id":"92511831","rmas":["802039029"],"bugs":[]},{"item_entry_id":3,"user_id":"pbhadori","case_id":"692740305","title":"++
+        Cisco IT saw a major outage and wanted TAC engineer to look into the FTDs","severity":"1","contact_name":"Prashant
+        Bhadoria","status_flag":"O","status":"Cisco Pending","creation_date":"2021-12-15T18:53:09.000Z","updated_date":"2022-01-31T19:18:35.000Z","serial_number":"JMX2208L018","contract_id":"92511831","rmas":[],"bugs":["CSCum03297","CSCvv53700","CSCvy97368","CSCvz62646","CSCvx07524"]},{"item_entry_id":4,"user_id":"nfong","case_id":"692858503","title":"Multiple
+        SDWAN branch sites down","severity":"3","contact_name":"Norman Fong","status_flag":"O","status":"Cisco
+        Pending","creation_date":"2022-01-11T21:47:25.000Z","updated_date":"2022-02-02T17:53:09.000Z","serial_number":"FXS2237Q0P9","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":5,"user_id":"wisantos","case_id":"692780414","title":"CPU
+        Mixed Mode install failure [CISCO SYSTEMS INC]","severity":"3","contact_name":"William
+        Santos","status_flag":"O","status":"Close Pending","creation_date":"2021-12-22T18:49:50.000Z","updated_date":"2022-02-07T17:25:57.000Z","serial_number":"FDO24390DJT","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":6,"user_id":"whouse","case_id":"692723310","title":"NWSBWAN-277
+        - SDWAN - Per-Tunnel QoS does not seem to be working","severity":"3","contact_name":"Anthony
+        House","status_flag":"O","status":"Customer Pending","creation_date":"2021-12-13T23:50:32.000Z","updated_date":"2022-02-07T17:59:40.000Z","serial_number":"","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":7,"user_id":"priyades","case_id":"692933496","title":"alln01-fab3-int-fw2
+        went into error state","severity":"3","contact_name":"Priyank Desai","status_flag":"O","status":"Cisco
+        Pending","creation_date":"2022-01-25T06:38:49.000Z","updated_date":"2022-02-08T03:44:19.000Z","serial_number":"FLM2249064T","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":8,"user_id":"frotthie","case_id":"693018536","title":"root-cause
+        find for outage on aer01-mda1-cci-gw1, ASR1006","severity":"3","contact_name":"Fredric
+        Rotthier","status_flag":"O","status":"Cisco Pending","creation_date":"2022-02-08T11:35:22.000Z","updated_date":"2022-02-08T13:43:20.000Z","serial_number":"FXS1820Q3CQ","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":9,"user_id":"madede","case_id":"692577799","title":"ISE
+        v3.1 API Network Access - Authorization Rules","severity":"4","contact_name":"Maria
+        Dede","status_flag":"O","status":"Cisco Pending","creation_date":"2021-11-18T15:39:39.000Z","updated_date":"2022-02-08T14:31:41.000Z","serial_number":"","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":10,"user_id":"irolea","case_id":"693019607","title":"Console
+        port not working","severity":"3","contact_name":"Ilinca Rolea","status_flag":"O","status":"Customer
+        Pending","creation_date":"2022-02-08T14:29:16.000Z","updated_date":"2022-02-08T15:21:17.000Z","serial_number":"FDO2518M2W6","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":11,"user_id":"rkunthir","case_id":"693019753","title":"We
+        have below ASA devices , one of the showing unreachable but the devices seems
+        to be up. Please find some basic logs.","severity":"3","contact_name":"Rashid
+        Kunthiriyatt","status_flag":"O","status":"Customer Pending","creation_date":"2022-02-08T14:46:20.000Z","updated_date":"2022-02-08T22:09:02.000Z","serial_number":"JAD1834013F","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":12,"user_id":"sheerens","case_id":"692873682","title":"FTD
+        Failover issue","severity":"3","contact_name":"Steve Heerensperger","status_flag":"O","status":"Cisco
+        Pending","creation_date":"2022-01-13T20:08:29.000Z","updated_date":"2022-02-09T03:42:58.000Z","serial_number":"FLM2247030H","contract_id":"92511831","rmas":[],"bugs":["CSCvf70573","CSCvm94545"]},{"item_entry_id":13,"user_id":"dprasant","case_id":"693019860","title":"FTD
+        6.6.5.1 // High LINA CPU after upgrade.","severity":"3","contact_name":"Prasanth
+        Damodaran","status_flag":"O","status":"Customer Pending","creation_date":"2022-02-08T14:55:33.000Z","updated_date":"2022-02-09T12:16:38.000Z","serial_number":"JMX2210L03L","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":14,"user_id":"ppuchals","case_id":"692991529","title":"ASR1002-HX//17.6.1a//Unable
+        to install thousand eyes","severity":"3","contact_name":"Peter Puchalski","status_flag":"O","status":"Cisco
+        Pending","creation_date":"2022-02-03T06:37:32.000Z","updated_date":"2022-02-09T12:59:08.000Z","serial_number":"FXS2432Q1EH","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":15,"user_id":"madede","case_id":"693019595","title":"Switches
+        fail downloading requested SGTs that have been deleted from ISE","severity":"3","contact_name":"Maria
+        Dede","status_flag":"O","status":"Customer Pending","creation_date":"2022-02-08T14:27:48.000Z","updated_date":"2022-02-09T14:05:26.000Z","serial_number":"SAL1627FUAH","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":16,"user_id":"sheerens","case_id":"693019098","title":"FMC
+        reflects inaccurate FTD device status","severity":"3","contact_name":"Steve
+        Heerensperger","status_flag":"O","status":"Cisco Pending","creation_date":"2022-02-08T13:19:30.000Z","updated_date":"2022-02-09T14:32:35.000Z","serial_number":"WZP23250HM0","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":17,"user_id":"ppuchals","case_id":"692900876","title":"C8300
+        SDWAN DNS lookup problem","severity":"3","contact_name":"Peter Puchalski","status_flag":"O","status":"Cisco
+        Pending","creation_date":"2022-01-19T11:02:09.000Z","updated_date":"2022-02-09T15:17:15.000Z","serial_number":"FLM250411A7","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":18,"user_id":"smatiulb","case_id":"692922188","title":"Security
+        Module 1 is in failed state of ftd device.","severity":"3","contact_name":"Shaikh
+        Matiul Bari","status_flag":"O","status":"Customer Pending","creation_date":"2022-01-22T11:42:12.000Z","updated_date":"2022-02-09T19:50:01.000Z","serial_number":"JMX2403L04X","contract_id":"92511831","rmas":["802070333"],"bugs":[]},{"item_entry_id":19,"user_id":"dprasant","case_id":"692888301","title":"FTD
+        6.6.0/ Block 256 and 9344 depletion /Instability","severity":"3","contact_name":"Prasanth
+        Damodaran","status_flag":"O","status":"Customer Pending","creation_date":"2022-01-17T16:35:35.000Z","updated_date":"2022-02-09T20:51:32.000Z","serial_number":"JMX2210L03L","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":20,"user_id":"pangli","case_id":"692597153","title":"SDWAN
+        outage, BFD session at multi sites are down now","severity":"3","contact_name":"Jonny
+        Li","status_flag":"O","status":"Cisco Pending","creation_date":"2021-11-21T07:32:11.000Z","updated_date":"2022-02-09T23:16:37.000Z","serial_number":"FXS2236Q04B","contract_id":"92511831","rmas":[],"bugs":["CSCwa29191"]}]}'
+    headers:
+      Cache-Control:
+      - private
+      Date:
+      - Thu, 10 Feb 2022 02:01:06 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Mashery-Message-ID:
+      - 1bbe92c7-1373-4c2c-8dd9-2e070227254c
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Content-type, fromPartyID, inputFormat, outputFormat, Authorization, Content-Length,
+        Accept, Origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, PATCH, OPTIONS
+      access-control-allow-origin:
+      - (null)
+      content-type:
+      - application/json;charset=UTF-8
+      server:
+      - Apache-Coyote/1.1
+      set-cookie:
+      - 2e3b7c7c3322598b3ab8148ccdebc7c8=ccab14508f51dca65622a34f5e2e7003; path=/;
+        HttpOnly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload;
+      x-rp-ssl-name:
+      - cae-prd-alln-prt-ext-kube-rp-1.cisco.com
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,167 @@
+interactions:
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"CScv5rW1d922HUyYkIlL0tzdUtRJ","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 02:01:20 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=998
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - PF=c1ujabPlsRqmZluo5kzdKW;Path=/;Secure;HttpOnly;SameSite=None
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      Cookie:
+      - PF=c1ujabPlsRqmZluo5kzdKW
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://cloudsso.cisco.com/as/token.oauth2
+  response:
+    body:
+      string: '{"access_token":"4J6WyAfbwDePyGtcMZ8xJ9f6pHrE","token_type":"Bearer","expires_in":3599}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Feb 2022 02:01:21 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=2, max=983
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: https://api.cisco.com/supporttools/eox/rest/5/EOXBySWReleaseString/1/?responseencoding=json&input1=12.2%2CIOS
+  response:
+    body:
+      string: '{"PaginationResponseRecord":{"PageIndex":1,"LastIndex":1,"TotalRecords":6,"PageRecords":6},"EOXRecord":[{"EOLProductID":"SICSCHVK8-12203","ProductIDDescription":"Cisco
+        ics7700 Ser IOS IP/FW/VOICE PLUS IPSEC 56","ProductBulletinNumber":"3108","LinkToProductBulletinURL":"http://www.cisco.com/en/US/products/sw/iosswrel/ps1835/prod_eol_notice0900aecd80330813.html","EOXExternalAnnouncementDate":{"value":"2005-09-19","dateFormat":"YYYY-MM-DD"},"EndOfSaleDate":{"value":"2006-03-19","dateFormat":"YYYY-MM-DD"},"EndOfSWMaintenanceReleases":{"value":"2007-03-19","dateFormat":"YYYY-MM-DD"},"EndOfSecurityVulSupportDate":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfRoutineFailureAnalysisDate":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfServiceContractRenewal":{"value":"","dateFormat":"YYYY-MM-DD"},"LastDateOfSupport":{"value":"2011-03-19","dateFormat":"YYYY-MM-DD"},"EndOfSvcAttachDate":{"value":"","dateFormat":"YYYY-MM-DD"},"UpdatedTimeStamp":{"value":"2009-04-29","dateFormat":"YYYY-MM-DD"},"EOXMigrationDetails":{"PIDActiveFlag":"Y","MigrationInformation":"","MigrationOption":"See
+        Migration Section","MigrationProductId":"","MigrationProductName":"","MigrationStrategy":"Customers
+        are encouraged to migrate to the MIGRATION/REPLACEMENT PRODUCT NAME. Information
+        about this product can be found at: URL FOR THE MIGRATION/REPLACEMENT PRODUCT
+        WEB SITE ON CISCO.COM.","MigrationProductInfoURL":""},"EOXInputType":"ShowEOXBySoftware","EOXInputValue":"input1=12.2,IOS"},{"EOLProductID":"SU7PK8-12210","ProductIDDescription":"Cisco
+        ubr7200 Ser IOS DOCSIS 2-WAY BPI IP+","ProductBulletinNumber":"2348","LinkToProductBulletinURL":"http://www.cisco.com/en/US/products/sw/iosswrel/ps1835/prod_eol_notice09186a008032d55e.html","EOXExternalAnnouncementDate":{"value":"2002-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSaleDate":{"value":"2002-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSWMaintenanceReleases":{"value":"2003-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSecurityVulSupportDate":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfRoutineFailureAnalysisDate":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfServiceContractRenewal":{"value":"","dateFormat":"YYYY-MM-DD"},"LastDateOfSupport":{"value":"2007-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSvcAttachDate":{"value":"2004-12-17","dateFormat":"YYYY-MM-DD"},"UpdatedTimeStamp":{"value":"2012-07-02","dateFormat":"YYYY-MM-DD"},"EOXMigrationDetails":{"PIDActiveFlag":"Y","MigrationInformation":"","MigrationOption":"Enter
+        Product Name(s)","MigrationProductId":"","MigrationProductName":"See Product
+        Bulletin","MigrationStrategy":"","MigrationProductInfoURL":""},"EOXInputType":"ShowEOXBySoftware","EOXInputValue":"input1=12.2,IOS"},{"EOLProductID":"SU7M3PT2-12210","ProductIDDescription":"Cisco
+        ubr7200 Ser IOS DOCSIS 2-WAY TELCO-RETURN IP+","ProductBulletinNumber":"2348","LinkToProductBulletinURL":"http://www.cisco.com/en/US/products/sw/iosswrel/ps1835/prod_eol_notice09186a008032d55e.html","EOXExternalAnnouncementDate":{"value":"2002-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSaleDate":{"value":"2002-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSWMaintenanceReleases":{"value":"2003-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSecurityVulSupportDate":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfRoutineFailureAnalysisDate":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfServiceContractRenewal":{"value":"","dateFormat":"YYYY-MM-DD"},"LastDateOfSupport":{"value":"2007-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSvcAttachDate":{"value":"2004-12-17","dateFormat":"YYYY-MM-DD"},"UpdatedTimeStamp":{"value":"2012-07-02","dateFormat":"YYYY-MM-DD"},"EOXMigrationDetails":{"PIDActiveFlag":"Y","MigrationInformation":"","MigrationOption":"Enter
+        Product Name(s)","MigrationProductId":"","MigrationProductName":"See Product
+        Bulletin","MigrationStrategy":"","MigrationProductInfoURL":""},"EOXInputType":"ShowEOXBySoftware","EOXInputValue":"input1=12.2,IOS"},{"EOLProductID":"SU7M3-12210","ProductIDDescription":"Cisco
+        ubr7200 Ser IOS DOCSIS 2-WAY","ProductBulletinNumber":"2348","LinkToProductBulletinURL":"http://www.cisco.com/en/US/products/sw/iosswrel/ps1835/prod_eol_notice09186a008032d55e.html","EOXExternalAnnouncementDate":{"value":"2002-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSaleDate":{"value":"2002-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSWMaintenanceReleases":{"value":"2003-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSecurityVulSupportDate":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfRoutineFailureAnalysisDate":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfServiceContractRenewal":{"value":"","dateFormat":"YYYY-MM-DD"},"LastDateOfSupport":{"value":"2007-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSvcAttachDate":{"value":"2004-12-17","dateFormat":"YYYY-MM-DD"},"UpdatedTimeStamp":{"value":"2012-07-02","dateFormat":"YYYY-MM-DD"},"EOXMigrationDetails":{"PIDActiveFlag":"Y","MigrationInformation":"","MigrationOption":"Enter
+        Product Name(s)","MigrationProductId":"","MigrationProductName":"See Product
+        Bulletin","MigrationStrategy":"","MigrationProductInfoURL":""},"EOXInputType":"ShowEOXBySoftware","EOXInputValue":"input1=12.2,IOS"},{"EOLProductID":"SU7M3P-12210","ProductIDDescription":"Cisco
+        ubr7200 Ser IOS DOCSIS 2-WAY IP+","ProductBulletinNumber":"2348","LinkToProductBulletinURL":"http://www.cisco.com/en/US/products/sw/iosswrel/ps1835/prod_eol_notice09186a008032d55e.html","EOXExternalAnnouncementDate":{"value":"2002-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSaleDate":{"value":"2002-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSWMaintenanceReleases":{"value":"2003-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSecurityVulSupportDate":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfRoutineFailureAnalysisDate":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfServiceContractRenewal":{"value":"","dateFormat":"YYYY-MM-DD"},"LastDateOfSupport":{"value":"2007-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSvcAttachDate":{"value":"2004-12-17","dateFormat":"YYYY-MM-DD"},"UpdatedTimeStamp":{"value":"2012-07-02","dateFormat":"YYYY-MM-DD"},"EOXMigrationDetails":{"PIDActiveFlag":"Y","MigrationInformation":"","MigrationOption":"Enter
+        Product Name(s)","MigrationProductId":"","MigrationProductName":"See Product
+        Bulletin","MigrationStrategy":"","MigrationProductInfoURL":""},"EOXInputType":"ShowEOXBySoftware","EOXInputValue":"input1=12.2,IOS"},{"EOLProductID":"SU7PK8T2-12210","ProductIDDescription":"Cisco
+        ubr7200 Ser IOS DOCSIS 2-WAY BPI TELCO RETURN IP+","ProductBulletinNumber":"2348","LinkToProductBulletinURL":"http://www.cisco.com/en/US/products/sw/iosswrel/ps1835/prod_eol_notice09186a008032d55e.html","EOXExternalAnnouncementDate":{"value":"2002-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSaleDate":{"value":"2002-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSWMaintenanceReleases":{"value":"2003-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSecurityVulSupportDate":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfRoutineFailureAnalysisDate":{"value":"","dateFormat":"YYYY-MM-DD"},"EndOfServiceContractRenewal":{"value":"","dateFormat":"YYYY-MM-DD"},"LastDateOfSupport":{"value":"2007-05-07","dateFormat":"YYYY-MM-DD"},"EndOfSvcAttachDate":{"value":"2004-12-17","dateFormat":"YYYY-MM-DD"},"UpdatedTimeStamp":{"value":"2012-07-02","dateFormat":"YYYY-MM-DD"},"EOXMigrationDetails":{"PIDActiveFlag":"Y","MigrationInformation":"","MigrationOption":"Enter
+        Product Name(s)","MigrationProductId":"","MigrationProductName":"See Product
+        Bulletin","MigrationStrategy":"","MigrationProductInfoURL":""},"EOXInputType":"ShowEOXBySoftware","EOXInputValue":"input1=12.2,IOS"}]}'
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '7457'
+      Date:
+      - Thu, 10 Feb 2022 02:01:22 GMT
+      Expires:
+      - Wed, 31 Dec 1969 16:00:00 PST
+      X-Mashery-Message-ID:
+      - dd04ac2b-5252-45fc-849b-75c2b4a1edb2
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Content-type, fromPartyID, inputFormat, outputFormat, Authorization, Content-Length,
+        Accept, Origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, PATCH, OPTIONS
+      access-control-allow-origin:
+      - (null)
+      content-type:
+      - application/json;charset=UTF-8
+      server:
+      - Apache-Coyote/1.1
+      set-cookie:
+      - JSESSIONID=79EE6D1A527CDBDB30CE21368516930C; Path=/sswst1; Secure; HttpOnly
+      - 3aa70fdf111bedbf312fb7c9691b7f26=f06e32231dad73fcf0df5c7f953f2f3c; path=/;
+        HttpOnly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload;
+      x-rp-ssl-name:
+      - cae-prd-alln-prt-ext-kube-rp-1.cisco.com
+    status:
+      code: 200
+      message: OK
+version: 1
