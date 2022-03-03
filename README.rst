@@ -13,7 +13,7 @@ your own boilerplate code to deal with API semantics, like authentication
 
 Quick Usage
 -----------
-::
+.. code-block:: Python
 
    from ciscosupportsdk.api import CiscoSupportAPI
 
