@@ -27,11 +27,13 @@ Quick Usage
 Installation
 ------------
 Installing and upgrading the **ciscosupportsdk** is easy with pip
+
 .. code-block:: Bash
 
    pip install ciscosupportsdk
 
 Or to upgrade...
+
 .. code-block:: Bash
    
    pip install ciscosupportsdk --upgrade
