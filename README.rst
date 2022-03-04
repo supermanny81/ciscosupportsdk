@@ -3,7 +3,7 @@ ciscosupportsdk
 
 Python API wrapper for the Cisco Support APIs.
 
-|docs|
+|docs| |coverage|
 ----------------------------------------------
 
 The **ciscosupportsdk** supports all of the Cisco Support API
@@ -27,3 +27,5 @@ Quick Usage
 
 .. |docs| image:: https://github.com/supermanny81/ciscosupportapi/actions/workflows/docs_to_pages.yaml/badge.svg 
    :target: https://github.com/supermanny81/ciscosupportapi/actions/workflows/docs_to_pages.yaml
+.. |coverage| image:: https://codecov.io/gh/supermanny81/ciscosupportapi/branch/master/graph/badge.svg?token=CU4V95TVF1
+   :target: https://codecov.io/gh/supermanny81/ciscosupportapi
