@@ -3,7 +3,7 @@ ciscosupportsdk
 
 Python API wrapper for the Cisco Support APIs.
 
-|docs| |tests| |coverage|
+|docs| |tests| |coverage| |pypi|
 ----------------------------------------------
 
 The **ciscosupportsdk** supports all of the Cisco Support API
@@ -24,6 +24,17 @@ Quick Usage
    for item in api.serial_information.get_coverage_status(['FXS2130Q286']):
       print(f'{item.is_covered} {item.warranty_end_date}')
 
+Installation
+------------
+Installing and upgrading the ciscosupportsdk is easy.  
+
+Install with pip
+.. code-block:: Bash
+
+   pip install ciscosupportsdk
+
+Or to upgrade...
+   pip install ciscosupportsdk --upgrade
 
 .. |docs| image:: https://github.com/supermanny81/ciscosupportapi/actions/workflows/docs_to_pages.yaml/badge.svg 
    :target: https://github.com/supermanny81/ciscosupportapi/actions/workflows/docs_to_pages.yaml
@@ -31,3 +42,5 @@ Quick Usage
    :target: https://codecov.io/gh/supermanny81/ciscosupportapi
 .. |tests| image:: https://github.com/supermanny81/ciscosupportapi/actions/workflows/test.yaml/badge.svg
    :target: https://github.com/supermanny81/ciscosupportapi/actions/workflows/test.yaml
+.. |pypi| image:: https://badge.fury.io/py/ciscosupportsdk.svg
+    :target: https://badge.fury.io/py/ciscosupportsdk
