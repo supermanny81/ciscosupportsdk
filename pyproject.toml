@@ -8,7 +8,7 @@ keywords = ['cisco', 'cisco-support', 'python-sdk']
 readme = "README.rst"
 homepage = "https://supermanny81.github.io/ciscosupportapi/"
 repository = "https://github.com/supermanny81/ciscosupportapi"
-include = [LICENSE.txt]
+include = ["LICENSE.txt"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
