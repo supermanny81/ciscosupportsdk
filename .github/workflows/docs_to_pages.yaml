@@ -1,4 +1,4 @@
-name: docs_to_pages
+name: docs
 on:
   push:
     tags: '*'
