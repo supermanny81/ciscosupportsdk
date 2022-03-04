@@ -3,6 +3,7 @@ ciscosupportsdk
 
 Python API wrapper for the Cisco Support APIs.
 
+|docs|
 ----------------------------------------------
 
 The **ciscosupportsdk** supports all of the Cisco Support API
@@ -10,8 +11,6 @@ interactions via a native Python library.  This makes working with
 these APIs a more *natural* experience and eases the burden of writing
 your own boilerplate code to deal with API semantics, like authentication
 and pagination.
-
-|docs|
 
 Quick Usage
 -----------
