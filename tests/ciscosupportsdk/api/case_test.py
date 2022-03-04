@@ -1,8 +1,7 @@
 import pytest
+from fixtures import *  # noqa
 
 from ciscosupportsdk.api import CiscoSupportAPI
-
-from fixtures import *  # noqa
 
 
 @pytest.mark.usefixtures("vcr_config")
