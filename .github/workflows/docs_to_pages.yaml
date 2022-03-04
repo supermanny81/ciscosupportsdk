@@ -14,7 +14,8 @@ jobs:
       uses: actions/checkout@master
       with:
         fetch-depth: 0
-    - uses: actions/setup-python@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
       with:
         python-version: 3.9
     - uses: abatilo/actions-poetry@v2.1.3
