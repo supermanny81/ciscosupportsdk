@@ -18,7 +18,8 @@ for eox_item in cs.eox.get_by_dates(
 # find EoX by product IDs
 for e in cs.eox.get_by_product_ids(["MR42*"]):
     print(
-        f"{e.eol_product_id}: sale: {e.end_of_sale_date.value} support:{e.last_date_of_support.value}"
+        f"{e.eol_product_id}: sale: {e.end_of_sale_date.value}"
+        f"support:{e.last_date_of_support.value}"
     )
 
 # get EoX record for a serial number

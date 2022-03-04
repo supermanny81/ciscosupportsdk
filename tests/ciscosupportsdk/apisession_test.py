@@ -22,7 +22,8 @@ class TestApiSession:
         api = ApiSession(CS_API_KEY, CS_API_SECRET)
         with pytest.raises(ApiError):
             api._get(
-                "/bug/v2.0/bugs/product_name/Cisco Unified Communications Manager "
+                "/bug/v2.0/bugs/product_name/"
+                "Cisco Unified Communications Manager"
                 "(CallManager)/fixed_in_releases",
                 params={},
             )
