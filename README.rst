@@ -11,7 +11,7 @@ these APIs a more *natural* experience and eases the burden of writing
 your own boilerplate code to deal with API semantics, like authentication
 and pagination.
 
-.. |docs| image: :: https://github.com/supermanny81/ciscosupportapi/actions/workflows/docs_to_pages.yaml/badge.svg 
+.. |docs| image:: https://github.com/supermanny81/ciscosupportapi/actions/workflows/docs_to_pages.yaml/badge.svg 
    :target: https://github.com/supermanny81/ciscosupportapi/actions/workflows/docs_to_pages.yaml
 
 Quick Usage
