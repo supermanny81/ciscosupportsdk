@@ -1,0 +1,784 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>API Details &#8212; ciscosupportsdk  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="ciscosupportsdk" href="../index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="api-details">
+<span id="support-api-documentation"></span><h1>API Details<a class="headerlink" href="#api-details" title="Permalink to this headline">¶</a></h1>
+<section id="ciscosupportapi">
+<h2>CiscoSupportAPI<a class="headerlink" href="#ciscosupportapi" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">CiscoSupportAPI</span></code> class creates “session objects” for wrapping support APIs.
+Each support API endpoint is available to an instance of the <cite>ciscosupportsdk</cite>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ciscosupportsdk.api</span> <span class="kn">import</span> <span class="n">CiscoSupportAPI</span>
+
+<span class="n">cs</span> <span class="o">=</span> <span class="n">CiscoSupportAPI</span><span class="p">(</span><span class="n">CS_API_KEY</span><span class="p">,</span> <span class="n">CS_API_SECRET</span><span class="p">)</span>
+</pre></div>
+</div>
+<span class="target" id="module-ciscosupportsdk.api"></span><dl class="py class">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.CiscoSupportAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ciscosupportsdk.api.</span></span><span class="sig-name descname"><span class="pre">CiscoSupportAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_secret</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ciscosupportsdk.api.CiscoSupportAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Cisco Support API wrapper.</p>
+<p>Creates a session for all API calls through a CiscoSupportAPI
+object.  The ‘session’ handles authentication and communication
+to the API.  Each of the support APIs are added to this object
+in a hierarchical structure.</p>
+</dd></dl>
+
+<section id="module-ciscosupportsdk.api.asd">
+<span id="asd"></span><h3>asd<a class="headerlink" href="#module-ciscosupportsdk.api.asd" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ciscosupportsdk.api.asd.</span></span><span class="sig-name descname"><span class="pre">AutomatedSoftwareDistributionApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.apisession.ApiSession</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Cisco Automated Software Distribution service provides software
+information and download URLs to assist you in upgrading your
+device/application to the latest version.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_bug_details">
+<span class="sig-name descname"><span class="pre">get_bug_details</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bug_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_bug_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns detailed information for the specified bug ID or IDs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>bug_ids: list[str]: Identifier of the bug or bugs for which
+to return detailed information. A maximum of five (5) bug IDs can
+be submitted separated by a comma.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Bug</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="bug">
+<h3>bug<a class="headerlink" href="#bug" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>Used to makes calls to the <code class="docutils literal notranslate"><span class="pre">BugApi</span></code> endpoint.</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cs</span> <span class="o">=</span> <span class="n">CiscoSupportAPI</span><span class="p">(</span><span class="n">CS_API_KEY</span><span class="p">,</span> <span class="n">CS_API_SECRET</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cs</span><span class="o">.</span><span class="n">bug</span>
+<span class="go">&lt;ciscosupportsdk.api.bug.BugApi object at 0x10451eb20&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<span class="target" id="module-ciscosupportsdk.api.bug"></span><dl class="py class">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.bug.BugApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ciscosupportsdk.api.bug.</span></span><span class="sig-name descname"><span class="pre">BugApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.apisession.ApiSession</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ciscosupportsdk.api.bug.BugApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Cisco defects (or bugs) are made visible to customers and partners through
+the use of the Bug Search Tool (BST) application. The objective of the
+Cisco Bug API is to provide an entry point into the Bug Search Tool for
+customers and partners to view bug details and perform bug searches while
+integrating the search results into their own interfaces and applications.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.bug.BugApi.get_bug_details">
+<span class="sig-name descname"><span class="pre">get_bug_details</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bug_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.bug.Bug</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.bug.BugApi.get_bug_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns detailed information for the specified bug ID or IDs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>bug_ids: list[str]: Identifier of the bug or bugs for which
+to return detailed information. A maximum of five (5) bug IDs can
+be submitted separated by a comma.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Bug</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.bug.BugApi.get_bugs_by_keyword">
+<span class="sig-name descname"><span class="pre">get_bugs_by_keyword</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.bug.Status</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modified_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.bug.DateModified</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">severity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.bug.Severity</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.bug.SortBy</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.bug.Bug</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.bug.BugApi.get_bugs_by_keyword" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns detailed information for the bugs associated with the
+specified keyword.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>keyword: str: Keyword or keywords for which to return details
+on associated bugs. Multiple words can be submitted</p>
+</dd>
+<dt class="field-even">Param</dt>
+<dd class="field-even"><p>status: Status: Status of the bug; only bugs with the
+specified status are returned.</p>
+</dd>
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>modified_date: DateModified: Last modified date of the bug;
+only bugs modified within the specified time are returned.</p>
+</dd>
+<dt class="field-even">Param</dt>
+<dd class="field-even"><p>severity: Severity: Severity of the bug; only bugs with
+the specified severity are returned.</p>
+</dd>
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>sort_by: SortBy: Parameter on which to sort the results.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>ProductBug</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.bug.BugApi.get_bugs_by_product_and_affected_release">
+<span class="sig-name descname"><span class="pre">get_bugs_by_product_and_affected_release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_series</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">affected_releases</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.Status</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modified_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.DateModified</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">severity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.Severity</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.SortBy</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.bug.Bug</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.bug.BugApi.get_bugs_by_product_and_affected_release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns detailed information for the bugs associated with the specified
+hardware product series and affected software release or releases.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.bug.BugApi.get_bugs_by_product_and_fixed_release">
+<span class="sig-name descname"><span class="pre">get_bugs_by_product_and_fixed_release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_series</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixed_in_releases</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.Status</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modified_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.DateModified</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">severity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.Severity</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.SortBy</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.bug.Bug</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.bug.BugApi.get_bugs_by_product_and_fixed_release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns detailed information for the bugs associated with the specified
+hardware product series and affected software release or releases.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.bug.BugApi.get_bugs_by_product_id">
+<span class="sig-name descname"><span class="pre">get_bugs_by_product_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_pid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.bug.Status</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modified_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.bug.DateModified</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">severity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.bug.Severity</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.bug.SortBy</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.bug.Bug</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.bug.BugApi.get_bugs_by_product_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns detailed information for the bugs associated with the
+specified base product ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>base_pid: str: Identifier of the base product for which to
+return details on associated bugs. Only one base product ID can
+be submitted.</p>
+</dd>
+<dt class="field-even">Param</dt>
+<dd class="field-even"><p>status: Status: Status of the bug; only bugs with the
+specified status are returned.</p>
+</dd>
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>modified_date: DateModified: Last modified date of the bug;
+only bugs modified within the specified time are returned.</p>
+</dd>
+<dt class="field-even">Param</dt>
+<dd class="field-even"><p>severity: Severity: Severity of the bug; only bugs with
+the specified severity are returned.</p>
+</dd>
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>sort_by: SortBy: Parameter on which to sort the results.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>ProductBug</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.bug.BugApi.get_bugs_by_product_id_and_release">
+<span class="sig-name descname"><span class="pre">get_bugs_by_product_id_and_release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_pid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">software_releases</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.Status</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modified_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.DateModified</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">severity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.Severity</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.SortBy</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.bug.Bug</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.bug.BugApi.get_bugs_by_product_id_and_release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns detailed information for the bugs associated with the
+specified base product ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>base_pid: str: Identifier of the base product for which to
+return details on associated bugs. Only one base product ID can
+be submitted.</p>
+</dd>
+<dt class="field-even">Param</dt>
+<dd class="field-even"><p>status: Status: Status of the bug; only bugs with the
+specified status are returned.</p>
+</dd>
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>modified_date: DateModified: Last modified date of the bug;
+only bugs modified within the specified time are returned.</p>
+</dd>
+<dt class="field-even">Param</dt>
+<dd class="field-even"><p>severity: Severity: Severity of the bug; only bugs with
+the specified severity are returned.</p>
+</dd>
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>sort_by: SortBy: Parameter on which to sort the results.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>ProductBug</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.bug.BugApi.get_bugs_by_product_name_and_affected_release">
+<span class="sig-name descname"><span class="pre">get_bugs_by_product_name_and_affected_release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">affected_releases</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.Status</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modified_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.DateModified</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">severity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.Severity</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.SortBy</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.bug.Bug</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.bug.BugApi.get_bugs_by_product_name_and_affected_release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns detailed information for the bugs associated with the
+specified product name and affected software release or releases.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.bug.BugApi.get_bugs_by_product_name_and_fixed_release">
+<span class="sig-name descname"><span class="pre">get_bugs_by_product_name_and_fixed_release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixed_in_releases</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.Status</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modified_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.DateModified</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">severity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.Severity</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.bug.SortBy</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.bug.Bug</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.bug.BugApi.get_bugs_by_product_name_and_fixed_release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns detailed information for the bugs associated with the
+specified product name and affected software release or releases.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ciscosupportsdk.api.case">
+<span id="case"></span><h3>case<a class="headerlink" href="#module-ciscosupportsdk.api.case" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.case.CaseApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ciscosupportsdk.api.case.</span></span><span class="sig-name descname"><span class="pre">CaseApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.apisession.ApiSession</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ciscosupportsdk.api.case.CaseApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Cisco Support Case API v3 provides a powerful, convenient, and simple
+way to interact with the Cisco Support Case Manager tool and aims to
+improve the partner and customer experience by enabling you to access case
+information instantly, programmatically, and in bulk.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.case.CaseApi.get_case_details">
+<span class="sig-name descname"><span class="pre">get_case_details</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">case_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ciscosupportsdk.models.case.CaseDetail</span></span></span><a class="headerlink" href="#ciscosupportsdk.api.case.CaseApi.get_case_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns detailed information for the specified case.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>case_id: str: Identifier of the case for which to return
+results.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.case.CaseApi.get_case_summary">
+<span class="sig-name descname"><span class="pre">get_case_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">case_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.case.SortCaseBy</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">SortCaseBy.UPDATED_DATE</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.case.Case</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.case.CaseApi.get_case_summary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns brief information for the specified case or cases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>case_ids: list[str]: Identifier of the case or cases for which
+to return results. Multiple values must be specified within a
+comma-separated list and cannot exceed 30 IDs.</p>
+</dd>
+<dt class="field-even">Param</dt>
+<dd class="field-even"><p>sort_by: SortCaseBy: Order in which the results should be
+sorted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.case.CaseApi.get_cases_by_contract_id">
+<span class="sig-name descname"><span class="pre">get_cases_by_contract_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contract_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_created_from</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_created_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_flag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.case.CaseStatusFlag</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">CaseStatusFlag.OPEN</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.case.Case</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.case.CaseApi.get_cases_by_contract_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns summary information for cases associated with the specified
+contract or contracts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>contract_ids: list[str]: Identifier of the user or users for
+which to return results.  A maximum of 10 may be passed.</p>
+</dd>
+<dt class="field-even">Param</dt>
+<dd class="field-even"><p>date_created_from: str: Beginning date (in UTC) of the range
+in which to search. For example: 2013-04-23T11:00:14Z
+Note: The maximum date range currently supported is 90 days.</p>
+</dd>
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>date_created_to: str: End date (in UTC) of the range
+in which to search. For example: 2013-04-23T11:00:14Z
+Note: The maximum date range currently supported is 90 days.</p>
+</dd>
+<dt class="field-even">Param</dt>
+<dd class="field-even"><p>status_flag: CaseStatusFlag: Return only cases associated
+with the specified status.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.case.CaseApi.get_cases_by_user_id">
+<span class="sig-name descname"><span class="pre">get_cases_by_user_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_created_from</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_created_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_flag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.models.case.CaseStatusFlag</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">CaseStatusFlag.OPEN</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.case.Case</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.case.CaseApi.get_cases_by_user_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns summary information for cases associated with the specified
+contract or contracts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>user_ids: list[str]: Identifier of the user or users for
+which to return results.  A maximum of 10 may be passed.</p>
+</dd>
+<dt class="field-even">Param</dt>
+<dd class="field-even"><p>date_created_from: str: Beginning date (in UTC) of the range
+in which to search. For example: 2013-04-23T11:00:14Z
+Note: The maximum date range currently supported is 90 days.</p>
+</dd>
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>date_created_to: str: End date (in UTC) of the range
+in which to search. For example: 2013-04-23T11:00:14Z
+Note: The maximum date range currently supported is 90 days.</p>
+</dd>
+<dt class="field-even">Param</dt>
+<dd class="field-even"><p>status_flag: CaseStatusFlag: Return only cases associated
+with the specified status.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ciscosupportsdk.api.eox">
+<span id="eox"></span><h3>eox<a class="headerlink" href="#module-ciscosupportsdk.api.eox" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.eox.EoxApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ciscosupportsdk.api.eox.</span></span><span class="sig-name descname"><span class="pre">EoxApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.apisession.ApiSession</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ciscosupportsdk.api.eox.EoxApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Cisco EoX API provides access to Cisco End of Life product data.</p>
+<p>Using the EoX Service API, customers and partners can request Cisco
+EoX product information for both hardware and software using a variety
+of input mechanisms.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.eox.EoxApi.get_by_dates">
+<span class="sig-name descname"><span class="pre">get_by_dates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None.datetime.date</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None.datetime.date</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eox_attribs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.eox.EoxAttrib</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.eox.EoxRecord</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.eox.EoxApi.get_by_dates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get EoX notices for all products by date.</p>
+<p>Returns all active and inactive EoX records for all products with the
+specified eoxAttrib value within an inclusive date range. If you do
+not specify an eoxAttrib value, this method returns records with an
+updated time stamp within the specified date range.</p>
+<p>Note: This method can be used to retrieve records based on any date
+listed in the EoX record. For example, if you specify a date range
+and enter EO_SALE_DATE and EO_LAST_SUPPORT_DATE as the eoxAttrib
+values, this method returns records with an end of sale date or last
+date of support within the specified date range. This feature allows
+you to target specific date ranges within each attribute without having
+to pull the entire database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_date</strong> – Start date of the date range of records to
+return in the following format: YYYY-MM-DD.
+For example: 2010-01-01</p></li>
+<li><p><strong>end_date</strong> – End date of the date range of records to return
+in the following format: YYYY-MM-DD. For example: 2010-01-01</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Iterable[EoxRecord]</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#ciscosupportsdk.api.eox.EoxError" title="ciscosupportsdk.api.eox.EoxError"><strong>EoxError</strong></a><strong>, </strong><strong>ValueError</strong> – Depending on errors with input or processing</p></li>
+<li><p><strong>the request on the server.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.eox.EoxApi.get_by_serial_number">
+<span class="sig-name descname"><span class="pre">get_by_serial_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serial_numbers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.eox.EoxRecord</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.eox.EoxApi.get_by_serial_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the EoX record for products with the specified serial numbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>serial_numbers</strong> – Device serial number or numbers
+for which to return results. You can enter up to 20 serial
+numbers (each with a maximum length of 40) separated by commas.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Iterable[EoxRecord]</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ciscosupportsdk.api.eox.EoxError" title="ciscosupportsdk.api.eox.EoxError"><strong>EoxError</strong></a><strong>, </strong><strong>ValueError</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.eox.EoxApi.get_by_software_release">
+<span class="sig-name descname"><span class="pre">get_by_software_release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">software_releases</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.eox.SoftwareRelease</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.eox.EoxRecord</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.eox.EoxApi.get_by_software_release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the EoX record for products associated with the specified
+software release and (optionally) the specified operating system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>software_release</strong> – A combination of
+software release and operating system.  Up to 20 combinations
+may be used and each may return multiple entires.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Iterable[EoxRecord]</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ciscosupportsdk.api.eox.EoxError" title="ciscosupportsdk.api.eox.EoxError"><strong>EoxError</strong></a><strong>, </strong><strong>ValueError</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.eox.EoxError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ciscosupportsdk.api.eox.</span></span><span class="sig-name descname"><span class="pre">EoxError</span></span><a class="headerlink" href="#ciscosupportsdk.api.eox.EoxError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Server side errors in processing the request throw an EoxError.</p>
+<p>If you see one of these, make sure to look at the message body
+to see why the error occurred.</p>
+</dd></dl>
+
+</section>
+<section id="module-ciscosupportsdk.api.productinformation">
+<span id="product-information"></span><h3>product_information<a class="headerlink" href="#module-ciscosupportsdk.api.productinformation" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.productinformation.ProductInformationApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ciscosupportsdk.api.productinformation.</span></span><span class="sig-name descname"><span class="pre">ProductInformationApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.apisession.ApiSession</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ciscosupportsdk.api.productinformation.ProductInformationApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Cisco Product Information API looks up details on products using serial
+numbers and product IDs.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.productinformation.ProductInformationApi.get_info_by_product_id">
+<span class="sig-name descname"><span class="pre">get_info_by_product_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.productinformation.ProductInformationRecord</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.productinformation.ProductInformationApi.get_info_by_product_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns product information associated with the specified product
+identifier or identifiers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.productinformation.ProductInformationApi.get_info_by_serial">
+<span class="sig-name descname"><span class="pre">get_info_by_serial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serial_numbers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.productinformation.ProductInformationRecord</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.productinformation.ProductInformationApi.get_info_by_serial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns product information associated with the specified serial ]
+number or numbers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.productinformation.ProductInformationApi.get_mdf_by_product_id">
+<span class="sig-name descname"><span class="pre">get_mdf_by_product_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.productinformation.ProductMDFRecord</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.productinformation.ProductInformationApi.get_mdf_by_product_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns metadata framework (MDF) identifiers associated with
+the specified product identifier or identifiers.Returns metadata
+framework (MDF) identifiers associated with the specified product
+identifier or identifiers.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ciscosupportsdk.api.serialnumbertoinformation">
+<span id="serial-information"></span><h3>serial_information<a class="headerlink" href="#module-ciscosupportsdk.api.serialnumbertoinformation" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.serialnumbertoinformation.SerialNumberToInformationAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ciscosupportsdk.api.serialnumbertoinformation.</span></span><span class="sig-name descname"><span class="pre">SerialNumberToInformationAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.apisession.ApiSession</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ciscosupportsdk.api.serialnumbertoinformation.SerialNumberToInformationAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Cisco Serial Number to Information API assists customers and
+partners in identifying an orderable PID and coverage status based
+on a serial number.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.serialnumbertoinformation.SerialNumberToInformationAPI.get_coverage_owner_status">
+<span class="sig-name descname"><span class="pre">get_coverage_owner_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serial_numbers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.serialnumbertoinformation.CoverageOwnerStatus</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.serialnumbertoinformation.SerialNumberToInformationAPI.get_coverage_owner_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the orderable PID for the specified device serial number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>serial_numbers: list[str]: Device serial number or
+numbers for which to return results. You can enter up to
+75 serial numbers (each with a maximum length of 40) separated
+by commas.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Iterable[OrderableProductList]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.serialnumbertoinformation.SerialNumberToInformationAPI.get_coverage_status">
+<span class="sig-name descname"><span class="pre">get_coverage_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serial_numbers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.serialnumbertoinformation.CoverageStatus</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.serialnumbertoinformation.SerialNumberToInformationAPI.get_coverage_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns coverage status for a set of serial numbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>serial_numbers: list[str]: Device serial number or
+numbers for which to return results. You can enter up to
+75 serial numbers (each with a maximum length of 40) separated
+by commas.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Iterable[CoverageStatus]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.serialnumbertoinformation.SerialNumberToInformationAPI.get_coverage_summary_by_serial">
+<span class="sig-name descname"><span class="pre">get_coverage_summary_by_serial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serial_numbers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.serialnumbertoinformation.CoverageSummary</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.serialnumbertoinformation.SerialNumberToInformationAPI.get_coverage_summary_by_serial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns coverage status, warranty, and product identifier details for a set of serial numbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>serial_numbers: list[str]: Device serial number or
+numbers for which to return results. You can enter up to
+75 serial numbers (each with a maximum length of 40) separated
+by commas.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Iterable[CoverageSummary]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.serialnumbertoinformation.SerialNumberToInformationAPI.get_orderable_pids">
+<span class="sig-name descname"><span class="pre">get_orderable_pids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serial_numbers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.serialnumbertoinformation.OrderableProductList</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.serialnumbertoinformation.SerialNumberToInformationAPI.get_orderable_pids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the orderable PID for the specified device serial number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>serial_numbers: list[str]: Device serial number or
+numbers for which to return results. You can enter up to
+75 serial numbers (each with a maximum length of 40) separated
+by commas.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Iterable[OrderableProductList]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="serviceorderreturn">
+<span id="id1"></span><h3>serviceorderreturn<a class="headerlink" href="#serviceorderreturn" title="Permalink to this headline">¶</a></h3>
+<span class="target" id="module-ciscosupportsdk.api.serviceorderreturn"></span><dl class="py class">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.serviceorderreturn.ServiceOrderReturnApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ciscosupportsdk.api.serviceorderreturn.</span></span><span class="sig-name descname"><span class="pre">ServiceOrderReturnApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.apisession.ApiSession</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ciscosupportsdk.api.serviceorderreturn.ServiceOrderReturnApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Cisco Service Order Return (RMA) API provides a powerful, convenient,
+and simple way to interact with the Cisco RMA service and enables you to
+access RMA information instantly, programmatically, and in bulk.</p>
+<p>The Cisco Service Order Return (RMA) API is stateless, externally
+accessible, and delivered as a REST web service, which allows you to
+build innovative RMA applications and portals</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.serviceorderreturn.ServiceOrderReturnApi.get_rma_details_by_rma_number">
+<span class="sig-name descname"><span class="pre">get_rma_details_by_rma_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rma_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.serviceorderreturn.Rma</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.serviceorderreturn.ServiceOrderReturnApi.get_rma_details_by_rma_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns detailed information about the specified RMA.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>rma_number: str: Identifier of the RMA for which to
+return details.
+Note: Currently, only one RMA Number is required and accepted.
+In the future, multiple RMA numbers will be supported.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Iterable[Rma]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.serviceorderreturn.ServiceOrderReturnApi.get_rma_details_by_user_id">
+<span class="sig-name descname"><span class="pre">get_rma_details_by_user_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.serviceorderreturn.User</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.serviceorderreturn.ServiceOrderReturnApi.get_rma_details_by_user_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of RMAs associated with the specified user.
+By default, the last 30 days of RMAs for a user is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>user_id: list[str]: Identifier of the user for which
+to return associated RMAs. Note: Only 1 user ID is accepted;
+currently, multiple user IDs are not supported.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Iterable[Rma]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ciscosupportsdk.api.softwaresuggestion">
+<span id="suggestion"></span><h3>suggestion<a class="headerlink" href="#module-ciscosupportsdk.api.softwaresuggestion" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ciscosupportsdk.api.softwaresuggestion.</span></span><span class="sig-name descname"><span class="pre">SoftwareSuggestionApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ciscosupportsdk.apisession.ApiSession</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The process of selecting the appropriate software upgrade path for your
+environment can be complex. The Cisco Software Suggestions streamline the
+software selection process by providing the necessary information to assist
+you in making intelligent choices for upgrading your software.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi.get_compatible_by_mdf_id">
+<span class="sig-name descname"><span class="pre">get_compatible_by_mdf_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mdf_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_release</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">supported_features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">supported_hardware</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.softwaresuggestion.Suggestion</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi.get_compatible_by_mdf_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns compatible and suggested software releases for a product given
+its mdf identifier (mdfId) and specific software attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>mdfIds: list[str]: Base mdf IDs for which to return suggested
+software releases. A maximum of 10 mdf Ids are allowed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi.get_compatible_by_product_id">
+<span class="sig-name descname"><span class="pre">get_compatible_by_product_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_release</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">supported_features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">supported_hardware</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.softwaresuggestion.Suggestion</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi.get_compatible_by_product_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns compatible and suggested software releases for a product given
+its product identifier (PID) and specific software attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>mdfIds: list[str]: Base mdf IDs for which to return suggested
+software releases. A maximum of 10 mdf Ids are allowed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi.get_suggestions_and_image_by_mdf_ids">
+<span class="sig-name descname"><span class="pre">get_suggestions_and_image_by_mdf_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mdf_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.softwaresuggestion.Suggestion</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi.get_suggestions_and_image_by_mdf_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of Cisco suggested software releases and images for
+a list of mdf IDs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>product_ids: list[str]: Base product IDs for which to return
+suggested software releases. A maximum of 10 PIDs are allowed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi.get_suggestions_and_image_by_product_ids">
+<span class="sig-name descname"><span class="pre">get_suggestions_and_image_by_product_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.softwaresuggestion.Suggestions</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi.get_suggestions_and_image_by_product_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of Cisco suggested software releases and images for a
+list of product IDs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>product_ids: list[str]: Base product IDs for which to return
+suggested software releases. A maximum of 10 PIDs are allowed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi.get_suggestions_by_mdf_ids">
+<span class="sig-name descname"><span class="pre">get_suggestions_by_mdf_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mdf_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.softwaresuggestion.Suggestion</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi.get_suggestions_by_mdf_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of Cisco suggested software releases and NO images for
+a list of mdf IDs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>product_ids: list[str]: Base product IDs for which to return
+suggested software releases. A maximum of 10 PIDs are allowed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi.get_suggestions_by_product_ids">
+<span class="sig-name descname"><span class="pre">get_suggestions_by_product_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">ciscosupportsdk.models.softwaresuggestion.Suggestions</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi.get_suggestions_by_product_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of Cisco suggested software releases (without images)
+for a list of product IDs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>product_ids: list[str]: Base product IDs for which to return
+suggested software releases. A maximum of 10 PIDs are allowed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="rma">
+<h3>rma<a class="headerlink" href="#rma" title="Permalink to this headline">¶</a></h3>
+<p>While known as an RMA to many customers and partners, the service endpoint here
+is described above in <a class="reference internal" href="#serviceorderreturn"><span class="std std-ref">serviceorderreturn</span></a>.  This member is
+here for convenience and references the same API endpoint.</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">ciscosupportsdk</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Details</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ciscosupportapi">CiscoSupportAPI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-ciscosupportsdk.api.asd">asd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bug">bug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ciscosupportsdk.api.case">case</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ciscosupportsdk.api.eox">eox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ciscosupportsdk.api.productinformation">product_information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ciscosupportsdk.api.serialnumbertoinformation">serial_information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#serviceorderreturn">serviceorderreturn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ciscosupportsdk.api.softwaresuggestion">suggestion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rma">rma</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../index.html" title="previous chapter">ciscosupportsdk</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Manny Garcia <mannygar@cisco.com>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/api/ciscosupportsdk.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
