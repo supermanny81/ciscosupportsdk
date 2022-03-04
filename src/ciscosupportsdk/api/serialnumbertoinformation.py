@@ -54,7 +54,8 @@ class SerialNumberToInformationAPI(object):
         self, serial_numbers: list[str]
     ) -> Iterable[CoverageSummary]:
         """
-        Returns coverage status, warranty, and product identifier details for a set of serial numbers.
+        Returns coverage status, warranty, and product identifier details for
+        a set of serial numbers.
 
         :param: serial_numbers: list[str]: Device serial number or
             numbers for which to return results. You can enter up to
