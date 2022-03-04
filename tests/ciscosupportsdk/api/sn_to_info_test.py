@@ -1,10 +1,8 @@
 import pytest
-
+from fixtures import *  # noqa
 
 from ciscosupportsdk.api import CiscoSupportAPI
 from ciscosupportsdk.models.serialnumbertoinformation import CoverageStatus
-
-from fixtures import *  # noqa
 
 
 @pytest.mark.usefixtures("vcr_config")

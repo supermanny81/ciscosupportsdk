@@ -1,11 +1,9 @@
 import pytest
-
 from authlib.integrations.base_client.errors import OAuthError
+from fixtures import *  # noqa
 
 from ciscosupportsdk.api import ApiSession
 from ciscosupportsdk.apisession import ApiError
-
-from fixtures import *  # noqa
 
 
 @pytest.mark.usefixtures("vcr_config")

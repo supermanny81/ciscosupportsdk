@@ -1,11 +1,9 @@
 import pytest
-
+from fixtures import *  # noqa
 
 from ciscosupportsdk.api import CiscoSupportAPI
 from ciscosupportsdk.apisession import ApiError
 from ciscosupportsdk.models.serviceorderreturn import Rma, User
-
-from fixtures import *  # noqa
 
 
 @pytest.mark.usefixtures("vcr_config")
