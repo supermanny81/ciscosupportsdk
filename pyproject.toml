@@ -2,8 +2,13 @@
 name = "ciscosupportsdk"
 version = "0.1.1"
 description = "Cisco Support APIs allow Cisco Partner Support Services (PSS) partners and Cisco Smart Net Total Care (SNTC) customers to programmatically access and consume Cisco Support data in the cloud in a simple, secure, and scalable manner."
-authors = ["Manny Garcia <mannygar@cisco.com>"]
+authors = ["Manny Garcia <supermanny@icloud.com>"]
 license = "MIT"
+keywords = ['cisco', 'cisco-support', 'python-sdk']
+readme = "README.rst"
+homepage = "https://supermanny81.github.io/ciscosupportapi/"
+repository = "https://github.com/supermanny81/ciscosupportapi"
+include = [LICENSE.txt]
 
 [tool.poetry.dependencies]
 python = "^3.9"
