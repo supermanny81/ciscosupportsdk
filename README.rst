@@ -38,6 +38,10 @@ Or to upgrade...
    
    pip install ciscosupportsdk --upgrade
 
+Examples
+--------
+Looking for some sample usage?  Check out the examples_ folder!
+
 .. |docs| image:: https://github.com/supermanny81/ciscosupportapi/actions/workflows/docs_to_pages.yaml/badge.svg 
    :target: https://github.com/supermanny81/ciscosupportapi/actions/workflows/docs_to_pages.yaml
 .. |coverage| image:: https://codecov.io/gh/supermanny81/ciscosupportapi/branch/master/graph/badge.svg?token=CU4V95TVF1
@@ -48,3 +52,4 @@ Or to upgrade...
    :target: https://badge.fury.io/py/ciscosupportsdk
 .. |devnet| image:: https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg
    :target: https://developer.cisco.com/codeexchange/github/repo/supermanny81/ciscosupportsdk
+.. _examples: https://github.com/supermanny81/ciscosupportsdk/tree/master/examples
