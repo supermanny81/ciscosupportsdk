@@ -26,17 +26,31 @@ Quick Usage
 
 Installation
 ------------
-Installing and upgrading the **ciscosupportsdk** is easy with pip
+Installing and upgrading the **ciscosupportsdk** is easy with ``pip``
 
-.. code-block:: Bash
+.. code-block:: console
 
-   pip install ciscosupportsdk
+   $ pip install ciscosupportsdk
+   # or to upgrade use...
+   $ pip install ciscosupportsdk --upgrade
 
-Or to upgrade...
+If you want to setup a development environment, use ``poetry`` instead:
 
-.. code-block:: Bash
-   
-   pip install ciscosupportsdk --upgrade
+.. code-block:: console
+
+    $ # Install poetry using pipx
+    $ python -m pip install pipx
+    $ python -m pipx ensurepath
+    $ pipx install poetry
+
+    $ # Clone repository
+    $ git clone https://github.com/supermanny81/ciscosupportsdk.git
+    $ cd ciscosupportsdk/
+
+    $ # Install dependencies and hooks
+    $ poetry install
+    $ poetry run pre-commit install
+
 
 Examples
 --------
