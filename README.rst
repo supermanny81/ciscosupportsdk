@@ -44,25 +44,25 @@ Installing and upgrading the **ciscosupportsdk** is easy with ``pip``
 
 .. code-block:: console
 
-   $ pip install ciscosupportsdk
+   pip install ciscosupportsdk
    # or to upgrade use...
-   $ pip install ciscosupportsdk --upgrade
+   pip install ciscosupportsdk --upgrade
 
 If you want to setup a development environment, use ``poetry`` instead:
 
 .. code-block:: console
 
-    $ # Install poetry using pipx
-    $ python -m pip install pipx
-    $ python -m pipx ensurepath
-    $ pipx install poetry
+   # Install poetry using pipx
+   python -m pip install pipx
+   python -m pipx ensurepath
+   pipx install poetry
 
-    $ # Clone repository
-    $ git clone https://github.com/supermanny81/ciscosupportsdk.git
-    $ cd ciscosupportsdk/
+   # Clone repository
+   git clone https://github.com/supermanny81/ciscosupportsdk.git
+   cd ciscosupportsdk/
 
-    $ # Install dependencies
-    $ poetry install
+   # Install dependencies
+   poetry install
 
 
 Examples
