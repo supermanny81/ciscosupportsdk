@@ -31,12 +31,12 @@ Quick Usage
 
 Features
 --------
-* Represents all of the Cisco Support API interactions in native python.
-   * Authentication and connection management
-   * All APIs organized hierarchically as attributes and methods under the main API object
-   * Returned data objects are all native python objects
-* Pagination is automatic and transparent
-* API documentation will appear in your IDE to ease development
+*  Represents all of the Cisco Support API interactions in native python
+    *  Authentication and connection management
+    *  All APIs organized hierarchically as attributes and methods under the main API object
+    *  Returned data objects are all native python objects
+*  Pagination is automatic and transparent
+*  API documentation will appear in your IDE to ease development
 
 Installation
 ------------
