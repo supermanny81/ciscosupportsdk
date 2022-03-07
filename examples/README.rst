@@ -1,7 +1,7 @@
- ciscosupportsdk examples
- ========================
+ciscosupportsdk examples
+========================
 
- The files in this folder serve as examples for using all parts of the cisco support sdk.
+The files in this folder serve as examples for using all parts of the cisco support sdk.
 
 Some requirements on usage
 --------------------------
