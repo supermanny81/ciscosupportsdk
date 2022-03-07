@@ -47,9 +47,8 @@ If you want to setup a development environment, use ``poetry`` instead:
     $ git clone https://github.com/supermanny81/ciscosupportsdk.git
     $ cd ciscosupportsdk/
 
-    $ # Install dependencies and hooks
+    $ # Install dependencies
     $ poetry install
-    $ poetry run pre-commit install
 
 
 Examples
