@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ciscosupportsdk"
-version = "0.1.1"
+version = "0.2.1"
 description = "Cisco Support APIs allow Cisco Partner Support Services (PSS) partners and Cisco Smart Net Total Care (SNTC) customers to programmatically access and consume Cisco Support data in the cloud in a simple, secure, and scalable manner."
 authors = ["Manny Garcia <supermanny@icloud.com>"]
 license = "MIT"

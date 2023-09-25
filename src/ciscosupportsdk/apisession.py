@@ -7,8 +7,8 @@ from ciscosupportsdk.models.common import ApiResponse, CamelCaseApi
 
 ResponseType = TypeVar("ResponseType", bound=ApiResponse)
 
-OAUTH2_URL = "https://cloudsso.cisco.com/as/token.oauth2"
-BASE_URL = "https://api.cisco.com"
+OAUTH2_URL = "https://id.cisco.com/oauth2/default/v1/token"
+BASE_URL = "https://apix.cisco.com"
 
 
 class ApiError(Exception):
@@ -33,6 +33,7 @@ class ApiSession(object):
         self.token = self.client.fetch_token(
             OAUTH2_URL, grant_type="client_credentials"
         )
+        print(self.token)
 
     def _check_token(self):
         if self.client.token.is_expired:
