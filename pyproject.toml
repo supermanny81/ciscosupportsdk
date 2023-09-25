@@ -13,7 +13,7 @@ include = ["LICENSE.txt"]
 [tool.poetry.dependencies]
 python = "^3.9"
 requests = "^2.27.1"
-Authlib = "^0.15.5"
+Authlib = "^1.2.1"
 pydantic = "^1.9.0"
 
 [tool.poetry.dev-dependencies]
@@ -26,7 +26,7 @@ Sphinx = "^4.4.0"
 sphinx-autobuild = "^2021.3.14"
 flake8 = "^4.0.1"
 bandit = "^1.7.3"
-safety = "^1.10.3"
+safety = "^2.3.5"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
