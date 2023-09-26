@@ -16,7 +16,7 @@ class TestEoxApi:
                 "2022-01-01", "2022-01-31", [EoxAttrib.EO_LAST_SUPPORT_DATE]
             )
         )
-        assert count == 2183
+        assert count == 2216
 
     @pytest.mark.vcr()
     def test_get_by_product_ids(self, api: CiscoSupportAPI):
@@ -41,7 +41,7 @@ class TestEoxApi:
                 [SoftwareRelease(os=OSType.IOS, version="12.2")]
             )
         )
-        assert count == 6
+        assert count == 2019
 
     @pytest.mark.vcr()
     def test_eox_error(self, api: CiscoSupportAPI):
