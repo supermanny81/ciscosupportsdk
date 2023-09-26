@@ -15,33 +15,82 @@ interactions:
       Content-Type:
       - application/x-www-form-urlencoded;charset=UTF-8
       User-Agent:
-      - python-requests/2.27.1
+      - python-requests/2.31.0
     method: POST
-    uri: https://cloudsso.cisco.com/as/token.oauth2
+    uri: https://id.cisco.com/oauth2/default/v1/token
   response:
     body:
-      string: '{"access_token":"YHpdHBqRUuMdnbaJgZxsW6MIZmNG","token_type":"Bearer","expires_in":3599}'
+      string: '{"token_type":"Bearer","expires_in":3600,"access_token":"eyJraWQiOiJUV3lfd0piZUhMUjJrb1NZQWZpTnZPeGptWExPM3NKNTdBTUk0UGEySzRRIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULko4TnhnRlZHN1NUOEloSUV3RTlBNkVVME9MbktXT1dCUDBPTG91ZDE4UjgiLCJpc3MiOiJodHRwczovL2lkLmNpc2NvLmNvbS9vYXV0aDIvZGVmYXVsdCIsImF1ZCI6ImFwaTovL2RlZmF1bHQiLCJpYXQiOjE2OTU2OTYwNjgsImV4cCI6MTY5NTY5OTY2OCwiY2lkIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIiwic2NwIjpbImN1c3RvbXNjb3BlIl0sImFjY2Vzc19sZXZlbCI6MSwic3ViIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIiwiZnVsbF9uYW1lIjoibnVsbCBudWxsIiwiYXpwIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIn0.lboaElTG3j-W1KOmQpASWXBZNxO7lOxwuqsARe5y6KW3JeBq5ahT-zuEWNzNXLlGY2SfIWbm3p6zxcHvJ-FVatoUGL9DYdJYqaheWVrSGDBjXnCd8nNHqPjgKMboYaNKESdgFmiKCmIq58aJ-VUTNqgCe6O3XyUFJtTt2gbDQW76l6aqDBVCLL9OLDKXps_OXKAIUC9MSSJdCf5ZqFL-7nFPRHLRgJqeCzsJ_D6BWuFhEP8LULDoqCSb4WGoS6SWMZ8G8wC_VFXbVgvquTU04ccmLbBuunSuMY0MWOqnOwphT2n40sTMb6t0WO2S3UKXpVc9NnMl-jcAmZh_QczOOw","scope":"customscope"}'
     headers:
-      Access-Control-Allow-Origin:
-      - '*'
       Cache-Control:
-      - no-cache, no-store
+      - max-age=0, no-cache, no-store
       Connection:
-      - Keep-Alive
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '703'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
       Content-Type:
-      - application/json;charset=utf-8
+      - application/json
       Date:
-      - Thu, 10 Feb 2022 01:59:46 GMT
+      - Tue, 26 Sep 2023 02:41:08 GMT
       Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Keep-Alive:
-      - timeout=2, max=955
+      - Tue, 26 Sep 2023 02:41:08 GMT
       Pragma:
       - no-cache
+      Server:
+      - nginx
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=25
+      - origin; dur=119
+      - ak_p; desc="1695696068422_386656188_70049842_14447_7160_83_133_-";dur=1
       Set-Cookie:
-      - PF=XFId1HXPAVa6hRj5nmC6CR;Path=/;Secure;HttpOnly;SameSite=None
-      Transfer-Encoding:
-      - chunked
+      - sid="";Version=1;Path=/;Max-Age=0
+      - autolaunch_triggered=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      - JSESSIONID=DBBD0C323DBB8DC399A90430E4F9FF5C; Path=/; Secure; HttpOnly
+      - _abck=9164F21EF80DAE881818C9CA7F20EE29~-1~YAAQvOcLF+Ac18qKAQAAaKBczwq2FjYB1KHbMiyzXqzZhktTpJebB020ZJSoLK7Yfjls09u3UdM9QuZHD6q4oeAwiC0yQBk2mvcpt2Cx25XT8Jt8v2xbiRagBjORrbyYvaKIMH4dw8lvDK3G0gx8ASEUnRGzMU85E9mgDNPG2WOH++CNAGpV11J7fNpkQD9vumJ/n6XhEdDRPd3lodJUAdhk23CXdAypWMDoDF++XUj7xBmRMFCOeN98UQ9xXaBYrXqzPF7BCKp6FtxgSRLU9og8td9825Su3rkKDGG9PExblssMjHhhF4NelI3se9ksRKYPGeiNpzBuq7ERjmt1rdjs9HASybn3vI383ObS4nj4Bc1PVMO0Nw==~-1~-1~-1;
+        Domain=.cisco.com; Path=/; Expires=Wed, 25 Sep 2024 02:41:08 GMT; Max-Age=31536000;
+        Secure
+      - bm_sz=9CD30C39030972B27426C287496E0D36~YAAQvOcLF+Ec18qKAQAAaKBczxWqM9q8jGHn7waAs3HoP7BNa/c7jBH7EEARkD6qmLO6rj5u05OJbP6F8VRdNvX8TVdmtO5hbSjyGkWCvj7W7lIR0X/b6Gzn8LpBzh6pVDpd6OVBQnkWpcip/PXtjGvQGtfBelrgWRWD3eFGY0nP4IA0gUeO6392Di9NlLwNe1RHO/apwMoGe0yX8nUTEiMz6hpVq8KJNDh9iDKt2yZcVtGSDBKpfOUF6Z7zNR0SHu6oShf102fwkQNkV1akvxmowwnseRqagZZ6/5SVEvMt0w==~3223601~3163445;
+        Domain=.cisco.com; Path=/; Expires=Tue, 26 Sep 2023 06:41:08 GMT; Max-Age=14400
+      Strict-Transport-Security:
+      - max-age=315360000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Robots-Tag:
+      - noindex,nofollow
+      content-security-policy-report-only:
+      - 'default-src ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; connect-src
+        ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com *.oktacdn.com
+        *.mixpanel.com *.mapbox.com app.pendo.io data.pendo.io pendo-static-5634101834153984.storage.googleapis.com
+        pendo-static-5391521872216064.storage.googleapis.com *.mtls.okta.com ciscoid.kerberos.okta.com
+        https://oinmanager.okta.com data:; script-src ''unsafe-inline'' ''unsafe-eval''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; style-src ''unsafe-inline''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com app.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com;
+        frame-src ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com login.okta.com
+        api-dbbfec7f.duosecurity.com; img-src ''self'' ciscoid.okta.com id.cisco.com
+        *.oktacdn.com *.tiles.mapbox.com *.mapbox.com app.pendo.io data.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com
+        data: blob:; font-src ''self'' ciscoid.okta.com id.cisco.com data: *.oktacdn.com
+        fonts.gstatic.com; frame-ancestors ''self'''
+      p3p:
+      - CP="HONK"
+      x-content-type-options:
+      - nosniff
+      x-okta-request-id:
+      - ZRJExH5WeqhPsgy5MAoxZAAAAzQ
+      x-rate-limit-limit:
+      - '60000'
+      x-rate-limit-remaining:
+      - '59280'
+      x-rate-limit-reset:
+      - '1695696100'
+      x-xss-protection:
+      - '0'
     status:
       code: 200
       message: OK
@@ -61,33 +110,82 @@ interactions:
       Content-Type:
       - application/x-www-form-urlencoded;charset=UTF-8
       Cookie:
-      - PF=XFId1HXPAVa6hRj5nmC6CR
+      - _abck=9164F21EF80DAE881818C9CA7F20EE29~-1~YAAQvOcLF+Ac18qKAQAAaKBczwq2FjYB1KHbMiyzXqzZhktTpJebB020ZJSoLK7Yfjls09u3UdM9QuZHD6q4oeAwiC0yQBk2mvcpt2Cx25XT8Jt8v2xbiRagBjORrbyYvaKIMH4dw8lvDK3G0gx8ASEUnRGzMU85E9mgDNPG2WOH++CNAGpV11J7fNpkQD9vumJ/n6XhEdDRPd3lodJUAdhk23CXdAypWMDoDF++XUj7xBmRMFCOeN98UQ9xXaBYrXqzPF7BCKp6FtxgSRLU9og8td9825Su3rkKDGG9PExblssMjHhhF4NelI3se9ksRKYPGeiNpzBuq7ERjmt1rdjs9HASybn3vI383ObS4nj4Bc1PVMO0Nw==~-1~-1~-1;
+        bm_sz=9CD30C39030972B27426C287496E0D36~YAAQvOcLF+Ec18qKAQAAaKBczxWqM9q8jGHn7waAs3HoP7BNa/c7jBH7EEARkD6qmLO6rj5u05OJbP6F8VRdNvX8TVdmtO5hbSjyGkWCvj7W7lIR0X/b6Gzn8LpBzh6pVDpd6OVBQnkWpcip/PXtjGvQGtfBelrgWRWD3eFGY0nP4IA0gUeO6392Di9NlLwNe1RHO/apwMoGe0yX8nUTEiMz6hpVq8KJNDh9iDKt2yZcVtGSDBKpfOUF6Z7zNR0SHu6oShf102fwkQNkV1akvxmowwnseRqagZZ6/5SVEvMt0w==~3223601~3163445;
+        JSESSIONID=DBBD0C323DBB8DC399A90430E4F9FF5C
       User-Agent:
-      - python-requests/2.27.1
+      - python-requests/2.31.0
     method: POST
-    uri: https://cloudsso.cisco.com/as/token.oauth2
+    uri: https://id.cisco.com/oauth2/default/v1/token
   response:
     body:
-      string: '{"access_token":"79g2GCQOdGzLB48hb2ifCpQcmXbw","token_type":"Bearer","expires_in":3599}'
+      string: '{"token_type":"Bearer","expires_in":3600,"access_token":"eyJraWQiOiJUV3lfd0piZUhMUjJrb1NZQWZpTnZPeGptWExPM3NKNTdBTUk0UGEySzRRIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULm9YZTlZb0RNcEMwMG91NUIzYUJFcmlzUURUeTNRUUFpV0lENVk5d2F6UGsiLCJpc3MiOiJodHRwczovL2lkLmNpc2NvLmNvbS9vYXV0aDIvZGVmYXVsdCIsImF1ZCI6ImFwaTovL2RlZmF1bHQiLCJpYXQiOjE2OTU2OTYwNjksImV4cCI6MTY5NTY5OTY2OSwiY2lkIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIiwic2NwIjpbImN1c3RvbXNjb3BlIl0sImFjY2Vzc19sZXZlbCI6MSwic3ViIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIiwiZnVsbF9uYW1lIjoibnVsbCBudWxsIiwiYXpwIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIn0.izlveXI5-dX_MqZ1x9GLIU20c3EjYru_GrwI1VMl-YClB0Dib_3njX33VbsV3-G_gTEyCI74UAAb3k-Yd0qoQPDBcHxeiQ7hKVfGLX7SfqayNHSeoUEytwy900GcEsEOzgAmLINGco1BFQYgsfPrt5E1eScPcGtfX2pSiE27WAUC1aq8rQdexa_RQv5YHht3qYPzKR3kssdLd2y0FpTQJ714DCSlvcSp0Pa3uZalQzQe3zb8O1w0brS3949ZJcSo5mIHJgctiDD68btfBxJZp7I6-QW8I-eOuL-BFbymLTFsDNyGXHwgxCJpKbTucwV6WeERd8jStHRL0ChV2xWF7A","scope":"customscope"}'
     headers:
-      Access-Control-Allow-Origin:
-      - '*'
       Cache-Control:
-      - no-cache, no-store
+      - max-age=0, no-cache, no-store
       Connection:
-      - Keep-Alive
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '703'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
       Content-Type:
-      - application/json;charset=utf-8
+      - application/json
       Date:
-      - Thu, 10 Feb 2022 01:59:47 GMT
+      - Tue, 26 Sep 2023 02:41:09 GMT
       Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Keep-Alive:
-      - timeout=2, max=996
+      - Tue, 26 Sep 2023 02:41:09 GMT
       Pragma:
       - no-cache
-      Transfer-Encoding:
-      - chunked
+      Server:
+      - nginx
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=23
+      - origin; dur=128
+      - ak_p; desc="1695696068907_386656188_70052286_15121_10947_83_145_-";dur=1
+      Set-Cookie:
+      - sid="";Version=1;Path=/;Max-Age=0
+      - autolaunch_triggered=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      - JSESSIONID=711BA435C6CFA076A37C1EC7B4FD3765; Path=/; Secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=315360000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Robots-Tag:
+      - noindex,nofollow
+      content-security-policy-report-only:
+      - 'default-src ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; connect-src
+        ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com *.oktacdn.com
+        *.mixpanel.com *.mapbox.com app.pendo.io data.pendo.io pendo-static-5634101834153984.storage.googleapis.com
+        pendo-static-5391521872216064.storage.googleapis.com *.mtls.okta.com ciscoid.kerberos.okta.com
+        https://oinmanager.okta.com data:; script-src ''unsafe-inline'' ''unsafe-eval''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; style-src ''unsafe-inline''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com app.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com;
+        frame-src ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com login.okta.com
+        api-dbbfec7f.duosecurity.com; img-src ''self'' ciscoid.okta.com id.cisco.com
+        *.oktacdn.com *.tiles.mapbox.com *.mapbox.com app.pendo.io data.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com
+        data: blob:; font-src ''self'' ciscoid.okta.com id.cisco.com data: *.oktacdn.com
+        fonts.gstatic.com; frame-ancestors ''self''; report-uri https://oktacsp.report-uri.com/r/t/csp/reportOnly;
+        report-to csp'
+      p3p:
+      - CP="HONK"
+      x-content-type-options:
+      - nosniff
+      x-okta-request-id:
+      - ZRJExQOIMONearavduHK7gAACgE
+      x-rate-limit-limit:
+      - '60000'
+      x-rate-limit-remaining:
+      - '59200'
+      x-rate-limit-reset:
+      - '1695696100'
+      x-xss-protection:
+      - '0'
     status:
       code: 200
       message: OK
@@ -102,46 +200,65 @@ interactions:
       - DUMMY
       Connection:
       - keep-alive
+      Cookie:
+      - _abck=9164F21EF80DAE881818C9CA7F20EE29~-1~YAAQvOcLF+Ac18qKAQAAaKBczwq2FjYB1KHbMiyzXqzZhktTpJebB020ZJSoLK7Yfjls09u3UdM9QuZHD6q4oeAwiC0yQBk2mvcpt2Cx25XT8Jt8v2xbiRagBjORrbyYvaKIMH4dw8lvDK3G0gx8ASEUnRGzMU85E9mgDNPG2WOH++CNAGpV11J7fNpkQD9vumJ/n6XhEdDRPd3lodJUAdhk23CXdAypWMDoDF++XUj7xBmRMFCOeN98UQ9xXaBYrXqzPF7BCKp6FtxgSRLU9og8td9825Su3rkKDGG9PExblssMjHhhF4NelI3se9ksRKYPGeiNpzBuq7ERjmt1rdjs9HASybn3vI383ObS4nj4Bc1PVMO0Nw==~-1~-1~-1;
+        bm_sz=9CD30C39030972B27426C287496E0D36~YAAQvOcLF+Ec18qKAQAAaKBczxWqM9q8jGHn7waAs3HoP7BNa/c7jBH7EEARkD6qmLO6rj5u05OJbP6F8VRdNvX8TVdmtO5hbSjyGkWCvj7W7lIR0X/b6Gzn8LpBzh6pVDpd6OVBQnkWpcip/PXtjGvQGtfBelrgWRWD3eFGY0nP4IA0gUeO6392Di9NlLwNe1RHO/apwMoGe0yX8nUTEiMz6hpVq8KJNDh9iDKt2yZcVtGSDBKpfOUF6Z7zNR0SHu6oShf102fwkQNkV1akvxmowwnseRqagZZ6/5SVEvMt0w==~3223601~3163445
       User-Agent:
-      - python-requests/2.27.1
+      - python-requests/2.31.0
     method: GET
-    uri: https://api.cisco.com/bug/v2.0/bugs/keyword/IOS%20SSH%20PKI?page_index=1
+    uri: https://apix.cisco.com/bug/v2.0/bugs/keyword/IOS%20SSH%20PKI?page_index=1
   response:
     body:
-      string: '{"bugs":[{"id":"1","bug_id":"CSCvx27079","headline":"CMX in Non-FIPS
-        mode cannot connect to the controller in FIPS mode. Certificate Validation
-        Error.","description":"<B>Symptom:</B>\nCMX performs two operations when adding
-        a 9800 controller:\n1) It opens an SSH session to the 9800 controller to configure
-        AAA parameters required for NMSP session\n2) It opens a NMSP session to the
-        9800 controller to communicate location-related info.\n\nWhen CMX is in non-FIPS
-        mode, it sends any arbitrary self-signed certificate to 9800 controller for
-        the NMSP session, which if 9800 controller is in FIPS mode, it will require
-        to validate CMX''s certificate. During the NMSP SSL handshake negotiation,
-        if we perform ''debug crypto pki validation'', ''debug crypto pki callbacks''
-        and ''debug crypto pki api'', the following logs can be seen:\n\nIt is worth
-        noting that SSH session is established without any issue, but NMSP session
-        fails due to certificate validation error.\n\nFeb  3 18:23:59.538 CET: %SEC_LOGIN-5-LOGIN_SUCCESS:
-        Login Success [user: lab] [Source: 10.1.1.10] [localport: 22] at 18:23:59
-        CET Wed Feb 3 2021\nFeb  3 18:24:00.283 CET: %DMI-5-SYNC_START: Chassis 1
-        R0/0: syncfd: External change to running configuration detected. The running
-        configuration will be synchronized to the NETCONF running data store.\nFeb  3
-        18:24:00.591 CET: %SYS-5-CONFIG_I: Configured from console by lab on vty0
-        (10.1.1.10)\nFeb  3 18:24:00.637 CET: %SYS-6-LOGOUT: User lab has exited tty
-        session 1(10.1.1.10)\nFeb  3 18:24:02.828 CET: %DMI-5-SYNC_COMPLETE: Chassis
-        1 R0/0: syncfd: The running configuration has been synchronized to the NETCONF
-        running data store.\nFeb  3 18:24:13.931 CET: CRYPTO_PKI: (A001B) Adding peer
-        certificate\nFeb  3 18:24:13.931 CET: CRYPTO_PKI: ip-ext-val: IP extension
-        validation not required\nFeb  3 18:24:13.931 CET: CRYPTO_PKI: (A001B) Check
-        for identical certs\nFeb  3 18:24:13.931 CET: CRYPTO_PKI: looking for cert
-        in handle=7FCEBCF58F68, digest=\n 31 40 8D DA E4 19 F0 7C 13 13 9D 37 75 FA
-        ED 36\n\nFeb  3 18:24:13.932 CET: CRYPTO_PKI: Cert record not found, returning
-        E_NOT_FOUND\nFeb  3 18:24:13.933 CET: CRYPTO_PKI : (A001B) Validating non-trusted
-        cert\nFeb  3 18:24:13.933 CET: CRYPTO_PKI: (A001B) Create a list of suitable
-        trustpoints\nFeb  3 18:24:13.933 CET: CRYPTO_PKI: crypto_pki_get_cert_record_by_issuer()\nFeb  3
-        18:24:13.933 CET: CRYPTO_PKI: crypto_pki_get_cert_record_by_subject()\nFeb  3
-        18:24:13.933 CET: CRYPTO_PKI: (A001B) No suitable trustpoints found\nFeb  3
-        18:24:13.934 CET: %CERT_MGR_ERRMSG-3-CERT_VALIDATION_ERR: Chassis 1 R0/0:
-        nmspd: Certificate Validation Error, Cert validation status:pki_ssl_status@pki_ssl_status:PKI_SSL_ERROR\nFeb  3
+      string: '{"bugs":[{"id":"1","bug_id":"CSCvt43974","headline":"Serviceability
+        improvement: Netconf SSH - fatal libcrypto error when SSH to netconf port","description":"<B>Symptom:</B>\nWhen
+        attempting to connect to a IOS-XE device through netconf port (default 830),
+        you will receive the following error:\n\nssh_dispatch_run_fatal: Connection
+        to IP_ADDRESS port 830: error in libcrypto\n\n<B>Conditions:</B>\nIOS-XE 16.X/17.1-2\n\n<B>Workaround:</B>\nDelete
+        self signed certificate off of IOS-XE device using\n\nno crypto pki trustpoint
+        TP-Selfsigned-x where x is found using\n\nshow crypto pki trustpoints and
+        copying the name of the self signed certificate\n\nRegenerate the self signed
+        certificate using the following document:\n\nhttps://www.cisco.com/c/en/us/support/docs/security-vpn/public-key-infrastructure-pki/215118-ios-self-signed-certificate-expiration-o.html#anc9\n\nContact
+        Cisco TAC only if the above workaround does not work.\n\n<B>Further Problem
+        Description:</B>\n","severity":"2","status":"F","behavior_changed":"false","last_modified_date":"2023-09-10","product":"ewlc","known_affected_releases":"17.3.1","known_fixed_releases":"17.10.1
+        17.10.1a 17.10.1b 17.3.1 17.3.1a 17.3.1w 17.3.1x 17.3.1z 17.3.2 17.3.2a 17.3.3
+        17.3.3a 17.3.4 17.3.4a 17.3.4b 17.3.4c 17.3.5 17.3.5a 17.3.5b 17.3.6 17.4.1
+        17.4.1a 17.4.1b 17.4.1c 17.4.2 17.4.2a 17.5.1 17.5.1a 17.5.1b 17.6.1 17.6.1a
+        17.6.1w 17.6.1x 17.6.1y 17.6.1z 17.6.1z1 17.6.2 17.6.3 17.6.3a 17.6.4 17.6.5
+        17.7.1 17.7.1a 17.7.1b 17.7.2 17.8.1 17.8.1a 17.9.1 17.9.1a 17.9.1w 17.9.1x
+        17.9.1x1 17.9.2 17.9.2a 17.9.3","support_case_count":"106"},{"id":"2","bug_id":"CSCvx27079","headline":"CMX
+        in Non-FIPS mode cannot connect to the controller in FIPS mode. Certificate
+        Validation Error.","description":"<B>Symptom:</B>\nCMX performs two operations
+        when adding a 9800 controller:\n1) It opens an SSH session to the 9800 controller
+        to configure AAA parameters required for NMSP session\n2) It opens a NMSP
+        session to the 9800 controller to communicate location-related info.\n\nWhen
+        CMX is in non-FIPS mode, it sends any arbitrary self-signed certificate to
+        9800 controller for the NMSP session, which if 9800 controller is in FIPS
+        mode, it will require to validate CMX''s certificate. During the NMSP SSL
+        handshake negotiation, if we perform ''debug crypto pki validation'', ''debug
+        crypto pki callbacks'' and ''debug crypto pki api'', the following logs can
+        be seen:\n\nIt is worth noting that SSH session is established without any
+        issue, but NMSP session fails due to certificate validation error.\n\nFeb  3
+        18:23:59.538 CET: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: lab] [Source:
+        10.1.1.10] [localport: 22] at 18:23:59 CET Wed Feb 3 2021\nFeb  3 18:24:00.283
+        CET: %DMI-5-SYNC_START: Chassis 1 R0/0: syncfd: External change to running
+        configuration detected. The running configuration will be synchronized to
+        the NETCONF running data store.\nFeb  3 18:24:00.591 CET: %SYS-5-CONFIG_I:
+        Configured from console by lab on vty0 (10.1.1.10)\nFeb  3 18:24:00.637 CET:
+        %SYS-6-LOGOUT: User lab has exited tty session 1(10.1.1.10)\nFeb  3 18:24:02.828
+        CET: %DMI-5-SYNC_COMPLETE: Chassis 1 R0/0: syncfd: The running configuration
+        has been synchronized to the NETCONF running data store.\nFeb  3 18:24:13.931
+        CET: CRYPTO_PKI: (A001B) Adding peer certificate\nFeb  3 18:24:13.931 CET:
+        CRYPTO_PKI: ip-ext-val: IP extension validation not required\nFeb  3 18:24:13.931
+        CET: CRYPTO_PKI: (A001B) Check for identical certs\nFeb  3 18:24:13.931 CET:
+        CRYPTO_PKI: looking for cert in handle=7FCEBCF58F68, digest=\n 31 40 8D DA
+        E4 19 F0 7C 13 13 9D 37 75 FA ED 36\n\nFeb  3 18:24:13.932 CET: CRYPTO_PKI:
+        Cert record not found, returning E_NOT_FOUND\nFeb  3 18:24:13.933 CET: CRYPTO_PKI
+        : (A001B) Validating non-trusted cert\nFeb  3 18:24:13.933 CET: CRYPTO_PKI:
+        (A001B) Create a list of suitable trustpoints\nFeb  3 18:24:13.933 CET: CRYPTO_PKI:
+        crypto_pki_get_cert_record_by_issuer()\nFeb  3 18:24:13.933 CET: CRYPTO_PKI:
+        crypto_pki_get_cert_record_by_subject()\nFeb  3 18:24:13.933 CET: CRYPTO_PKI:
+        (A001B) No suitable trustpoints found\nFeb  3 18:24:13.934 CET: %CERT_MGR_ERRMSG-3-CERT_VALIDATION_ERR:
+        Chassis 1 R0/0: nmspd: Certificate Validation Error, Cert validation status:pki_ssl_status@pki_ssl_status:PKI_SSL_ERROR\nFeb  3
         18:24:13.935 CET: %NMSP_SYSLOG-3-NMSP_SSL_ERROR_DISCONNECT: Chassis 1 R0/0:
         nmspd: nmspd TLS disconnection: [TLS local: 10.1.1.1, remote: 10.1.1.10] SSL
         accept failed with SSL error (code: 1, error:1417C086:SSL routines:tls_process_client_certificate:certificate
@@ -164,25 +281,13 @@ interactions:
         %SSH-3-RSA_SIGN_FAIL: Signature connection failed, status 9\nFeb  3 19:01:23.295
         CET: %SSH-3-RSA_SIGN_FAIL: Signature creation failed, status 23\n\nIn this
         case, SSH connection is the one that fails, and NMSP is not even called.  For
-        this particular case, fix is to be addressed on CMX side.\n","severity":"2","status":"F","behavior_changed":"false","last_modified_date":"2022-02-09","product":"ewlc","known_affected_releases":"16.12
-        17.3.2a","known_fixed_releases":"16.12(5.2) 16.12.6 16.12.6a 16.12.7 17.3(2.15)
-        17.3.3 17.3.4 17.3.4a 17.3.4c 17.6(0.38) 17.6.1 17.6.1a 17.6.1x 17.6.2 17.7.1
-        17.7.1a Bengaluru-17.6.1 Gibraltar-16.12.6","support_case_count":"0"},{"id":"2","bug_id":"CSCvz68895","headline":"The
-        device crashed after adding  trustpoint","description":"<B>Symptom:</B>\nThe
-        device crashed after adding a trustpoint on the device:\n\nThe following lines
-        should be seen on the crashinfo file generated by the problem:\n\nCMD: ''no
-        crypto pki trustpoint TEST2'' 16:47:54 BRT Tue Aug 24 2021\nCMD: ''do sh run''
-        16:47:58 BRT Tue Aug 24 2021\nCMD: ''sh run'' 16:47:58 BRT Tue Aug 24 2021\nCMD:
-        ''crypto pki trustpoint TEST'' 16:48:27 BRT Tue Aug 24 2021\n475001: Aug 24
-        16:48:27.752: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: TEST created succesfully\nCMD:
-        '' revocation-check crl'' 16:48:28 BRT Tue Aug 24 2021\n\n  475008: Aug 24
-        16:49:21.862: %PKI-3-HOSTNAME_RESOLVE_ERR: Failed to resolve HOSTNAME/IPADDRESS
-        : \n475009: Aug 24 16:49:21.862: %PKI-3-CRL_FETCH_FAIL: CRL fetch for trustpoint  failed\n                      Reason
-        : Failed to fetch IP address\n\n               \n\nException to IOS Thread:\nFrame
-        pointer 0x7FF88871B6D0, PC = 0x564D1BDA84D2\n\nUNIX-EXT-SIGNAL: Segmentation
-        fault(11), Process = SSH Process\n\n<B>Conditions:</B>\nThe device crashed
-        after adding a trustpoint on the device.\n\n<B>Workaround:</B>\nNA\n\n<B>Further
-        Problem Description:</B>\n","severity":"6","status":"O","behavior_changed":"","last_modified_date":"2022-02-09","product":"all_security_iosxe","known_affected_releases":"17.3.3","known_fixed_releases":"","support_case_count":"1"},{"id":"3","bug_id":"CSCvw41482","headline":"SSH
+        this particular case, fix is to be addressed on CMX side.\n","severity":"2","status":"F","behavior_changed":"false","last_modified_date":"2023-09-08","product":"ewlc","known_affected_releases":"17.3.2a","known_fixed_releases":"16.12.10
+        16.12.6 16.12.6a 16.12.7 16.12.8 16.12.9 17.10.1 17.10.1a 17.10.1b 17.11.1
+        17.11.1a 17.12.1 17.12.1a 17.3.3 17.3.3a 17.3.4 17.3.4a 17.3.4b 17.3.4c 17.3.5
+        17.3.5a 17.3.5b 17.3.6 17.3.7 17.6.1 17.6.1a 17.6.1w 17.6.1x 17.6.1y 17.6.1z
+        17.6.1z1 17.6.2 17.6.3 17.6.3a 17.6.4 17.6.5 17.7.1 17.7.1a 17.7.1b 17.7.2
+        17.8.1 17.8.1a 17.9.1 17.9.1a 17.9.1w 17.9.1x 17.9.1x1 17.9.1y 17.9.1y1 17.9.2
+        17.9.2a 17.9.3 17.9.3a 17.9.4","support_case_count":"0"},{"id":"3","bug_id":"CSCvw41482","headline":"SSH
         with Certificate authentication doesn''t work after upgrade to 17.3.1","description":"<B>Symptom:</B>\nSSH
         session is being rejected with reason: Login Authentication Failed\n\nThe
         following debugs are being generated:\nOct  5 17:35:06.074 CDT: SSH2 0: Starting
@@ -201,72 +306,25 @@ interactions:
         ID}] [Source: 10.100.10.10] [localport: 22] [Reason: Login Authentication
         Failed] at 17:35:07 CDT Mon Oct 5 2020\n\n<B>Conditions:</B>\nSSH with certificate
         authentication is configured\nIOS-XE was upgraded to 17.3.x\n\n<B>Workaround:</B>\nDowngrade
-        to IOS-XE 16.12.x\n\n<B>Further Problem Description:</B>\n","severity":"3","status":"F","behavior_changed":"false","last_modified_date":"2022-02-09","product":"all_pi_infra_iosxe","known_affected_releases":"17.3.1
-        17.3.1a 17.3.2","known_fixed_releases":"16.12.7 17.3(2.4) 17.3.3 17.3.4 17.3.4a
-        17.3.4b 17.3.4c 17.4(1.3) 17.4.1 17.4.1a 17.4.1b 17.4.2 17.5(0.86) 17.5.1
-        17.5.1a 17.6.1 17.6.1a 17.6.1w 17.6.1x 17.6.2 17.7.1 17.7.1a Bengaluru-17.4.1
-        Bengaluru-17.4.2 Bengaluru-17.5.1","support_case_count":"3"},{"id":"4","bug_id":"CSCvt43974","headline":"Netconf
-        SSH - fatal libcrypto error when SSH to netconf port","description":"<B>Symptom:</B>\nWhen
-        attempting to connect to a IOS-XE device through netconf port (default 830),
-        you will receive the following error:\n\nssh_dispatch_run_fatal: Connection
-        to IP_ADDRESS port 830: error in libcrypto\n\n<B>Conditions:</B>\nIOS-XE 16.X/17.1-2\n\n<B>Workaround:</B>\nDelete
-        self signed certificate off of IOS-XE device using\n\nno crypto pki trustpoint
-        TP-Selfsigned-x where x is found using\n\nshow crypto pki trustpoints and
-        copying the name of the self signed certificate\n\nRegenerate the self signed
-        certificate using the following document:\n\nhttps://www.cisco.com/c/en/us/support/docs/security-vpn/public-key-infrastructure-pki/215118-ios-self-signed-certificate-expiration-o.html#anc9\n\nContact
-        Cisco TAC only if the above workaround does not work.\n\n<B>Further Problem
-        Description:</B>\n","severity":"2","status":"F","behavior_changed":"false","last_modified_date":"2022-02-09","product":"ewlc","known_affected_releases":"17.3.1","known_fixed_releases":"17.3(0.134)
-        17.3.1 17.3.1a 17.3.1w 17.3.1x 17.3.2 17.3.2a 17.3.3 17.3.4 17.3.4a 17.3.4c
-        17.4.1 17.4.1a 17.4.1b 17.4.2 17.5.1 17.5.1a 17.6.1 17.6.1a 17.6.1x 17.6.2
-        17.7.1 17.7.1a Amsterdam-17.3.1","support_case_count":"36"},{"id":"5","bug_id":"CSCvx69752","headline":"SSH
-        connection fails from cisco ssh client when certs imported with ssh server
-        pki configs","description":"$$PREFCS\n\nwhen ssh server config with pki related
-        configs\n\n<B>Symptom:</B>\nSSH conneciton fails\n\n<B>Conditions:</B>\nssh
-        server trustpoint host host\nssh server trustpoint user user\nssh server trustpoint
-        user devca\nssh server trustpoint user user3\nssh server trustpoint user user4\nssh
-        server trustpoint user user5\nssh server trustpoint user user6\nssh server
-        trustpoint user user7\nssh server trustpoint user user8\nssh server trustpoint
-        user user9\nssh server trustpoint user venkat\nssh server certificate username
-        common-name user-principle-name\n\nwith below imported certs in the router\nRP/0/RP0/CPU0:BB#show  crypto
-        ca certificates host\nTue Mar 16 15:48:36.543 IST\n\nTrustpoint       : host\n==================================================\nCA
-        certificate \n  Serial Number  : E0:18:F3:E4:53:17:3E:28\n  Subject:\n        emailAddress=gopalak@cisco.com,CN=gopalak,OU=CSG,O=Cisco,L=Bangalore,ST=Karnataka,C=IN\n  Issued
-        By      :\n        emailAddress=gopalak@cisco.com,CN=gopalak,OU=CSG,O=Cisco,L=Bangalore,ST=Karnataka,C=IN\n  Validity
-        Start : 08:17:32 UTC Fri Jun 24 2016\n  Validity End   : 08:17:32 UTC Mon
-        Jun 22 2026\n  SHA1 Fingerprint:\n         894ABBFAA3B08E5B7D9E470ECFBBC04576B569F2
-        \nRouter certificate\n  Key usage      : General Purpose \n  Status         :
-        Available \n  Serial Number  : 22:97\n  Subject:\n        CN=server@cisco.com,OU=CSGBU,ST=KA,C=IN\n  Issued
-        By      :\n        emailAddress=gopalak@cisco.com,CN=gopalak,OU=CSG,O=Cisco,L=Bangalore,ST=Karnataka,C=IN\n  Validity
-        Start : 07:28:55 UTC Fri Mar 05 2021\n  Validity End   : 07:28:55 UTC Sat
-        Mar 05 2022\n  SHA1 Fingerprint:\n         4932134DFF05E8AC8B6CB240E301FBD3E9C4EE00
-        \nAssociated Trustpoint: host \nRP/0/RP0/CPU0:BB#\n\n<B>Workaround:</B>\nremove
-        SSH PKI configs\n\n<B>Further Problem Description:</B>\nSSH connection fails
-        from cisco ssh client when certs imported with ssh server pki configs\n","severity":"3","status":"F","behavior_changed":"false","last_modified_date":"2022-02-07","product":"all","known_affected_releases":"","known_fixed_releases":"6.8.1
-        7.3.2 7.3.25 7.3.26 7.3.3 7.4.1 7.5.1","support_case_count":"0"},{"id":"6","bug_id":"CSCvw98710","headline":"SSH
-        PKI Stress:Memleaks on locald_DLRSC during Password and PKI auth session longevity","description":"$$PREFCS\n\nRelease-note\n\n<B>Symptom:</B>\n\n<B>Conditions:</B>\n\n<B>Workaround:</B>\n\n<B>Further
-        Problem Description:</B>\n","severity":"3","status":"F","behavior_changed":"false","last_modified_date":"2022-02-07","product":"all","known_affected_releases":"","known_fixed_releases":"6.8.1
-        7.3.1 7.3.2 7.3.25 7.3.26 7.3.3 7.4.1 7.5.1","support_case_count":"0"},{"id":"7","bug_id":"CSCvv31271","headline":"SSH
-        PKI: CLI and Netconf config issues for ssh server host key algorithms","description":"$$PREFCS\n\nRelease-note\n\n<B>Symptom:</B>\n\n<B>Conditions:</B>\n\n<B>Workaround:</B>\n\n<B>Further
-        Problem Description:</B>\n","severity":"3","status":"F","behavior_changed":"false","last_modified_date":"2022-02-07","product":"all","known_affected_releases":"","known_fixed_releases":"6.8.1
-        7.3.0 7.3.1 7.3.15 7.3.2 7.3.25 7.3.26 7.3.3 7.4.1 7.5.1","support_case_count":"0"},{"id":"8","bug_id":"CSCvv30122","headline":"SSH
-        PKI: x509v3 session fails with certificate having Extended Key Usage extension","description":"$$PREFCS\n\nRelease-note\n\n<B>Symptom:</B>\n\n<B>Conditions:</B>\n\n<B>Workaround:</B>\n\n<B>Further
-        Problem Description:</B>\n","severity":"3","status":"F","behavior_changed":"false","last_modified_date":"2022-02-07","product":"all","known_affected_releases":"","known_fixed_releases":"6.8.1
-        7.3.0 7.3.1 7.3.15 7.3.2 7.3.25 7.3.26 7.3.3 7.4.1 7.5.1","support_case_count":"0"},{"id":"9","bug_id":"CSCvv30206","headline":"SSH
-        PKI: x509v3 session setup fails with Subject Alternative name (UPN)","description":"$$PREFCS\n\nRelease-note\n\n<B>Symptom:</B>\n\n<B>Conditions:</B>\n\n<B>Workaround:</B>\n\n<B>Further
-        Problem Description:</B>\n","severity":"2","status":"F","behavior_changed":"false","last_modified_date":"2022-02-07","product":"all","known_affected_releases":"","known_fixed_releases":"","support_case_count":"0"},{"id":"10","bug_id":"CSCvv28226","headline":"SSH
-        PKI: Not to negotiate x509v3-ssh-rsa hostkey in FIPS mode","description":"$$PREFCS\n\nRelease-note\n\n<B>Symptom:</B>\n\n<B>Conditions:</B>\n\n<B>Workaround:</B>\n\n<B>Further
-        Problem Description:</B>\n","severity":"3","status":"F","behavior_changed":"true","last_modified_date":"2022-02-07","product":"all","known_affected_releases":"","known_fixed_releases":"7.3.0
-        7.3.1 7.3.15","support_case_count":"0"}],"pagination_response_record":{"last_index":2,"page_index":1,"page_records":10,"self_link":"https://api.cisco.com/bug/v2.0/bugs/keyword/IOS
+        to IOS-XE 16.12.x\n\n<B>Further Problem Description:</B>\n","severity":"3","status":"F","behavior_changed":"false","last_modified_date":"2023-09-08","product":"all_pi_infra_iosxe","known_affected_releases":"17.3.1
+        17.3.1a 17.3.2","known_fixed_releases":"16.12.10 16.12.7 16.12.8 16.12.9 17.05.01c
+        17.10.1 17.10.1a 17.10.1b 17.11.1 17.11.1a 17.12.1 17.12.1a 17.3.3 17.3.3a
+        17.3.4 17.3.4a 17.3.4b 17.3.4c 17.3.5 17.3.5a 17.3.5b 17.3.6 17.3.7 17.4.1
+        17.4.1a 17.4.1b 17.4.1c 17.4.2 17.4.2a 17.5.1 17.5.1a 17.5.1b 17.5.1c 17.6.1
+        17.6.1a 17.6.1w 17.6.1x 17.6.1y 17.6.1z 17.6.1z1 17.6.2 17.6.3 17.6.3a 17.6.4
+        17.6.5 17.7.1 17.7.1a 17.7.1b 17.7.2 17.8.1 17.8.1a 17.9.1 17.9.1a 17.9.1w
+        17.9.1x 17.9.1x1 17.9.1y 17.9.1y1 17.9.2 17.9.2a 17.9.3 17.9.3a 17.9.4","support_case_count":"3"}],"pagination_response_record":{"last_index":1,"page_index":1,"page_records":3,"self_link":"https://api.cisco.com/bug/v2.0/bugs/keyword/IOS
         SSH PKI?page_index=1&modified_date=2&sort_by=modified_date","title":"Bug API
-        - Search Bugs by Keyword","total_records":11}}'
+        - Search Bugs by Keyword","total_records":3}}'
     headers:
       Cache-Control:
       - private
       Date:
-      - Thu, 10 Feb 2022 01:59:47 GMT
+      - Tue, 26 Sep 2023 02:41:10 GMT
       Transfer-Encoding:
       - chunked
       X-Mashery-Message-ID:
-      - a274b86b-ca78-4b12-9066-1a4f79175796
+      - 219c2dab-a26a-424e-8e5e-9c3cf4cec94a
       access-control-allow-credentials:
       - 'true'
       access-control-allow-headers:
@@ -276,124 +334,17 @@ interactions:
       - GET, POST, PUT, DELETE, PATCH, OPTIONS
       content-type:
       - application/json;charset=UTF-8
-      server:
-      - Apache-Coyote/1.1
       set-cookie:
-      - 2e3b7c7c3322598b3ab8148ccdebc7c8=ccab14508f51dca65622a34f5e2e7003; path=/;
-        HttpOnly; Secure
+      - 2e3b7c7c3322598b3ab8148ccdebc7c8=044566682bb90d006f4eea80e615f583; path=/;
+        HttpOnly; Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload;
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-observed:
+      - '77'
       x-rp-ssl-name:
-      - cae-prd-alln-prt-ext-kube-rp-1.cisco.com
-    status:
-      code: 200
-      message: OK
-- request:
-    body: grant_type=client_credentials
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - DUMMY
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '29'
-      Content-Type:
-      - application/x-www-form-urlencoded;charset=UTF-8
-      Cookie:
-      - PF=XFId1HXPAVa6hRj5nmC6CR
-      User-Agent:
-      - python-requests/2.27.1
-    method: POST
-    uri: https://cloudsso.cisco.com/as/token.oauth2
-  response:
-    body:
-      string: '{"access_token":"wDOA2jeUgphe7WPHxpvzyimKzsrn","token_type":"Bearer","expires_in":3599}'
-    headers:
-      Access-Control-Allow-Origin:
-      - '*'
-      Cache-Control:
-      - no-cache, no-store
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json;charset=utf-8
-      Date:
-      - Thu, 10 Feb 2022 01:59:48 GMT
-      Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Keep-Alive:
-      - timeout=2, max=986
-      Pragma:
-      - no-cache
-      Transfer-Encoding:
-      - chunked
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - DUMMY
-      Connection:
-      - keep-alive
-      Cookie:
-      - 2e3b7c7c3322598b3ab8148ccdebc7c8=ccab14508f51dca65622a34f5e2e7003
-      User-Agent:
-      - python-requests/2.27.1
-    method: GET
-    uri: https://api.cisco.com/bug/v2.0/bugs/keyword/IOS%20SSH%20PKI?page_index=2
-  response:
-    body:
-      string: '{"bugs":[{"id":"11","bug_id":"CSCvx28898","headline":"SUDI certificate
-        expiration may impact functionality","description":"<B>Symptom:</B>\nCisco
-        Secure Unique Device Identifier (SUDI) certificates on a limited number Cisco
-        platforms running IOS or IOS XE (see the Products Affected section) will expire
-        either on [Date of Manufacture + 10 Years] OR 2029-05-14, whichever is earlier.
-        \nThe expiration of the SUDI cert may impact router functionalities that may
-        be configured to use the SUDI certificate such as HTTP, SSH, PnP\n\n<B>Conditions:</B>\nWhen
-        SUDI certificate expires.\n\n<B>Workaround:</B>\nInstall a Local Device ID
-        Cert (LDevID) by using SCEP or manually applying it and then using the new
-        certificate for the features that were previously using SUDI cert.\n\n<B>Further
-        Problem Description:</B>\nNone\n","severity":"6","status":"","behavior_changed":"","last_modified_date":"2022-01-24","product":"all_security_iosxe","known_affected_releases":"15.3(02.14)PI23
-        17.4.1","known_fixed_releases":"","support_case_count":"0"}],"pagination_response_record":{"last_index":2,"page_index":2,"page_records":1,"self_link":"https://api.cisco.com/bug/v2.0/bugs/keyword/IOS
-        SSH PKI?page_index=2&modified_date=2&sort_by=modified_date","title":"Bug API
-        - Search Bugs by Keyword","total_records":11}}'
-    headers:
-      Cache-Control:
-      - private
-      Date:
-      - Thu, 10 Feb 2022 01:59:49 GMT
-      Transfer-Encoding:
-      - chunked
-      X-Mashery-Message-ID:
-      - 98d11035-555b-4ef9-931e-014569aba64f
-      access-control-allow-credentials:
-      - 'true'
-      access-control-allow-headers:
-      - Content-type, fromPartyID, inputFormat, outputFormat, Authorization, Content-Length,
-        Accept, Origin
-      access-control-allow-methods:
-      - GET, POST, PUT, DELETE, PATCH, OPTIONS
-      content-type:
-      - application/json;charset=UTF-8
-      server:
-      - Apache-Coyote/1.1
-      set-cookie:
-      - 2e3b7c7c3322598b3ab8148ccdebc7c8=ccab14508f51dca65622a34f5e2e7003; path=/;
-        HttpOnly; Secure
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains; preload;
-      x-rp-ssl-name:
-      - cae-prd-alln-prt-ext-kube-rp-1.cisco.com
+      - prd-alln-101-8zrsp-dedicated0-ext-kube-rp-1b-64m89
     status:
       code: 200
       message: OK

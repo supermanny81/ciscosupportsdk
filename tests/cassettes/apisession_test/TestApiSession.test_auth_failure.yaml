@@ -15,35 +15,157 @@ interactions:
       Content-Type:
       - application/x-www-form-urlencoded;charset=UTF-8
       User-Agent:
-      - python-requests/2.27.1
+      - python-requests/2.31.0
     method: POST
-    uri: https://cloudsso.cisco.com/as/token.oauth2
+    uri: https://id.cisco.com/oauth2/default/v1/token
   response:
     body:
-      string: '{"error_description":"Invalid client or client credentials.","error":"invalid_client"}'
+      string: '{"errorCode":"invalid_client","errorSummary":"Invalid value for ''client_id''
+        parameter.","errorLink":"invalid_client","errorId":"oaekdN_2leeRci6MjoT0B52Jw","errorCauses":[]}'
     headers:
-      Access-Control-Allow-Origin:
-      - '*'
       Cache-Control:
-      - no-cache, no-store
+      - max-age=0, no-cache, no-store
       Connection:
-      - Keep-Alive
+      - close
+      Content-Length:
+      - '172'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
       Content-Type:
-      - application/json;charset=utf-8
+      - application/json
       Date:
-      - Thu, 10 Feb 2022 01:59:39 GMT
+      - Tue, 26 Sep 2023 02:52:08 GMT
       Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Keep-Alive:
-      - timeout=2, max=990
+      - Tue, 26 Sep 2023 02:52:08 GMT
       Pragma:
       - no-cache
+      Server:
+      - nginx
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=31
+      - origin; dur=88
+      - ak_p; desc="1695696728511_386656188_71629218_11933_7479_82_120_-";dur=1
       Set-Cookie:
-      - PF=DnHQKkRegwOU66U4ckVrQ4;Path=/;Secure;HttpOnly;SameSite=None
-      Transfer-Encoding:
-      - chunked
+      - sid="";Version=1;Path=/;Max-Age=0
+      - autolaunch_triggered=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      - _abck=0B31FF57327D96EDC6D5694BFDE4F020~-1~YAAQvOcLF/g718qKAQAAt7Jmzwr01mjXAffbgmqcVl62Gz4W5b5SAIWTaV6whOEGYuSygaYvvocDrp64Mj7tavsJR1QvfcVQjW/uUp2XG5W0Kt7AaPNpB5X+PjXs2JzCnrEzJfzJB1qcCGPNfTErtf9VqQm6Jxu9cwcEeHNgO7QZChnVtqdhKSZbwmBU0yZk0UHx927/NOSPiLFyOiscvGfkqKAyn6e7rEojpi1njvipPaIwzyPA3Wa2JvvzfXEKv+eVh+gO8XsGWrisP89mAlNGVvFfLWzR1GFtqewgPPR0mlhlRSTgUMVo6ju9FMWwjRXwSxECEsxGaKNH+GnKtpXfATA3/qr3jdHpiNY3/5TjcIE62B3arQ==~-1~-1~-1;
+        Domain=.cisco.com; Path=/; Expires=Wed, 25 Sep 2024 02:52:08 GMT; Max-Age=31536000;
+        Secure
+      - bm_sz=767A5B8C9A59071A15B346BDAA0D6116~YAAQvOcLF/k718qKAQAAt7JmzxUMpmY5StXcgO5VbuAKUFKiDTvAvj+yk79slqRom2jBJk6H4LqwIh1helHIpxw6YNX4K+AfDOuD7K35ewmah/0yMLzSTTkfnupOxRhaJhrJgcM1nZfoW0G80fUTNyesCyu0xhHAEAN1H7AAKsLvogWdqhirCxNHRiftxQwUZRLm5yzic1Rj1vadi6vZLofmZieFOjgPBioAjHthFSjwJGL9x4v9T8iINUX4wKBvyKjvxivKwvUCYO9hPC8+aUjEkOBHJfQj/E69BLn4irJ8eg==~4403507~3748674;
+        Domain=.cisco.com; Path=/; Expires=Tue, 26 Sep 2023 06:52:08 GMT; Max-Age=14400
+      Strict-Transport-Security:
+      - max-age=315360000; includeSubDomains
       WWW-Authenticate:
-      - basic realm="PF AS Token Endpoints"
+      - Basic
+      content-security-policy-report-only:
+      - 'default-src ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; connect-src
+        ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com *.oktacdn.com
+        *.mixpanel.com *.mapbox.com app.pendo.io data.pendo.io pendo-static-5634101834153984.storage.googleapis.com
+        pendo-static-5391521872216064.storage.googleapis.com *.mtls.okta.com ciscoid.kerberos.okta.com
+        https://oinmanager.okta.com data:; script-src ''unsafe-inline'' ''unsafe-eval''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; style-src ''unsafe-inline''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com app.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com;
+        frame-src ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com login.okta.com
+        api-dbbfec7f.duosecurity.com; img-src ''self'' ciscoid.okta.com id.cisco.com
+        *.oktacdn.com *.tiles.mapbox.com *.mapbox.com app.pendo.io data.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com
+        data: blob:; font-src ''self'' ciscoid.okta.com id.cisco.com data: *.oktacdn.com
+        fonts.gstatic.com; frame-ancestors ''self'''
+      p3p:
+      - CP="HONK"
+      x-content-type-options:
+      - nosniff
+      x-okta-request-id:
+      - ZRJHWGuXAGlGJ36aLKPUWAAAANg
+      x-xss-protection:
+      - '0'
+    status:
+      code: 401
+      message: Unauthorized
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - DUMMY
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      User-Agent:
+      - python-requests/2.31.0
+    method: POST
+    uri: https://id.cisco.com/oauth2/default/v1/token
+  response:
+    body:
+      string: '{"errorCode":"invalid_client","errorSummary":"Invalid value for ''client_id''
+        parameter.","errorLink":"invalid_client","errorId":"oaeSti_1O76TYCFJ79PKCqcTw","errorCauses":[]}'
+    headers:
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Connection:
+      - close
+      Content-Length:
+      - '172'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 26 Sep 2023 02:52:09 GMT
+      Expires:
+      - Tue, 26 Sep 2023 02:52:09 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=57
+      - origin; dur=76
+      - ak_p; desc="1695696728911_386656188_71630151_13264_6991_77_160_-";dur=1
+      Set-Cookie:
+      - sid="";Version=1;Path=/;Max-Age=0
+      - autolaunch_triggered=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      - _abck=27BE9603BAB068D7807345896618E552~-1~YAAQvOcLF/8718qKAQAAfLRmzwpxDvIC0HBOpNuD+RVV5DeeV0IW1UD3PK41pO2RFzraYR3qER4BOQo8gjf3Issl/jT3UkdG/55GhHz0euUprQ+9lPTNKW+4f1mgbujYnjW896zpvxz1+7YlX9rG1rejp7Iv9056d2rOxCkq8JL4dOonioRKCD51umMUEr3hfsJutyT/KazQPW+XJx11i2lIi5fdJjp9BZZlNhz4JcKGHS4Stma0TeJJWX5QixG5FNSQok0aaufqGU0OY6kntVe5sW8DLw1EFuF/FoT0am9ZJfKCdV1Tc27WBZulHJ38jAFu9UKDNLLKtrhYD8fFqZGaNMSgImx4GEYr3w+BYc1KLp4dhUPOaw==~-1~-1~-1;
+        Domain=.cisco.com; Path=/; Expires=Wed, 25 Sep 2024 02:52:09 GMT; Max-Age=31536000;
+        Secure
+      - bm_sz=70E040343FBC37A2D8811EEA23F2A3B0~YAAQvOcLFwA818qKAQAAfLRmzxWJJVhb7h/gIXfBguTlyrxN7B+JzG7e64BErR2whNFIBoC9o0/PO//hirf21HygtHjnbF1Gotq8dwM+wGKy9JIM8ilJQX7wUqt1RiM2JmmSN6b4dROb+U/+nFbTz7QIGxAilCWl4JXFaBUfuj7KoScJtsR3lKUl39TMOIg5dhQfI+dSyfKtXdHBWngTkK7HKhwL5K49GrbyD8kwvclUU/VSoFFzZGOHIM7F/HJ7PEGGqhDJa8T4hkoFvebUQerwAmqZvjTbPl8bs3yl5rhXgA==~3619138~3289392;
+        Domain=.cisco.com; Path=/; Expires=Tue, 26 Sep 2023 06:52:09 GMT; Max-Age=14400
+      Strict-Transport-Security:
+      - max-age=315360000; includeSubDomains
+      WWW-Authenticate:
+      - Basic
+      content-security-policy-report-only:
+      - 'default-src ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; connect-src
+        ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com *.oktacdn.com
+        *.mixpanel.com *.mapbox.com app.pendo.io data.pendo.io pendo-static-5634101834153984.storage.googleapis.com
+        pendo-static-5391521872216064.storage.googleapis.com *.mtls.okta.com ciscoid.kerberos.okta.com
+        https://oinmanager.okta.com data:; script-src ''unsafe-inline'' ''unsafe-eval''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; style-src ''unsafe-inline''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com app.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com;
+        frame-src ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com login.okta.com
+        api-dbbfec7f.duosecurity.com; img-src ''self'' ciscoid.okta.com id.cisco.com
+        *.oktacdn.com *.tiles.mapbox.com *.mapbox.com app.pendo.io data.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com
+        data: blob:; font-src ''self'' ciscoid.okta.com id.cisco.com data: *.oktacdn.com
+        fonts.gstatic.com; frame-ancestors ''self'''
+      p3p:
+      - CP="HONK"
+      x-content-type-options:
+      - nosniff
+      x-okta-request-id:
+      - ZRJHWVm-sg6CbM-l5DYX-wAADQY
+      x-xss-protection:
+      - '0'
     status:
       code: 401
       message: Unauthorized

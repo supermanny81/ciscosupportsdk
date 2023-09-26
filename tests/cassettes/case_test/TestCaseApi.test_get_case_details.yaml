@@ -15,33 +15,82 @@ interactions:
       Content-Type:
       - application/x-www-form-urlencoded;charset=UTF-8
       User-Agent:
-      - python-requests/2.27.1
+      - python-requests/2.31.0
     method: POST
-    uri: https://cloudsso.cisco.com/as/token.oauth2
+    uri: https://id.cisco.com/oauth2/default/v1/token
   response:
     body:
-      string: '{"access_token":"18rLKAF5KaDiVBk2JRwWuyVD141S","token_type":"Bearer","expires_in":3599}'
+      string: '{"token_type":"Bearer","expires_in":3600,"access_token":"eyJraWQiOiJUV3lfd0piZUhMUjJrb1NZQWZpTnZPeGptWExPM3NKNTdBTUk0UGEySzRRIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULmJTMkxuNEphVEhBZXIyQlctYU5NbW55OVhETF9sbXh3TWlLRS1GdnBORjQiLCJpc3MiOiJodHRwczovL2lkLmNpc2NvLmNvbS9vYXV0aDIvZGVmYXVsdCIsImF1ZCI6ImFwaTovL2RlZmF1bHQiLCJpYXQiOjE2OTU2OTYxMzksImV4cCI6MTY5NTY5OTczOSwiY2lkIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIiwic2NwIjpbImN1c3RvbXNjb3BlIl0sImFjY2Vzc19sZXZlbCI6MSwic3ViIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIiwiZnVsbF9uYW1lIjoibnVsbCBudWxsIiwiYXpwIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIn0.JbrRIyKo4PpbJnCRG47tu669Zjdc1feyaMbIGAyKKMk1WxAtFEs3cPeZNOcqyKfEE-XdzyI8j1EYdnwBN3B8CoMh3cOld2GE4WagSs_raCv3S_-UBa0-ZUl9kK6h0fbgQ7nE9k5EFkjjaWP5-WXI2r2Kc4ALCNMVsWyin3wZyiWJZsrYuTpvNaFr6rp_tlQ-zyIpAQMbuCwRfYppO4nLl_5lr-W9_NzMUXW85k_G5cQHkJCfIpVcKjygkMUftPH7R5MpOyP__kewWdcnyOlaooBN8TWHeJ06wHJqYzCsmJRumhaV-MG-DkSIo_hhMS2o-OdCuPa4kkjbW0MVrwGdWw","scope":"customscope"}'
     headers:
-      Access-Control-Allow-Origin:
-      - '*'
       Cache-Control:
-      - no-cache, no-store
+      - max-age=0, no-cache, no-store
       Connection:
-      - Keep-Alive
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '700'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
       Content-Type:
-      - application/json;charset=utf-8
+      - application/json
       Date:
-      - Thu, 10 Feb 2022 02:01:01 GMT
+      - Tue, 26 Sep 2023 02:42:19 GMT
       Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Keep-Alive:
-      - timeout=2, max=997
+      - Tue, 26 Sep 2023 02:42:19 GMT
       Pragma:
       - no-cache
+      Server:
+      - nginx
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=15
+      - origin; dur=133
+      - ak_p; desc="1695696138900_1752730244_130049302_14840_9213_83_154_-";dur=1
       Set-Cookie:
-      - PF=d3ibbBcH8mocIzWKVBT3FC;Path=/;Secure;HttpOnly;SameSite=None
-      Transfer-Encoding:
-      - chunked
+      - sid="";Version=1;Path=/;Max-Age=0
+      - autolaunch_triggered=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      - JSESSIONID=5505CE55B78E37FDB671750CA76811EC; Path=/; Secure; HttpOnly
+      - _abck=448970B0E7E05D92DF255EF7E9AC23B9~-1~YAAQhIp4aNaWRMqKAQAA0rNdzwrgS7kT0uFjDmuERXs81MEOUrizNiLrbcTSRVL7gTa4BD+yq1ZxucaiFk2zfVEqmAXnXMlwNo/vDLDKy+XNKnJoIuFOriFR2WP+W0LThmb4D6C1dhGfuDkJcQEITS7Ygmpe+1TxvbhHhZ8LSgONJaAckcvKAczdthGlzjtKzwP5uQ7L0/gSI/swF8RrvN/OjkI3blSk0j+8vG07nH2CiTecsFLcHd02qOv0owFY+0z4mw05HjyZl/qhneJy0ETfirvpoH9YJsKbVRFfPuXn3Zlfs6Qai7Qjjg3Eiw50yj8qMjBSWNQAaVsLO0C0U0EknplhPHsK5B9FNktjHwNRQdMxp4EH7g==~-1~-1~-1;
+        Domain=.cisco.com; Path=/; Expires=Wed, 25 Sep 2024 02:42:19 GMT; Max-Age=31536000;
+        Secure
+      - bm_sz=61F84159CF0030CD7E8156EA64C2B249~YAAQhIp4aNeWRMqKAQAA0rNdzxWCN7+jwJ6qODi+hWdVqf8Zmz/XnEWcLhnew/bj3UtbqIJzn4+X0l2czDqJVcX8fOAGIDhWWMxs2Sn/CF6vLiDct3ZGKtpNbWytTwTeZIoKs77YRzmAxJkGR20Nd6LD7AhRHTq6ECjR2TWvEmLIs1tYb/Hg/bZ4GKPn0eTqO/Ox85rYUslCKRO+TwpM0s33vNROoLXAXCR7/OMDA5LbVs4Aegj/9usIAbgtt9DYS2r5x55jEcBveR1h72mg8lT0C/ign1WcyL29UyF+PFcr7Q==~4470328~3223874;
+        Domain=.cisco.com; Path=/; Expires=Tue, 26 Sep 2023 06:42:19 GMT; Max-Age=14400
+      Strict-Transport-Security:
+      - max-age=315360000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Robots-Tag:
+      - noindex,nofollow
+      content-security-policy-report-only:
+      - 'default-src ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; connect-src
+        ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com *.oktacdn.com
+        *.mixpanel.com *.mapbox.com app.pendo.io data.pendo.io pendo-static-5634101834153984.storage.googleapis.com
+        pendo-static-5391521872216064.storage.googleapis.com *.mtls.okta.com ciscoid.kerberos.okta.com
+        https://oinmanager.okta.com data:; script-src ''unsafe-inline'' ''unsafe-eval''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; style-src ''unsafe-inline''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com app.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com;
+        frame-src ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com login.okta.com
+        api-dbbfec7f.duosecurity.com; img-src ''self'' ciscoid.okta.com id.cisco.com
+        *.oktacdn.com *.tiles.mapbox.com *.mapbox.com app.pendo.io data.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com
+        data: blob:; font-src ''self'' ciscoid.okta.com id.cisco.com data: *.oktacdn.com
+        fonts.gstatic.com; frame-ancestors ''self'''
+      p3p:
+      - CP="HONK"
+      x-content-type-options:
+      - nosniff
+      x-okta-request-id:
+      - ZRJFCx4gQnyXqTl8urqL0QAACnM
+      x-rate-limit-limit:
+      - '60000'
+      x-rate-limit-remaining:
+      - '58082'
+      x-rate-limit-reset:
+      - '1695696160'
+      x-xss-protection:
+      - '0'
     status:
       code: 200
       message: OK
@@ -61,33 +110,81 @@ interactions:
       Content-Type:
       - application/x-www-form-urlencoded;charset=UTF-8
       Cookie:
-      - PF=d3ibbBcH8mocIzWKVBT3FC
+      - _abck=448970B0E7E05D92DF255EF7E9AC23B9~-1~YAAQhIp4aNaWRMqKAQAA0rNdzwrgS7kT0uFjDmuERXs81MEOUrizNiLrbcTSRVL7gTa4BD+yq1ZxucaiFk2zfVEqmAXnXMlwNo/vDLDKy+XNKnJoIuFOriFR2WP+W0LThmb4D6C1dhGfuDkJcQEITS7Ygmpe+1TxvbhHhZ8LSgONJaAckcvKAczdthGlzjtKzwP5uQ7L0/gSI/swF8RrvN/OjkI3blSk0j+8vG07nH2CiTecsFLcHd02qOv0owFY+0z4mw05HjyZl/qhneJy0ETfirvpoH9YJsKbVRFfPuXn3Zlfs6Qai7Qjjg3Eiw50yj8qMjBSWNQAaVsLO0C0U0EknplhPHsK5B9FNktjHwNRQdMxp4EH7g==~-1~-1~-1;
+        bm_sz=61F84159CF0030CD7E8156EA64C2B249~YAAQhIp4aNeWRMqKAQAA0rNdzxWCN7+jwJ6qODi+hWdVqf8Zmz/XnEWcLhnew/bj3UtbqIJzn4+X0l2czDqJVcX8fOAGIDhWWMxs2Sn/CF6vLiDct3ZGKtpNbWytTwTeZIoKs77YRzmAxJkGR20Nd6LD7AhRHTq6ECjR2TWvEmLIs1tYb/Hg/bZ4GKPn0eTqO/Ox85rYUslCKRO+TwpM0s33vNROoLXAXCR7/OMDA5LbVs4Aegj/9usIAbgtt9DYS2r5x55jEcBveR1h72mg8lT0C/ign1WcyL29UyF+PFcr7Q==~4470328~3223874;
+        JSESSIONID=5505CE55B78E37FDB671750CA76811EC
       User-Agent:
-      - python-requests/2.27.1
+      - python-requests/2.31.0
     method: POST
-    uri: https://cloudsso.cisco.com/as/token.oauth2
+    uri: https://id.cisco.com/oauth2/default/v1/token
   response:
     body:
-      string: '{"access_token":"Mu26w1ZkyBAZvk61Yds4ibKgWVva","token_type":"Bearer","expires_in":3599}'
+      string: '{"token_type":"Bearer","expires_in":3600,"access_token":"eyJraWQiOiJUV3lfd0piZUhMUjJrb1NZQWZpTnZPeGptWExPM3NKNTdBTUk0UGEySzRRIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULk5wakROemYtbzE0djlGTzJTQ3VoSXdISEZWWVNaeklPMFJGaldscVVXbHMiLCJpc3MiOiJodHRwczovL2lkLmNpc2NvLmNvbS9vYXV0aDIvZGVmYXVsdCIsImF1ZCI6ImFwaTovL2RlZmF1bHQiLCJpYXQiOjE2OTU2OTYxMzksImV4cCI6MTY5NTY5OTczOSwiY2lkIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIiwic2NwIjpbImN1c3RvbXNjb3BlIl0sImFjY2Vzc19sZXZlbCI6MSwic3ViIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIiwiZnVsbF9uYW1lIjoibnVsbCBudWxsIiwiYXpwIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIn0.YpJ3p5-6T58wixQ2gZmj3XJ1ftcj-D7uQPjOJnOh3YPcnjXYycOSonAAl5pdTHZfk3kVmXE4ckPOOq87VW0NPMpYuhvKngj-3XgIAUH5LGjJ0XmM7M7VTCFWMO38itpzMacV1fT28mlT3Db7FoxfoAfoMWMbC5tjgDDE_3JWcQxjVWv9s8R3_WpHxKhk3uY45yGFP9PcNpFvyw9X8XH_EfU2xBGBJlD8cVsGnE1ZE6mky8o6feUdsoyaC6zXWPVCAQNneFhrtXUhMbsH3L3OvAgeG4VKRhzF2KlBEt5-dke-tij1QqJoZdFsZyLj249coTF4Tt9cZXPJksct1kks0Q","scope":"customscope"}'
     headers:
-      Access-Control-Allow-Origin:
-      - '*'
       Cache-Control:
-      - no-cache, no-store
+      - max-age=0, no-cache, no-store
       Connection:
-      - Keep-Alive
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '702'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
       Content-Type:
-      - application/json;charset=utf-8
+      - application/json
       Date:
-      - Thu, 10 Feb 2022 02:01:01 GMT
+      - Tue, 26 Sep 2023 02:42:19 GMT
       Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Keep-Alive:
-      - timeout=2, max=1000
+      - Tue, 26 Sep 2023 02:42:19 GMT
       Pragma:
       - no-cache
-      Transfer-Encoding:
-      - chunked
+      Server:
+      - nginx
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=46
+      - origin; dur=140
+      - ak_p; desc="1695696139395_1752730244_130050645_18560_11092_84_245_-";dur=1
+      Set-Cookie:
+      - sid="";Version=1;Path=/;Max-Age=0
+      - autolaunch_triggered=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      - JSESSIONID=048E764DA429403BBD0078B7D7B9626D; Path=/; Secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=315360000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Robots-Tag:
+      - noindex,nofollow
+      content-security-policy-report-only:
+      - 'default-src ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; connect-src
+        ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com *.oktacdn.com
+        *.mixpanel.com *.mapbox.com app.pendo.io data.pendo.io pendo-static-5634101834153984.storage.googleapis.com
+        pendo-static-5391521872216064.storage.googleapis.com *.mtls.okta.com ciscoid.kerberos.okta.com
+        https://oinmanager.okta.com data:; script-src ''unsafe-inline'' ''unsafe-eval''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; style-src ''unsafe-inline''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com app.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com;
+        frame-src ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com login.okta.com
+        api-dbbfec7f.duosecurity.com; img-src ''self'' ciscoid.okta.com id.cisco.com
+        *.oktacdn.com *.tiles.mapbox.com *.mapbox.com app.pendo.io data.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com
+        data: blob:; font-src ''self'' ciscoid.okta.com id.cisco.com data: *.oktacdn.com
+        fonts.gstatic.com; frame-ancestors ''self'''
+      p3p:
+      - CP="HONK"
+      x-content-type-options:
+      - nosniff
+      x-okta-request-id:
+      - ZRJFC7Kl7TjRCuxmuJ_a-wAAAqY
+      x-rate-limit-limit:
+      - '60000'
+      x-rate-limit-remaining:
+      - '57993'
+      x-rate-limit-reset:
+      - '1695696160'
+      x-xss-protection:
+      - '0'
     status:
       code: 200
       message: OK
@@ -102,19 +199,721 @@ interactions:
       - DUMMY
       Connection:
       - keep-alive
+      Cookie:
+      - _abck=448970B0E7E05D92DF255EF7E9AC23B9~-1~YAAQhIp4aNaWRMqKAQAA0rNdzwrgS7kT0uFjDmuERXs81MEOUrizNiLrbcTSRVL7gTa4BD+yq1ZxucaiFk2zfVEqmAXnXMlwNo/vDLDKy+XNKnJoIuFOriFR2WP+W0LThmb4D6C1dhGfuDkJcQEITS7Ygmpe+1TxvbhHhZ8LSgONJaAckcvKAczdthGlzjtKzwP5uQ7L0/gSI/swF8RrvN/OjkI3blSk0j+8vG07nH2CiTecsFLcHd02qOv0owFY+0z4mw05HjyZl/qhneJy0ETfirvpoH9YJsKbVRFfPuXn3Zlfs6Qai7Qjjg3Eiw50yj8qMjBSWNQAaVsLO0C0U0EknplhPHsK5B9FNktjHwNRQdMxp4EH7g==~-1~-1~-1;
+        bm_sz=61F84159CF0030CD7E8156EA64C2B249~YAAQhIp4aNeWRMqKAQAA0rNdzxWCN7+jwJ6qODi+hWdVqf8Zmz/XnEWcLhnew/bj3UtbqIJzn4+X0l2czDqJVcX8fOAGIDhWWMxs2Sn/CF6vLiDct3ZGKtpNbWytTwTeZIoKs77YRzmAxJkGR20Nd6LD7AhRHTq6ECjR2TWvEmLIs1tYb/Hg/bZ4GKPn0eTqO/Ox85rYUslCKRO+TwpM0s33vNROoLXAXCR7/OMDA5LbVs4Aegj/9usIAbgtt9DYS2r5x55jEcBveR1h72mg8lT0C/ign1WcyL29UyF+PFcr7Q==~4470328~3223874
       User-Agent:
-      - python-requests/2.27.1
+      - python-requests/2.31.0
     method: GET
-    uri: https://api.cisco.com/case/v3/cases/details/case_id/692277140
+    uri: https://apix.cisco.com/case/v3/cases/details/case_id/692277140
   response:
     body:
       string: "{\"caseDetail\":{\"user_id\":\"mcamando\",\"case_id\":\"692277140\",\"title\":\"rtp
         campus (rtp10-cd-dtbb-gw1) and others - Not able to respond to RS from a supplicant
-        device in IPv6 - Mostly noticed on MAC\",\"severity\":\"3\",\"status\":\"Cisco
-        Pending\",\"creation_date\":\"2021-09-30T14:46:09.000Z\",\"updated_date\":\"2022-02-07T16:05:24.000Z\",\"serial_number\":\"CAT2241L55B\",\"contract_id\":\"203371074\",\"contact_user_id\":\"mcamando\",\"preferred_contact_method\":\"Email\",\"contact_email_ids\":[\"mcamando@cisco.com\"],\"contact_business_phone_numbers\":[\"+19193923334\"],\"contact_mobile_phone_numbers\":[],\"owner_name\":\"Sheldon
-        Mooney\",\"owner_email\":\"shmooney@cisco.com\",\"close_date\":\"\",\"technology_name\":\"LAN
+        device in IPv6 - Mostly noticed on MAC\",\"severity\":\"3\",\"status\":\"Closed\",\"creation_date\":\"2021-09-30T14:46:09.000Z\",\"updated_date\":\"2022-03-03T15:54:45.000Z\",\"serial_number\":\"CAT2241L55B\",\"contract_id\":\"203371074\",\"contact_user_id\":\"mcamando\",\"preferred_contact_method\":\"Email\",\"contact_email_ids\":[\"mcamando@cisco.com\"],\"contact_business_phone_numbers\":[\"+19193923334\"],\"contact_mobile_phone_numbers\":[],\"owner_name\":\"Sheldon
+        Mooney\",\"owner_email\":\"shmooney@cisco.com\",\"close_date\":\"2022-03-03T15:54:39.000Z\",\"technology_name\":\"LAN
         Switching\",\"sub_technology_name\":\"Cat9500\",\"tracking_number\":\"\",\"problem_code_name\":\"Configuration
-        Assistance\",\"request_type\":\"Diagnose and Fix my Problem\",\"rmas\":[],\"bugs\":[],\"notes\":[{\"note\":\"\",\"note_detail\":\"Topology\\n\\n
+        Assistance\",\"request_type\":\"Diagnose and Fix my Problem\",\"rmas\":[],\"bugs\":[],\"notes\":[{\"note\":\"\",\"note_detail\":\"Closed\",\"created_by\":\"Sheldon
+        Mooney\",\"creation_date\":\"2022-03-03T15:54:45.000Z\"},{\"note\":\"\",\"note_detail\":\"<https://csone.my.salesforce.com/ui/support/servicedesk/ServiceDeskPage#/a1O6R00000AKccYUAT
+        >\\n<https://meetingnotes.cisco.com/index.html?caseId=1131499187&srId=692277140
+        >\\n \\nCollaboration Closure Reason: Case Closed\\nCollaboration Owner: shmooney\\nKey
+        Contributor: \\nParticipator: sherholm\",\"created_by\":\"Sheldon Mooney\",\"creation_date\":\"2022-03-03T15:54:42.000Z\"},{\"note\":\"\",\"note_detail\":\"Router
+        solicitation was being suppressed by RA Guard after configuring the switch
+        with the following configs we are now seeing the router solicitation messages
+        forwarding:\\n\\nconfig t\\n!\\nipv6 nd raguard policy uplink-policy\\ndevice-role
+        router\\n!\\ninterface Te5/0/1\\nipv6 nd raguard attach-policy uplink-policy\\n!\\ninterface
+        Te6/0/1\\nipv6 nd raguard attach-policy uplink-policy\\n!\\nend\\n!\\nwr\\n\\n//Reference
+        \\nCSCve80902\",\"created_by\":\"Sheldon Mooney\",\"creation_date\":\"2022-03-03T15:54:22.000Z\"},{\"note\":\"\",\"note_detail\":\"From:
+        kuwang@cisco.com\\nTo: \\\"Sheldon Mooney (shmooney)\\\" <shmooney@cisco.com>,\\\"sisf-coders(mailer
+        list)\\\" <sisf-coders@cisco.com>,\\\"email-in@cisco.com\\\" <email-in@cisco.com>,\\\"Jeremy
+        Collins (jerecoll)\\\" <jerecoll@cisco.com>\\nCc: \\nSubject: Re: 692277140
+        rtp campus (rtp10-cd-dtbb-gw1) and others\\n\\nHello Sheldon,\\r\\n\\r\\nWe\u2019re
+        glad to hear that the device-tracking issue has been clarified and you\u2019re
+        able to move forward.\\r\\nThank you very much!\\r\\n\\r\\nKuang-Yeh\\r\\n\\r\\nFrom:
+        \\\"Sheldon Mooney (shmooney)\\\" <shmooney@cisco.com>\\r\\nDate: Monday,
+        February 21, 2022 at 15:29\\r\\nTo: \\\"Kuang-Yeh Wang (kuwang)\\\" <kuwang@cisco.com>,
+        \\\"sisf-coders(mailer list)\\\" <sisf-coders@cisco.com>, \\\"email-in@cisco.com\\\"
+        <email-in@cisco.com>, \\\"Jeremy Collins (jerecoll)\\\" <jerecoll@cisco.com>\\r\\nSubject:
+        Re: 692277140 rtp campus (rtp10-cd-dtbb-gw1) and others\\r\\n\\r\\nHello Team,\\r\\n\\r\\nAfter
+        going back through my lab I had notice that I had added some padding to the
+        packet because I was worried that the packet was being dropped due to it being
+        too small, but after running the packet unaltered through my lab environment
+        we are no longer dropping due to device-tracking and I think I have been able
+        to isolate the issue to a configuration issue. Thank you for your assistance
+        with this case.\\r\\n\\r\\nThanks\\r\\n\\r\\nSheldon Mooney\\r\\n.:|:..:|:.\\r\\nGlobal
+        CX Centers \u2013 Enterprise Routing & Switching\\r\\nTechnical Consulting
+        Engineer\\r\\nEmail: shmooney@cisco.com<mailto:shmooney@cisco.com>\\r\\nOffice
+        Hours: M-F 0800-1700(8:00am -5:00pm)  EST/12PM \u2013 9PM UTC\\r\\nOffice
+        Phone: 1(919)392-0224\\r\\nCisco US Contact \u2013 1(800)553-2447\\r\\nTo
+        update your case (requires a support contract):https://tools.cisco.com/ServiceRequestTool/scm/mgmt/case\\r\\nCisco
+        Worldwide Contact: http://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html\\r\\n\\r\\nTeam
+        Leads:\\r\\nJeremy Collins: jerecoll@cisco.com\\r\\n\\r\\nDirect Manager:
+        Ryan Richon\\r\\nPhone: 919-392-3098\\r\\nEmail: rrichon@cisco.com\\r\\n\\r\\n\\r\\nFrom:
+        Kuang-Yeh Wang (kuwang) <kuwang@cisco.com>\\r\\nDate: Tuesday, February 15,
+        2022 at 5:26 PM\\r\\nTo: Sheldon Mooney (shmooney) <shmooney@cisco.com>, sisf-coders(mailer
+        list) <sisf-coders@cisco.com>, email-in@cisco.com <email-in@cisco.com>, Jeremy
+        Collins (jerecoll) <jerecoll@cisco.com>\\r\\nSubject: Re: 692277140 rtp campus
+        (rtp10-cd-dtbb-gw1) and others\\r\\nHi Sheldon,\\r\\n\\r\\nCould you please
+        specify the component of this new CDETS as \u201Caccsw-p-securefab\u201D?
+        \ We\u2019d probably add our assessment / reason why in this case packet corruption
+        likely occurs before SISF gets them.\\r\\n\\r\\nThanks a lot!\\r\\nKuang-Yeh\\r\\n\\r\\nFrom:
+        \\\"Kuang-Yeh Wang (kuwang)\\\" <kuwang@cisco.com>\\r\\nDate: Tuesday, February
+        15, 2022 at 17:14\\r\\nTo: \\\"Sheldon Mooney (shmooney)\\\" <shmooney@cisco.com>,
+        \\\"sisf-coders(mailer list)\\\" <sisf-coders@cisco.com>, \\\"email-in@cisco.com\\\"
+        <email-in@cisco.com>, \\\"Jeremy Collins (jerecoll)\\\" <jerecoll@cisco.com>\\r\\nSubject:
+        Re: 692277140 rtp campus (rtp10-cd-dtbb-gw1) and others\\r\\n\\r\\nHi Sheldon,\\r\\n\\r\\nThe
+        logs you included here say that SISF thinks the RSs are 434 bytes long, while
+        the packet captured in the pcap that you attached says the IPv6 payload is
+        8 bytes (correct).  We\u2019ll need to look further into this \u2013 but this
+        scenario appears so basic that we also have to see what\u2019s going on and
+        what\u2019s done to them before the packets are handed to SISF.\\r\\n\\r\\nCould
+        you please file a CDETS with all the relevant info?\\r\\n\\r\\nThanks a lot!\\r\\nKuang-Yeh\\r\\n\\r\\nFrom:
+        \\\"Sheldon Mooney (shmooney)\\\" <shmooney@cisco.com>\\r\\nDate: Tuesday,
+        February 15, 2022 at 16:32\\r\\nTo: \\\"sisf-coders(mailer list)\\\" <sisf-coders@cisco.com>,
+        \\\"email-in@cisco.com\\\" <email-in@cisco.com>, \\\"Jeremy Collins (jerecoll)\\\"
+        <jerecoll@cisco.com>\\r\\nSubject: Re: SR: 692277140 rtp campus (rtp10-cd-dtbb-gw1)
+        and others\\r\\n\\r\\nAttaching packet used in lab.\\r\\n\\r\\nThanks\\r\\n\\r\\nSheldon
+        Mooney\\r\\n.:|:..:|:.\\r\\nGlobal CX Centers \u2013 Enterprise Routing &
+        Switching\\r\\nTechnical Consulting Engineer\\r\\nEmail: shmooney@cisco.com<mailto:shmooney@cisco.com>\\r\\nOffice
+        Hours: M-F 0800-1700(8:00am -5:00pm)  EST/12PM \u2013 9PM UTC\\r\\nOffice
+        Phone: 1(919)392-0224\\r\\nCisco US Contact \u2013 1(800)553-2447\\r\\nTo
+        update your case (requires a support contract):https://tools.cisco.com/ServiceRequestTool/scm/mgmt/case\\r\\nCisco
+        Worldwide Contact: http://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html\\r\\n\\r\\nTeam
+        Leads:\\r\\nJeremy Collins: jerecoll@cisco.com\\r\\n\\r\\nDirect Manager:
+        Ryan Richon\\r\\nPhone: 919-392-3098\\r\\nEmail: rrichon@cisco.com\\r\\n\\r\\n\\r\\nFrom:
+        Sheldon Mooney (shmooney) <shmooney@cisco.com>\\r\\nDate: Tuesday, February
+        15, 2022 at 4:29 PM\\r\\nTo: sisf-coders(mailer list) <sisf-coders@cisco.com>,
+        email-in@cisco.com <email-in@cisco.com>, Jeremy Collins (jerecoll) <jerecoll@cisco.com>\\r\\nSubject:
+        SR: 692277140 rtp campus (rtp10-cd-dtbb-gw1) and others\\r\\nHello Team,\\r\\n\\r\\nHw:
+        Cat9410R\\r\\nSw: 16.9.6\\r\\n\\r\\nBrief problem description:\\r\\n\\r\\nCisco
+        IT reported that their ipv6 Macbook clients where not receiving an immediate
+        router advertisement upon sending their router solicitation. I was able to
+        isolate the issue to their cat9410 and seen that the packet was being punted
+        to the CPU but not forwarded. I then removed DHCP snooping and the packet
+        is now being forwarded.\\r\\n\\r\\nSteps to reproduce:\\r\\n\\r\\nI have a
+        single 9410R running 16.9.6 with 2 IXIA ports connected. One on int gig1/0/1
+        and one on gig1/0/2. I then rebuilt the router solicitation from the packet
+        capture from the customers environment and sent that out from IXIA to the
+        switch. I was even able to do this with basic configs on the switch everything
+        in VLAN 1, we can see input packets on port gig1/0/1 and output packets on
+        gig1/0/2. Enable DHCP snooping and we no longer see output packets.\\r\\n\\r\\n//Here
+        is snipped of the debugs in the broken state and I will provide a file with
+        the packet that I used in my lab\\r\\n\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320
+        Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.088:
+        SISF[PRS]: icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.088:
+        SISF[SWI]: Gi1/0/1 XOS L2 Eth: 0x86DD Packet being enqueued to sisf 0\\r\\n*Feb
+        15 20:10:49.088: SISF[SWI]: Dequeue packet\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        ICMPv6 parser selected\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Building interested
+        feature list\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Interest on target vlan
+        320\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Classifier cache hit!\\r\\n*Feb
+        15 20:10:49.089: SISF[CLA]: Interested feature:\\r\\n*Feb 15 20:10:49.089:
+        SISF[CLA]:                   Device-tracking\\r\\n*Feb 15 20:10:49.089: SISF[SWI]:
+        Gi1/0/1 vlan 320 Feature_0  Device-tracking priority 128\\r\\n*Feb 15 20:10:49.089:
+        SISF[PRS]: ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1
+        vlan 320 Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.089:
+        SISF[PRS]: ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1
+        vlan 320 Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.089:
+        SISF[GLN]: Gi1/0/1 vlan 320 ! DROP:  Malformed packet in Inspect or Guard
+        mode\\r\\n*Feb 15 20:10:49.089: SISF[GLN]: Gi1/0/1 vlan 320 Parser says drop
+        silently - reason Malformed Packet dropped in Guard mode\\r\\n*Feb 15 20:10:49.089:
+        SISF[SWI]: Gi1/0/1 vlan 320 Feature Device-tracking rc: DROP\\r\\n*Feb 15
+        20:10:49.089: SISF[SWI]: Gi1/0/1 vlan 320 Feature drop\\r\\n\\r\\nMy Ask:\\r\\n\\r\\nWhy
+        is device-tracking dropping this router solicitation? Is this Macbook sending
+        a bad router solicitation? Is this expected behavior based on the information
+        provided?\\r\\n\\r\\nThanks\\r\\n\\r\\nSheldon Mooney\\r\\n.:|:..:|:.\\r\\nGlobal
+        CX Centers \u2013 Enterprise Routing & Switching\\r\\nTechnical Consulting
+        Engineer\\r\\nEmail: shmooney@cisco.com<mailto:shmooney@cisco.com>\\r\\nOffice
+        Hours: M-F 0800-1700(8:00am -5:00pm)  EST/12PM \u2013 9PM UTC\\r\\nOffice
+        Phone: 1(919)392-0224\\r\\nCisco US Contact \u2013 1(800)553-2447\\r\\nTo
+        update your case (requires a support contract):https://tools.cisco.com/ServiceRequestTool/scm/mgmt/case\\r\\nCisco
+        Worldwide Contact: http://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html\\r\\n\\r\\nTeam
+        Leads:\\r\\nJeremy Collins: jerecoll@cisco.com\\r\\n\\r\\nDirect Manager:
+        Ryan Richon\\r\\nPhone: 919-392-3098\\r\\nEmail: rrichon@cisco.com\",\"created_by\":\"Kuang-Yeh
+        Wang\",\"creation_date\":\"2022-02-23T14:40:15.000Z\"},{\"note\":\"\",\"note_detail\":\"From:
+        shmooney@cisco.com\\nTo: \\\"Kuang-Yeh Wang (kuwang)\\\" <kuwang@cisco.com>,\\\"sisf-coders(mailer
+        list)\\\" <sisf-coders@cisco.com>,\\\"email-in@cisco.com\\\" <email-in@cisco.com>,\\\"Jeremy
+        Collins (jerecoll)\\\" <jerecoll@cisco.com>\\nCc: \\nSubject: Re: 692277140
+        rtp campus (rtp10-cd-dtbb-gw1) and others\\n\\nHello Team,\\r\\n\\r\\nAfter
+        going back through my lab I had notice that I had added some padding to the
+        packet because I was worried that the packet was being dropped due to it being
+        too small, but after running the packet unaltered through my lab environment
+        we are no longer dropping due to device-tracking and I think I have been able
+        to isolate the issue to a configuration issue. Thank you for your assistance
+        with this case.\\r\\n\\r\\nThanks\\r\\n\\r\\nSheldon Mooney\\r\\n.:|:..:|:.\\r\\nGlobal
+        CX Centers \u2013 Enterprise Routing & Switching\\r\\nTechnical Consulting
+        Engineer\\r\\nEmail: shmooney@cisco.com<mailto:shmooney@cisco.com>\\r\\nOffice
+        Hours: M-F 0800-1700(8:00am -5:00pm)  EST/12PM \u2013 9PM UTC\\r\\nOffice
+        Phone: 1(919)392-0224\\r\\nCisco US Contact \u2013 1(800)553-2447\\r\\nTo
+        update your case (requires a support contract):https://tools.cisco.com/ServiceRequestTool/scm/mgmt/case\\r\\nCisco
+        Worldwide Contact: http://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html\\r\\n\\r\\nTeam
+        Leads:\\r\\nJeremy Collins: jerecoll@cisco.com\\r\\n\\r\\nDirect Manager:
+        Ryan Richon\\r\\nPhone: 919-392-3098\\r\\nEmail: rrichon@cisco.com\\r\\n\\r\\n\\r\\nFrom:
+        Kuang-Yeh Wang (kuwang) <kuwang@cisco.com>\\r\\nDate: Tuesday, February 15,
+        2022 at 5:26 PM\\r\\nTo: Sheldon Mooney (shmooney) <shmooney@cisco.com>, sisf-coders(mailer
+        list) <sisf-coders@cisco.com>, email-in@cisco.com <email-in@cisco.com>, Jeremy
+        Collins (jerecoll) <jerecoll@cisco.com>\\r\\nSubject: Re: 692277140 rtp campus
+        (rtp10-cd-dtbb-gw1) and others\\r\\nHi Sheldon,\\r\\n\\r\\nCould you please
+        specify the component of this new CDETS as \u201Caccsw-p-securefab\u201D?
+        \ We\u2019d probably add our assessment / reason why in this case packet corruption
+        likely occurs before SISF gets them.\\r\\n\\r\\nThanks a lot!\\r\\nKuang-Yeh\\r\\n\\r\\nFrom:
+        \\\"Kuang-Yeh Wang (kuwang)\\\" <kuwang@cisco.com>\\r\\nDate: Tuesday, February
+        15, 2022 at 17:14\\r\\nTo: \\\"Sheldon Mooney (shmooney)\\\" <shmooney@cisco.com>,
+        \\\"sisf-coders(mailer list)\\\" <sisf-coders@cisco.com>, \\\"email-in@cisco.com\\\"
+        <email-in@cisco.com>, \\\"Jeremy Collins (jerecoll)\\\" <jerecoll@cisco.com>\\r\\nSubject:
+        Re: 692277140 rtp campus (rtp10-cd-dtbb-gw1) and others\\r\\n\\r\\nHi Sheldon,\\r\\n\\r\\nThe
+        logs you included here say that SISF thinks the RSs are 434 bytes long, while
+        the packet captured in the pcap that you attached says the IPv6 payload is
+        8 bytes (correct).  We\u2019ll need to look further into this \u2013 but this
+        scenario appears so basic that we also have to see what\u2019s going on and
+        what\u2019s done to them before the packets are handed to SISF.\\r\\n\\r\\nCould
+        you please file a CDETS with all the relevant info?\\r\\n\\r\\nThanks a lot!\\r\\nKuang-Yeh\\r\\n\\r\\nFrom:
+        \\\"Sheldon Mooney (shmooney)\\\" <shmooney@cisco.com>\\r\\nDate: Tuesday,
+        February 15, 2022 at 16:32\\r\\nTo: \\\"sisf-coders(mailer list)\\\" <sisf-coders@cisco.com>,
+        \\\"email-in@cisco.com\\\" <email-in@cisco.com>, \\\"Jeremy Collins (jerecoll)\\\"
+        <jerecoll@cisco.com>\\r\\nSubject: Re: SR: 692277140 rtp campus (rtp10-cd-dtbb-gw1)
+        and others\\r\\n\\r\\nAttaching packet used in lab.\\r\\n\\r\\nThanks\\r\\n\\r\\nSheldon
+        Mooney\\r\\n.:|:..:|:.\\r\\nGlobal CX Centers \u2013 Enterprise Routing &
+        Switching\\r\\nTechnical Consulting Engineer\\r\\nEmail: shmooney@cisco.com<mailto:shmooney@cisco.com>\\r\\nOffice
+        Hours: M-F 0800-1700(8:00am -5:00pm)  EST/12PM \u2013 9PM UTC\\r\\nOffice
+        Phone: 1(919)392-0224\\r\\nCisco US Contact \u2013 1(800)553-2447\\r\\nTo
+        update your case (requires a support contract):https://tools.cisco.com/ServiceRequestTool/scm/mgmt/case\\r\\nCisco
+        Worldwide Contact: http://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html\\r\\n\\r\\nTeam
+        Leads:\\r\\nJeremy Collins: jerecoll@cisco.com\\r\\n\\r\\nDirect Manager:
+        Ryan Richon\\r\\nPhone: 919-392-3098\\r\\nEmail: rrichon@cisco.com\\r\\n\\r\\n\\r\\nFrom:
+        Sheldon Mooney (shmooney) <shmooney@cisco.com>\\r\\nDate: Tuesday, February
+        15, 2022 at 4:29 PM\\r\\nTo: sisf-coders(mailer list) <sisf-coders@cisco.com>,
+        email-in@cisco.com <email-in@cisco.com>, Jeremy Collins (jerecoll) <jerecoll@cisco.com>\\r\\nSubject:
+        SR: 692277140 rtp campus (rtp10-cd-dtbb-gw1) and others\\r\\nHello Team,\\r\\n\\r\\nHw:
+        Cat9410R\\r\\nSw: 16.9.6\\r\\n\\r\\nBrief problem description:\\r\\n\\r\\nCisco
+        IT reported that their ipv6 Macbook clients where not receiving an immediate
+        router advertisement upon sending their router solicitation. I was able to
+        isolate the issue to their cat9410 and seen that the packet was being punted
+        to the CPU but not forwarded. I then removed DHCP snooping and the packet
+        is now being forwarded.\\r\\n\\r\\nSteps to reproduce:\\r\\n\\r\\nI have a
+        single 9410R running 16.9.6 with 2 IXIA ports connected. One on int gig1/0/1
+        and one on gig1/0/2. I then rebuilt the router solicitation from the packet
+        capture from the customers environment and sent that out from IXIA to the
+        switch. I was even able to do this with basic configs on the switch everything
+        in VLAN 1, we can see input packets on port gig1/0/1 and output packets on
+        gig1/0/2. Enable DHCP snooping and we no longer see output packets.\\r\\n\\r\\n//Here
+        is snipped of the debugs in the broken state and I will provide a file with
+        the packet that I used in my lab\\r\\n\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320
+        Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.088:
+        SISF[PRS]: icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.088:
+        SISF[SWI]: Gi1/0/1 XOS L2 Eth: 0x86DD Packet being enqueued to sisf 0\\r\\n*Feb
+        15 20:10:49.088: SISF[SWI]: Dequeue packet\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        ICMPv6 parser selected\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Building interested
+        feature list\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Interest on target vlan
+        320\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Classifier cache hit!\\r\\n*Feb
+        15 20:10:49.089: SISF[CLA]: Interested feature:\\r\\n*Feb 15 20:10:49.089:
+        SISF[CLA]:                   Device-tracking\\r\\n*Feb 15 20:10:49.089: SISF[SWI]:
+        Gi1/0/1 vlan 320 Feature_0  Device-tracking priority 128\\r\\n*Feb 15 20:10:49.089:
+        SISF[PRS]: ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1
+        vlan 320 Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.089:
+        SISF[PRS]: ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1
+        vlan 320 Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.089:
+        SISF[GLN]: Gi1/0/1 vlan 320 ! DROP:  Malformed packet in Inspect or Guard
+        mode\\r\\n*Feb 15 20:10:49.089: SISF[GLN]: Gi1/0/1 vlan 320 Parser says drop
+        silently - reason Malformed Packet dropped in Guard mode\\r\\n*Feb 15 20:10:49.089:
+        SISF[SWI]: Gi1/0/1 vlan 320 Feature Device-tracking rc: DROP\\r\\n*Feb 15
+        20:10:49.089: SISF[SWI]: Gi1/0/1 vlan 320 Feature drop\\r\\n\\r\\nMy Ask:\\r\\n\\r\\nWhy
+        is device-tracking dropping this router solicitation? Is this Macbook sending
+        a bad router solicitation? Is this expected behavior based on the information
+        provided?\\r\\n\\r\\nThanks\\r\\n\\r\\nSheldon Mooney\\r\\n.:|:..:|:.\\r\\nGlobal
+        CX Centers \u2013 Enterprise Routing & Switching\\r\\nTechnical Consulting
+        Engineer\\r\\nEmail: shmooney@cisco.com<mailto:shmooney@cisco.com>\\r\\nOffice
+        Hours: M-F 0800-1700(8:00am -5:00pm)  EST/12PM \u2013 9PM UTC\\r\\nOffice
+        Phone: 1(919)392-0224\\r\\nCisco US Contact \u2013 1(800)553-2447\\r\\nTo
+        update your case (requires a support contract):https://tools.cisco.com/ServiceRequestTool/scm/mgmt/case\\r\\nCisco
+        Worldwide Contact: http://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html\\r\\n\\r\\nTeam
+        Leads:\\r\\nJeremy Collins: jerecoll@cisco.com\\r\\n\\r\\nDirect Manager:
+        Ryan Richon\\r\\nPhone: 919-392-3098\\r\\nEmail: rrichon@cisco.com\",\"created_by\":\"Sheldon
+        Mooney\",\"creation_date\":\"2022-02-21T20:29:29.000Z\"},{\"note\":\"\",\"note_detail\":\"<https://csone.my.salesforce.com/ui/support/servicedesk/ServiceDeskPage#/a1O6R00000AQnfAUAT
+        >\\n<https://meetingnotes.cisco.com/index.html?caseId=1131499187&srId=692277140
+        >\\n \\nCollaboration Closure Reason: Collaborator Removed from the Case Team\\nCollaboration
+        Owner: shmooney\\nKey Contributor/Participator: tmalabek\",\"created_by\":\"Tolon
+        Malabekov\",\"creation_date\":\"2022-02-18T03:51:01.000Z\"},{\"note\":\"\",\"note_detail\":\"From:
+        kuwang@cisco.com\\nTo: \\\"Sheldon Mooney (shmooney)\\\" <shmooney@cisco.com>,\\\"sisf-coders(mailer
+        list)\\\" <sisf-coders@cisco.com>,\\\"email-in@cisco.com\\\" <email-in@cisco.com>,\\\"Jeremy
+        Collins (jerecoll)\\\" <jerecoll@cisco.com>\\nCc: \\nSubject: Re: 692277140
+        rtp campus (rtp10-cd-dtbb-gw1) and others\\n\\nHi Sheldon,\\r\\n\\r\\nCould
+        you please specify the component of this new CDETS as \u201Caccsw-p-securefab\u201D?
+        \ We\u2019d probably add our assessment / reason why in this case packet corruption
+        likely occurs before SISF gets them.\\r\\n\\r\\nThanks a lot!\\r\\nKuang-Yeh\\r\\n\\r\\nFrom:
+        \\\"Kuang-Yeh Wang (kuwang)\\\" <kuwang@cisco.com>\\r\\nDate: Tuesday, February
+        15, 2022 at 17:14\\r\\nTo: \\\"Sheldon Mooney (shmooney)\\\" <shmooney@cisco.com>,
+        \\\"sisf-coders(mailer list)\\\" <sisf-coders@cisco.com>, \\\"email-in@cisco.com\\\"
+        <email-in@cisco.com>, \\\"Jeremy Collins (jerecoll)\\\" <jerecoll@cisco.com>\\r\\nSubject:
+        Re: 692277140 rtp campus (rtp10-cd-dtbb-gw1) and others\\r\\n\\r\\nHi Sheldon,\\r\\n\\r\\nThe
+        logs you included here say that SISF thinks the RSs are 434 bytes long, while
+        the packet captured in the pcap that you attached says the IPv6 payload is
+        8 bytes (correct).  We\u2019ll need to look further into this \u2013 but this
+        scenario appears so basic that we also have to see what\u2019s going on and
+        what\u2019s done to them before the packets are handed to SISF.\\r\\n\\r\\nCould
+        you please file a CDETS with all the relevant info?\\r\\n\\r\\nThanks a lot!\\r\\nKuang-Yeh\\r\\n\\r\\nFrom:
+        \\\"Sheldon Mooney (shmooney)\\\" <shmooney@cisco.com>\\r\\nDate: Tuesday,
+        February 15, 2022 at 16:32\\r\\nTo: \\\"sisf-coders(mailer list)\\\" <sisf-coders@cisco.com>,
+        \\\"email-in@cisco.com\\\" <email-in@cisco.com>, \\\"Jeremy Collins (jerecoll)\\\"
+        <jerecoll@cisco.com>\\r\\nSubject: Re: SR: 692277140 rtp campus (rtp10-cd-dtbb-gw1)
+        and others\\r\\n\\r\\nAttaching packet used in lab.\\r\\n\\r\\nThanks\\r\\n\\r\\nSheldon
+        Mooney\\r\\n.:|:..:|:.\\r\\nGlobal CX Centers \u2013 Enterprise Routing &
+        Switching\\r\\nTechnical Consulting Engineer\\r\\nEmail: shmooney@cisco.com<mailto:shmooney@cisco.com>\\r\\nOffice
+        Hours: M-F 0800-1700(8:00am -5:00pm)  EST/12PM \u2013 9PM UTC\\r\\nOffice
+        Phone: 1(919)392-0224\\r\\nCisco US Contact \u2013 1(800)553-2447\\r\\nTo
+        update your case (requires a support contract):https://tools.cisco.com/ServiceRequestTool/scm/mgmt/case\\r\\nCisco
+        Worldwide Contact: http://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html\\r\\n\\r\\nTeam
+        Leads:\\r\\nJeremy Collins: jerecoll@cisco.com\\r\\n\\r\\nDirect Manager:
+        Ryan Richon\\r\\nPhone: 919-392-3098\\r\\nEmail: rrichon@cisco.com\\r\\n\\r\\n\\r\\nFrom:
+        Sheldon Mooney (shmooney) <shmooney@cisco.com>\\r\\nDate: Tuesday, February
+        15, 2022 at 4:29 PM\\r\\nTo: sisf-coders(mailer list) <sisf-coders@cisco.com>,
+        email-in@cisco.com <email-in@cisco.com>, Jeremy Collins (jerecoll) <jerecoll@cisco.com>\\r\\nSubject:
+        SR: 692277140 rtp campus (rtp10-cd-dtbb-gw1) and others\\r\\nHello Team,\\r\\n\\r\\nHw:
+        Cat9410R\\r\\nSw: 16.9.6\\r\\n\\r\\nBrief problem description:\\r\\n\\r\\nCisco
+        IT reported that their ipv6 Macbook clients where not receiving an immediate
+        router advertisement upon sending their router solicitation. I was able to
+        isolate the issue to their cat9410 and seen that the packet was being punted
+        to the CPU but not forwarded. I then removed DHCP snooping and the packet
+        is now being forwarded.\\r\\n\\r\\nSteps to reproduce:\\r\\n\\r\\nI have a
+        single 9410R running 16.9.6 with 2 IXIA ports connected. One on int gig1/0/1
+        and one on gig1/0/2. I then rebuilt the router solicitation from the packet
+        capture from the customers environment and sent that out from IXIA to the
+        switch. I was even able to do this with basic configs on the switch everything
+        in VLAN 1, we can see input packets on port gig1/0/1 and output packets on
+        gig1/0/2. Enable DHCP snooping and we no longer see output packets.\\r\\n\\r\\n//Here
+        is snipped of the debugs in the broken state and I will provide a file with
+        the packet that I used in my lab\\r\\n\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320
+        Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.088:
+        SISF[PRS]: icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.088:
+        SISF[SWI]: Gi1/0/1 XOS L2 Eth: 0x86DD Packet being enqueued to sisf 0\\r\\n*Feb
+        15 20:10:49.088: SISF[SWI]: Dequeue packet\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        ICMPv6 parser selected\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Building interested
+        feature list\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Interest on target vlan
+        320\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Classifier cache hit!\\r\\n*Feb
+        15 20:10:49.089: SISF[CLA]: Interested feature:\\r\\n*Feb 15 20:10:49.089:
+        SISF[CLA]:                   Device-tracking\\r\\n*Feb 15 20:10:49.089: SISF[SWI]:
+        Gi1/0/1 vlan 320 Feature_0  Device-tracking priority 128\\r\\n*Feb 15 20:10:49.089:
+        SISF[PRS]: ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1
+        vlan 320 Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.089:
+        SISF[PRS]: ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1
+        vlan 320 Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.089:
+        SISF[GLN]: Gi1/0/1 vlan 320 ! DROP:  Malformed packet in Inspect or Guard
+        mode\\r\\n*Feb 15 20:10:49.089: SISF[GLN]: Gi1/0/1 vlan 320 Parser says drop
+        silently - reason Malformed Packet dropped in Guard mode\\r\\n*Feb 15 20:10:49.089:
+        SISF[SWI]: Gi1/0/1 vlan 320 Feature Device-tracking rc: DROP\\r\\n*Feb 15
+        20:10:49.089: SISF[SWI]: Gi1/0/1 vlan 320 Feature drop\\r\\n\\r\\nMy Ask:\\r\\n\\r\\nWhy
+        is device-tracking dropping this router solicitation? Is this Macbook sending
+        a bad router solicitation? Is this expected behavior based on the information
+        provided?\\r\\n\\r\\nThanks\\r\\n\\r\\nSheldon Mooney\\r\\n.:|:..:|:.\\r\\nGlobal
+        CX Centers \u2013 Enterprise Routing & Switching\\r\\nTechnical Consulting
+        Engineer\\r\\nEmail: shmooney@cisco.com<mailto:shmooney@cisco.com>\\r\\nOffice
+        Hours: M-F 0800-1700(8:00am -5:00pm)  EST/12PM \u2013 9PM UTC\\r\\nOffice
+        Phone: 1(919)392-0224\\r\\nCisco US Contact \u2013 1(800)553-2447\\r\\nTo
+        update your case (requires a support contract):https://tools.cisco.com/ServiceRequestTool/scm/mgmt/case\\r\\nCisco
+        Worldwide Contact: http://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html\\r\\n\\r\\nTeam
+        Leads:\\r\\nJeremy Collins: jerecoll@cisco.com\\r\\n\\r\\nDirect Manager:
+        Ryan Richon\\r\\nPhone: 919-392-3098\\r\\nEmail: rrichon@cisco.com\",\"created_by\":\"Kuang-Yeh
+        Wang\",\"creation_date\":\"2022-02-15T22:26:56.000Z\"},{\"note\":\"\",\"note_detail\":\"From:
+        kuwang@cisco.com\\nTo: \\\"Sheldon Mooney (shmooney)\\\" <shmooney@cisco.com>,\\\"sisf-coders(mailer
+        list)\\\" <sisf-coders@cisco.com>,\\\"email-in@cisco.com\\\" <email-in@cisco.com>,\\\"Jeremy
+        Collins (jerecoll)\\\" <jerecoll@cisco.com>\\nCc: \\nSubject: Re: 692277140
+        rtp campus (rtp10-cd-dtbb-gw1) and others\\n\\nHi Sheldon,\\r\\n\\r\\nThe
+        logs you included here say that SISF thinks the RSs are 434 bytes long, while
+        the packet captured in the pcap that you attached says the IPv6 payload is
+        8 bytes (correct).  We\u2019ll need to look further into this \u2013 but this
+        scenario appears so basic that we also have to see what\u2019s going on and
+        what\u2019s done to them before the packets are handed to SISF.\\r\\n\\r\\nCould
+        you please file a CDETS with all the relevant info?\\r\\n\\r\\nThanks a lot!\\r\\nKuang-Yeh\\r\\n\\r\\nFrom:
+        \\\"Sheldon Mooney (shmooney)\\\" <shmooney@cisco.com>\\r\\nDate: Tuesday,
+        February 15, 2022 at 16:32\\r\\nTo: \\\"sisf-coders(mailer list)\\\" <sisf-coders@cisco.com>,
+        \\\"email-in@cisco.com\\\" <email-in@cisco.com>, \\\"Jeremy Collins (jerecoll)\\\"
+        <jerecoll@cisco.com>\\r\\nSubject: Re: SR: 692277140 rtp campus (rtp10-cd-dtbb-gw1)
+        and others\\r\\n\\r\\nAttaching packet used in lab.\\r\\n\\r\\nThanks\\r\\n\\r\\nSheldon
+        Mooney\\r\\n.:|:..:|:.\\r\\nGlobal CX Centers \u2013 Enterprise Routing &
+        Switching\\r\\nTechnical Consulting Engineer\\r\\nEmail: shmooney@cisco.com<mailto:shmooney@cisco.com>\\r\\nOffice
+        Hours: M-F 0800-1700(8:00am -5:00pm)  EST/12PM \u2013 9PM UTC\\r\\nOffice
+        Phone: 1(919)392-0224\\r\\nCisco US Contact \u2013 1(800)553-2447\\r\\nTo
+        update your case (requires a support contract):https://tools.cisco.com/ServiceRequestTool/scm/mgmt/case\\r\\nCisco
+        Worldwide Contact: http://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html\\r\\n\\r\\nTeam
+        Leads:\\r\\nJeremy Collins: jerecoll@cisco.com\\r\\n\\r\\nDirect Manager:
+        Ryan Richon\\r\\nPhone: 919-392-3098\\r\\nEmail: rrichon@cisco.com\\r\\n\\r\\n\\r\\nFrom:
+        Sheldon Mooney (shmooney) <shmooney@cisco.com>\\r\\nDate: Tuesday, February
+        15, 2022 at 4:29 PM\\r\\nTo: sisf-coders(mailer list) <sisf-coders@cisco.com>,
+        email-in@cisco.com <email-in@cisco.com>, Jeremy Collins (jerecoll) <jerecoll@cisco.com>\\r\\nSubject:
+        SR: 692277140 rtp campus (rtp10-cd-dtbb-gw1) and others\\r\\nHello Team,\\r\\n\\r\\nHw:
+        Cat9410R\\r\\nSw: 16.9.6\\r\\n\\r\\nBrief problem description:\\r\\n\\r\\nCisco
+        IT reported that their ipv6 Macbook clients where not receiving an immediate
+        router advertisement upon sending their router solicitation. I was able to
+        isolate the issue to their cat9410 and seen that the packet was being punted
+        to the CPU but not forwarded. I then removed DHCP snooping and the packet
+        is now being forwarded.\\r\\n\\r\\nSteps to reproduce:\\r\\n\\r\\nI have a
+        single 9410R running 16.9.6 with 2 IXIA ports connected. One on int gig1/0/1
+        and one on gig1/0/2. I then rebuilt the router solicitation from the packet
+        capture from the customers environment and sent that out from IXIA to the
+        switch. I was even able to do this with basic configs on the switch everything
+        in VLAN 1, we can see input packets on port gig1/0/1 and output packets on
+        gig1/0/2. Enable DHCP snooping and we no longer see output packets.\\r\\n\\r\\n//Here
+        is snipped of the debugs in the broken state and I will provide a file with
+        the packet that I used in my lab\\r\\n\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320
+        Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.088:
+        SISF[PRS]: icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.088:
+        SISF[SWI]: Gi1/0/1 XOS L2 Eth: 0x86DD Packet being enqueued to sisf 0\\r\\n*Feb
+        15 20:10:49.088: SISF[SWI]: Dequeue packet\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        ICMPv6 parser selected\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Building interested
+        feature list\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Interest on target vlan
+        320\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Classifier cache hit!\\r\\n*Feb
+        15 20:10:49.089: SISF[CLA]: Interested feature:\\r\\n*Feb 15 20:10:49.089:
+        SISF[CLA]:                   Device-tracking\\r\\n*Feb 15 20:10:49.089: SISF[SWI]:
+        Gi1/0/1 vlan 320 Feature_0  Device-tracking priority 128\\r\\n*Feb 15 20:10:49.089:
+        SISF[PRS]: ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1
+        vlan 320 Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.089:
+        SISF[PRS]: ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1
+        vlan 320 Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.089:
+        SISF[GLN]: Gi1/0/1 vlan 320 ! DROP:  Malformed packet in Inspect or Guard
+        mode\\r\\n*Feb 15 20:10:49.089: SISF[GLN]: Gi1/0/1 vlan 320 Parser says drop
+        silently - reason Malformed Packet dropped in Guard mode\\r\\n*Feb 15 20:10:49.089:
+        SISF[SWI]: Gi1/0/1 vlan 320 Feature Device-tracking rc: DROP\\r\\n*Feb 15
+        20:10:49.089: SISF[SWI]: Gi1/0/1 vlan 320 Feature drop\\r\\n\\r\\nMy Ask:\\r\\n\\r\\nWhy
+        is device-tracking dropping this router solicitation? Is this Macbook sending
+        a bad router solicitation? Is this expected behavior based on the information
+        provided?\\r\\n\\r\\nThanks\\r\\n\\r\\nSheldon Mooney\\r\\n.:|:..:|:.\\r\\nGlobal
+        CX Centers \u2013 Enterprise Routing & Switching\\r\\nTechnical Consulting
+        Engineer\\r\\nEmail: shmooney@cisco.com<mailto:shmooney@cisco.com>\\r\\nOffice
+        Hours: M-F 0800-1700(8:00am -5:00pm)  EST/12PM \u2013 9PM UTC\\r\\nOffice
+        Phone: 1(919)392-0224\\r\\nCisco US Contact \u2013 1(800)553-2447\\r\\nTo
+        update your case (requires a support contract):https://tools.cisco.com/ServiceRequestTool/scm/mgmt/case\\r\\nCisco
+        Worldwide Contact: http://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html\\r\\n\\r\\nTeam
+        Leads:\\r\\nJeremy Collins: jerecoll@cisco.com\\r\\n\\r\\nDirect Manager:
+        Ryan Richon\\r\\nPhone: 919-392-3098\\r\\nEmail: rrichon@cisco.com\",\"created_by\":\"Kuang-Yeh
+        Wang\",\"creation_date\":\"2022-02-15T22:14:29.000Z\"},{\"note\":\"\",\"note_detail\":\"From:
+        shmooney@cisco.com\\nTo: \\\"sisf-coders(mailer list)\\\" <sisf-coders@cisco.com>,\\\"email-in@cisco.com\\\"
+        <email-in@cisco.com>,\\\"Jeremy Collins (jerecoll)\\\" <jerecoll@cisco.com>\\nCc:
+        \\nSubject: Re: SR: 692277140 rtp campus (rtp10-cd-dtbb-gw1) and others\\n\\nAttaching
+        packet used in lab.\\r\\n\\r\\nThanks\\r\\n\\r\\nSheldon Mooney\\r\\n.:|:..:|:.\\r\\nGlobal
+        CX Centers \u2013 Enterprise Routing & Switching\\r\\nTechnical Consulting
+        Engineer\\r\\nEmail: shmooney@cisco.com<mailto:shmooney@cisco.com>\\r\\nOffice
+        Hours: M-F 0800-1700(8:00am -5:00pm)  EST/12PM \u2013 9PM UTC\\r\\nOffice
+        Phone: 1(919)392-0224\\r\\nCisco US Contact \u2013 1(800)553-2447\\r\\nTo
+        update your case (requires a support contract):https://tools.cisco.com/ServiceRequestTool/scm/mgmt/case\\r\\nCisco
+        Worldwide Contact: http://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html\\r\\n\\r\\nTeam
+        Leads:\\r\\nJeremy Collins: jerecoll@cisco.com\\r\\n\\r\\nDirect Manager:
+        Ryan Richon\\r\\nPhone: 919-392-3098\\r\\nEmail: rrichon@cisco.com\\r\\n\\r\\n\\r\\nFrom:
+        Sheldon Mooney (shmooney) <shmooney@cisco.com>\\r\\nDate: Tuesday, February
+        15, 2022 at 4:29 PM\\r\\nTo: sisf-coders(mailer list) <sisf-coders@cisco.com>,
+        email-in@cisco.com <email-in@cisco.com>, Jeremy Collins (jerecoll) <jerecoll@cisco.com>\\r\\nSubject:
+        SR: 692277140 rtp campus (rtp10-cd-dtbb-gw1) and others\\r\\nHello Team,\\r\\n\\r\\nHw:
+        Cat9410R\\r\\nSw: 16.9.6\\r\\n\\r\\nBrief problem description:\\r\\n\\r\\nCisco
+        IT reported that their ipv6 Macbook clients where not receiving an immediate
+        router advertisement upon sending their router solicitation. I was able to
+        isolate the issue to their cat9410 and seen that the packet was being punted
+        to the CPU but not forwarded. I then removed DHCP snooping and the packet
+        is now being forwarded.\\r\\n\\r\\nSteps to reproduce:\\r\\n\\r\\nI have a
+        single 9410R running 16.9.6 with 2 IXIA ports connected. One on int gig1/0/1
+        and one on gig1/0/2. I then rebuilt the router solicitation from the packet
+        capture from the customers environment and sent that out from IXIA to the
+        switch. I was even able to do this with basic configs on the switch everything
+        in VLAN 1, we can see input packets on port gig1/0/1 and output packets on
+        gig1/0/2. Enable DHCP snooping and we no longer see output packets.\\r\\n\\r\\n//Here
+        is snipped of the debugs in the broken state and I will provide a file with
+        the packet that I used in my lab\\r\\n\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320
+        Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.088:
+        SISF[PRS]: icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.088:
+        SISF[SWI]: Gi1/0/1 XOS L2 Eth: 0x86DD Packet being enqueued to sisf 0\\r\\n*Feb
+        15 20:10:49.088: SISF[SWI]: Dequeue packet\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        ICMPv6 parser selected\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Building interested
+        feature list\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Interest on target vlan
+        320\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Classifier cache hit!\\r\\n*Feb
+        15 20:10:49.089: SISF[CLA]: Interested feature:\\r\\n*Feb 15 20:10:49.089:
+        SISF[CLA]:                   Device-tracking\\r\\n*Feb 15 20:10:49.089: SISF[SWI]:
+        Gi1/0/1 vlan 320 Feature_0  Device-tracking priority 128\\r\\n*Feb 15 20:10:49.089:
+        SISF[PRS]: ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1
+        vlan 320 Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.089:
+        SISF[PRS]: ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1
+        vlan 320 Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.089:
+        SISF[GLN]: Gi1/0/1 vlan 320 ! DROP:  Malformed packet in Inspect or Guard
+        mode\\r\\n*Feb 15 20:10:49.089: SISF[GLN]: Gi1/0/1 vlan 320 Parser says drop
+        silently - reason Malformed Packet dropped in Guard mode\\r\\n*Feb 15 20:10:49.089:
+        SISF[SWI]: Gi1/0/1 vlan 320 Feature Device-tracking rc: DROP\\r\\n*Feb 15
+        20:10:49.089: SISF[SWI]: Gi1/0/1 vlan 320 Feature drop\\r\\n\\r\\nMy Ask:\\r\\n\\r\\nWhy
+        is device-tracking dropping this router solicitation? Is this Macbook sending
+        a bad router solicitation? Is this expected behavior based on the information
+        provided?\\r\\n\\r\\nThanks\\r\\n\\r\\nSheldon Mooney\\r\\n.:|:..:|:.\\r\\nGlobal
+        CX Centers \u2013 Enterprise Routing & Switching\\r\\nTechnical Consulting
+        Engineer\\r\\nEmail: shmooney@cisco.com<mailto:shmooney@cisco.com>\\r\\nOffice
+        Hours: M-F 0800-1700(8:00am -5:00pm)  EST/12PM \u2013 9PM UTC\\r\\nOffice
+        Phone: 1(919)392-0224\\r\\nCisco US Contact \u2013 1(800)553-2447\\r\\nTo
+        update your case (requires a support contract):https://tools.cisco.com/ServiceRequestTool/scm/mgmt/case\\r\\nCisco
+        Worldwide Contact: http://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html\\r\\n\\r\\nTeam
+        Leads:\\r\\nJeremy Collins: jerecoll@cisco.com\\r\\n\\r\\nDirect Manager:
+        Ryan Richon\\r\\nPhone: 919-392-3098\\r\\nEmail: rrichon@cisco.com\\r\\n\\r\\n\\nFile
+        Name:20220215-153244167_ICMPV6_RS.pcapng\",\"created_by\":\"Sheldon Mooney\",\"creation_date\":\"2022-02-15T21:32:45.000Z\"},{\"note\":\"\",\"note_detail\":\"From:
+        shmooney@cisco.com\\nTo: \\\"sisf-coders(mailer list)\\\" <sisf-coders@cisco.com>,\\\"email-in@cisco.com\\\"
+        <email-in@cisco.com>,\\\"Jeremy Collins (jerecoll)\\\" <jerecoll@cisco.com>\\nCc:
+        \\nSubject: SR: 692277140 rtp campus (rtp10-cd-dtbb-gw1) and others\\n\\nHello
+        Team,\\r\\n\\r\\nHw: Cat9410R\\r\\nSw: 16.9.6\\r\\n\\r\\nBrief problem description:\\r\\n\\r\\nCisco
+        IT reported that their ipv6 Macbook clients where not receiving an immediate
+        router advertisement upon sending their router solicitation. I was able to
+        isolate the issue to their cat9410 and seen that the packet was being punted
+        to the CPU but not forwarded. I then removed DHCP snooping and the packet
+        is now being forwarded.\\r\\n\\r\\nSteps to reproduce:\\r\\n\\r\\nI have a
+        single 9410R running 16.9.6 with 2 IXIA ports connected. One on int gig1/0/1
+        and one on gig1/0/2. I then rebuilt the router solicitation from the packet
+        capture from the customers environment and sent that out from IXIA to the
+        switch. I was even able to do this with basic configs on the switch everything
+        in VLAN 1, we can see input packets on port gig1/0/1 and output packets on
+        gig1/0/2. Enable DHCP snooping and we no longer see output packets.\\r\\n\\r\\n//Here
+        is snipped of the debugs in the broken state and I will provide a file with
+        the packet that I used in my lab\\r\\n\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320
+        Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.088: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.088:
+        SISF[PRS]: icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.088:
+        SISF[SWI]: Gi1/0/1 XOS L2 Eth: 0x86DD Packet being enqueued to sisf 0\\r\\n*Feb
+        15 20:10:49.088: SISF[SWI]: Dequeue packet\\r\\n*Feb 15 20:10:49.088: SISF[PRS]:
+        icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        icmpv6 packet size left 442 required 8\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        ICMPv6 parser selected\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Building interested
+        feature list\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Interest on target vlan
+        320\\r\\n*Feb 15 20:10:49.089: SISF[CLA]: Classifier cache hit!\\r\\n*Feb
+        15 20:10:49.089: SISF[CLA]: Interested feature:\\r\\n*Feb 15 20:10:49.089:
+        SISF[CLA]:                   Device-tracking\\r\\n*Feb 15 20:10:49.089: SISF[SWI]:
+        Gi1/0/1 vlan 320 Feature_0  Device-tracking priority 128\\r\\n*Feb 15 20:10:49.089:
+        SISF[PRS]: ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1
+        vlan 320 Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.089:
+        SISF[PRS]: ICMPv6 parser invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1
+        vlan 320 Parse msg ND_ROUTER_SOLICIT. len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]:
+        Gi1/0/1 vlan 320                option 0 len 8: Unknown option\\r\\n*Feb 15
+        20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option 80 len 648:
+        Option length too big\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: ICMPv6 parser
+        invoked\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320 Parse msg ND_ROUTER_SOLICIT.
+        len 434\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan 320                option
+        0 len 8: Unknown option\\r\\n*Feb 15 20:10:49.089: SISF[PRS]: Gi1/0/1 vlan
+        320                option 80 len 648: Option length too big\\r\\n*Feb 15 20:10:49.089:
+        SISF[GLN]: Gi1/0/1 vlan 320 ! DROP:  Malformed packet in Inspect or Guard
+        mode\\r\\n*Feb 15 20:10:49.089: SISF[GLN]: Gi1/0/1 vlan 320 Parser says drop
+        silently - reason Malformed Packet dropped in Guard mode\\r\\n*Feb 15 20:10:49.089:
+        SISF[SWI]: Gi1/0/1 vlan 320 Feature Device-tracking rc: DROP\\r\\n*Feb 15
+        20:10:49.089: SISF[SWI]: Gi1/0/1 vlan 320 Feature drop\\r\\n\\r\\nMy Ask:\\r\\n\\r\\nWhy
+        is device-tracking dropping this router solicitation? Is this Macbook sending
+        a bad router solicitation? Is this expected behavior based on the information
+        provided?\\r\\n\\r\\nThanks\\r\\n\\r\\nSheldon Mooney\\r\\n.:|:..:|:.\\r\\nGlobal
+        CX Centers \u2013 Enterprise Routing & Switching\\r\\nTechnical Consulting
+        Engineer\\r\\nEmail: shmooney@cisco.com<mailto:shmooney@cisco.com>\\r\\nOffice
+        Hours: M-F 0800-1700(8:00am -5:00pm)  EST/12PM \u2013 9PM UTC\\r\\nOffice
+        Phone: 1(919)392-0224\\r\\nCisco US Contact \u2013 1(800)553-2447\\r\\nTo
+        update your case (requires a support contract):https://tools.cisco.com/ServiceRequestTool/scm/mgmt/case\\r\\nCisco
+        Worldwide Contact: http://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html\\r\\n\\r\\nTeam
+        Leads:\\r\\nJeremy Collins: jerecoll@cisco.com\\r\\n\\r\\nDirect Manager:
+        Ryan Richon\\r\\nPhone: 919-392-3098\\r\\nEmail: rrichon@cisco.com\",\"created_by\":\"Sheldon
+        Mooney\",\"creation_date\":\"2022-02-15T21:29:54.000Z\"},{\"note\":\"\",\"note_detail\":\"rtp10-21-sw2#show
+        plat soft fed active cpu-interface\\nqueue                      retrieved
+        \  dropped     invalid     hol-block\\n-------------------------------------------------------------------------\\nRouting
+        Protocol           42829979    42829978    0           0 <----\\nL2 Protocol
+        \               0           0           0           0\\nsw forwarding              240
+        \        82          0           0\\nbroadcast                  0           0
+        \          0           0\\nicmp gen                   0           0           0
+        \          0\\nicmp redirect              0           0           0           0\\nlogging
+        \                   5           0           0           0\\nrpf-fail                   0
+        \          0           0           0\\nDOT1X authentication       0           0
+        \          0           0\\nForus Traffic              0           0           0
+        \          0\\nForus Resolution           0           0           0           0\\nInter
+        FED                  0           0           0           0\\nL2 LVX control
+        \            0           0           0           0\\nEWLC control               0
+        \          0           0           0\\nEWLC data                  0           0
+        \          0           0\\nL2 LVX data                0           0           0
+        \          0\\nOpenflow                   0           0           0           0\\nTopology
+        control           0           0           0           0\\nProto snooping             43000683
+        \   0           0           0\\nDHCP snooping              0           0           0
+        \          0\\nTransit Traffic            0           0           0           0\\nMulti
+        End station          0           0           0           0\\nWebauth                    0
+        \          0           0           0\\nHigh rate app              0           0
+        \          0           0\\nException                  0           0           0
+        \          0\\nSystem Critical            0           0           0           0\\nNFL
+        sampled data           0           0           0           0\\nLow latency
+        \               0           0           0           0\\nEGR exception              0
+        \          0           0           0\\nStackwise Virtual OOB      0           0
+        \          0           0\\nMulticast data             0           0           0
+        \          0\\nGold packet                393         0           0           0\",\"created_by\":\"Sheldon
+        Mooney\",\"creation_date\":\"2022-02-15T04:19:17.000Z\"},{\"note\":\"\",\"note_detail\":\"rtp10-21-sw2#show
+        plat hard fed active forward last sum\\nInput Packet Details:\\n###[ Ethernet
+        ]###\\n  dst       = 33:33:00:00:00:02\\n  src       = 24:f5:a2:8c:67:26\\n
+        \ type      = 0x86dd\\n###[ IPv6 ]###\\n     version   = 6L\\n     tc        =
+        0L\\n     fl        = 0L\\n     plen      = 0\\n     nh        = No Next Header\\n
+        \    hlim      = 64\\n     src       = fe80::18f1:fbf3:6430:115\\n     dst
+        \      = ff02::2\\n###[ Padding ]###\\n        load      = '00 00 00 00 00
+        00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+        00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'\\nIngress:\\n   Port                      :
+        GigabitEthernet1/0/1\\n   Global Port Number        : 101\\n   Local Port
+        Number         : 1\\n   Asic Port Number          : 0\\n   Asic Instance             :
+        0\\n   Vlan                      : 320\\n   Mapped Vlan ID            : 27\\n
+        \  STP Instance              : 25\\n   BlockForward              : 0\\n   BlockLearn
+        \               : 0\\n   L3 Interface              : 39\\n       IPv4 Routing
+        \         : enabled\\n       IPv6 Routing          : enabled\\n       Vrf
+        Id                : 0\\n   Adjacency:\\n       Station Index         : 3      [SI_DIET_L2]\\n
+        \      Destination Index     : 18\\n       Rewrite Index         : 2\\n       Replication
+        Bit Map   : 0x15   ['localData', 'remoteData', 'coreData']\\n   Decision:\\n
+        \      Destination Index     : 45     [DI_DIET_L2]\\n       Rewrite Index
+        \        : 2      [RI_L2]\\n       Dest Mod Index        : 0      [IGR_FIXED_DMI_NULL_VALUE]\\n
+        \      CPU Map Index         : 515    [CMI2]\\n       Forwarding Mode       :
+        0      [Bridging]\\n       Replication Bit Map   :        ['localData', 'localCpu',
+        'remoteData', 'remoteCpu', 'coreData']\\n       Winner                :        CPPIPV6
+        LOOKUP2\\n       Qos Label             : 1\\n       SGT                   :
+        0\\n       DGTID                 : 0\\n No exceptions occured.\\n CoPP Type
+        = 3  CMI2 = 515\\nEgress:\\n   Possible Replication      :\\n       Port                  :
+        GigabitEthernet1/0/1\\n       Port                  : GigabitEthernet1/0/2\\n
+        \      Port                  : CPU_Q_ROUTING_CONTROL\\n       Port                  :
+        CPU_Q_ROUTING_CONTROL\\n       Port                  : CPU_Q_ROUTING_CONTROL\\n
+        \      Port                  : CPU_Q_ROUTING_CONTROL\\n       Port                  :
+        CPU_Q_ROUTING_CONTROL\\n       Port                  : CPU_Q_ROUTING_CONTROL\\n
+        \  Output Port Data          :\\n     Port                    : GigabitEthernet1/0/2\\n
+        \      Global Port Number    : 102\\n       Local Port Number     : 2\\n       Asic
+        Port Number      : 1\\n       Asic Instance         : 0\\n       Unique RI
+        \            : 2\\n       Rewrite Type          : 1      [L2_BRIDGE]\\n       Mapped
+        Rewrite Type   : 5      [L2_BRIDGE_INNER_IPv6]\\n       Vlan                  :
+        320\\n       Mapped Vlan ID        : 27\\n\\nOutput Packet Details:\\n   Port
+        \                     : GigabitEthernet1/0/2\\n###[ Ethernet ]###\\n  dst
+        \      = 33:33:00:00:00:02\\n  src       = 24:f5:a2:8c:67:26\\n  type      =
+        0x8100\\n###[ 802.1Q ]###\\n     prio      = 0L\\n     id        = 0L\\n     vlan
+        \     = 320L\\n     type      = 0x86dd\\n###[ IPv6 ]###\\n        version
+        \  = 6L\\n        tc        = 0L\\n        fl        = 0L\\n        plen      =
+        0\\n        nh        = No Next Header\\n        hlim      = 64\\n        src
+        \      = fe80::18f1:fbf3:6430:115\\n        dst       = ff02::2\\n###[ Padding
+        ]###\\n           load      = '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+        00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+        00 00 00 00 00 00'\\n********************************************************************************\",\"created_by\":\"Sheldon
+        Mooney\",\"creation_date\":\"2022-02-14T15:57:54.000Z\"},{\"note\":\"\",\"note_detail\":\"Topology\\n\\n
         \      rtp10-21-sw2                               rtp10-dt-gw1\\n      +--------------+
         \                          +------------+\\n      |              |                           |
         \           |\\n      |              |                           |            |\\n
@@ -2095,11 +2894,11 @@ interactions:
       Cache-Control:
       - private
       Date:
-      - Thu, 10 Feb 2022 02:01:04 GMT
+      - Tue, 26 Sep 2023 02:42:23 GMT
       Transfer-Encoding:
       - chunked
       X-Mashery-Message-ID:
-      - 628ebae5-8bc1-4496-8487-06c44e63577a
+      - f52443ab-1ee8-4854-b8fb-5622dc721283
       access-control-allow-credentials:
       - 'true'
       access-control-allow-headers:
@@ -2111,15 +2910,17 @@ interactions:
       - (null)
       content-type:
       - application/json;charset=UTF-8
-      server:
-      - Apache-Coyote/1.1
       set-cookie:
-      - 2e3b7c7c3322598b3ab8148ccdebc7c8=ccab14508f51dca65622a34f5e2e7003; path=/;
-        HttpOnly; Secure
+      - 2e3b7c7c3322598b3ab8148ccdebc7c8=044566682bb90d006f4eea80e615f583; path=/;
+        HttpOnly; Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload;
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-observed:
+      - '114'
       x-rp-ssl-name:
-      - cae-prd-alln-prt-ext-kube-rp-1.cisco.com
+      - prd-alln-101-8zrsp-dedicated0-ext-kube-rp-1b-64m89
     status:
       code: 200
       message: OK

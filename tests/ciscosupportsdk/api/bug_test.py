@@ -21,7 +21,7 @@ class TestBugApi:
         ):
             count += 1
 
-        assert count == 2
+        assert count == 3
 
     @pytest.mark.vcr()
     def test_get_bugs_by_product_id_and_release(self, api: CiscoSupportAPI):
@@ -30,14 +30,14 @@ class TestBugApi:
             "WS-C3560-48PS-S", ["15.2(03)E01"]
         ):
             count += 1
-        assert count == 1
+        assert count == 0
 
     @pytest.mark.vcr()
     def test_get_bugs_by_keyword(self, api: CiscoSupportAPI):
         count = 0
         for bug in api.bug.get_bugs_by_keyword("IOS SSH PKI"):
             count += 1
-        assert count == 11
+        assert count == 3
 
     @pytest.mark.vcr()
     def test_get_bugs_by_product_and_affected_release(
@@ -74,7 +74,7 @@ class TestBugApi:
             modified_date=DateModified.ALL,
         ):
             count += 1
-        assert count == 386
+        assert count == 248
 
     @pytest.mark.vcr()
     def test_get_bugs_by_product_name_and_fixed_release(
@@ -87,4 +87,4 @@ class TestBugApi:
             modified_date=DateModified.ALL,
         ):
             count += 1
-        assert count == 1
+        assert count == 0

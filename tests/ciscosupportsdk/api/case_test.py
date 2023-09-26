@@ -19,7 +19,7 @@ class TestCaseApi:
     @pytest.mark.vcr()
     def test_get_cases_by_contract_id(self, api: CiscoSupportAPI):
         count = sum(1 for _ in api.case.get_cases_by_contract_id(["92511831"]))
-        assert count == 20
+        assert count == 10
 
     @pytest.mark.vcr()
     def test_get_case_summary(self, api: CiscoSupportAPI):

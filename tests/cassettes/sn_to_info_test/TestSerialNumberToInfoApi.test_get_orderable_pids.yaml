@@ -15,33 +15,82 @@ interactions:
       Content-Type:
       - application/x-www-form-urlencoded;charset=UTF-8
       User-Agent:
-      - python-requests/2.27.1
+      - python-requests/2.31.0
     method: POST
-    uri: https://cloudsso.cisco.com/as/token.oauth2
+    uri: https://id.cisco.com/oauth2/default/v1/token
   response:
     body:
-      string: '{"access_token":"xRS3lweBxrOtcNXCjvvNBEgH43mj","token_type":"Bearer","expires_in":3599}'
+      string: '{"token_type":"Bearer","expires_in":3600,"access_token":"eyJraWQiOiJUV3lfd0piZUhMUjJrb1NZQWZpTnZPeGptWExPM3NKNTdBTUk0UGEySzRRIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULkhwZUYzRzhUU3FPV1ZPMnFiX2h0OVJwUWtTLXR5YlBkMzdWODd4OHFLQ28iLCJpc3MiOiJodHRwczovL2lkLmNpc2NvLmNvbS9vYXV0aDIvZGVmYXVsdCIsImF1ZCI6ImFwaTovL2RlZmF1bHQiLCJpYXQiOjE2OTU2OTYyMDQsImV4cCI6MTY5NTY5OTgwNCwiY2lkIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIiwic2NwIjpbImN1c3RvbXNjb3BlIl0sImFjY2Vzc19sZXZlbCI6MSwic3ViIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIiwiZnVsbF9uYW1lIjoibnVsbCBudWxsIiwiYXpwIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIn0.MgJiTX7gf07DBZxxYs6eDm0e7rrqodZKUJ2lIZw-BMlkiHiSH-f-YNoReBPWcrFtkeKTx0cowo2S191_6Thr49LlASn6NjKckYIaL8gyyQjqXRwRDcP6uL8C_QIg8EgY8H1EOudfaNVN1y5B-kGYHw-oExd0wQrNdcQzR1MK3nkDR3I5JOBGxEJS8zwOIhCMAX8gyuqrc6d3Jy4kRnPQJwMBk0gLWWZ1MMuML3xaNXTD5dyHamUbUJdadGybl8dzfh9sxebA6XNDaQq9BAD7EHZfswm_Cfyv8Q2ZXGcVbKQd9vjCGgRPtK4GkNdcYOm_t-eGJwNPQ70jTGTV-0CgRQ","scope":"customscope"}'
     headers:
-      Access-Control-Allow-Origin:
-      - '*'
       Cache-Control:
-      - no-cache, no-store
+      - max-age=0, no-cache, no-store
       Connection:
-      - Keep-Alive
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '704'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
       Content-Type:
-      - application/json;charset=utf-8
+      - application/json
       Date:
-      - Thu, 10 Feb 2022 04:29:19 GMT
+      - Tue, 26 Sep 2023 02:43:24 GMT
       Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Keep-Alive:
-      - timeout=2, max=991
+      - Tue, 26 Sep 2023 02:43:24 GMT
       Pragma:
       - no-cache
+      Server:
+      - nginx
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=49
+      - origin; dur=135
+      - ak_p; desc="1695696204174_1752730244_130236651_18392_9940_76_267_-";dur=1
       Set-Cookie:
-      - PF=aoTbcieaqEqlGkB1qyLUKD;Path=/;Secure;HttpOnly;SameSite=None
-      Transfer-Encoding:
-      - chunked
+      - sid="";Version=1;Path=/;Max-Age=0
+      - autolaunch_triggered=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      - JSESSIONID=5DA5B3A462D4440D76E7CE39680E2457; Path=/; Secure; HttpOnly
+      - _abck=B9B105C1E285822908CE1BC9CFAC58D9~-1~YAAQhIp4aMygRMqKAQAAb7NezwqOjljrfU/V49m+KT6H3grXvnMhmZEmwHhY7Ej9iePASzH9Dq5QZK0vFRR4by7SvQgLZrQBBLI0vzdvHS3RiCRGYmEhHYjryrF71732IKAhJBNT9X+fw0/pdsMOzZcG8wFKayCyEOFEI6PSL+eAr/ZcWfGZxtvfbxlZN7RDqbE1x//6nxYqPaloKXvrFmhbSCtcQ9NFyN7H/EuOCfWjcRYi1tmSCXGknDGv9v6mZlwRrQuo9RSMYU2Dq9LBq4Zo2Nad7jOLd1nUmlLma8OAWnMjuRrb8cuc31HmguiNaKWkwQr8Pj1xrkaaLiDlpRcbYjMfSF7zo/obWy1zE3FbYYBuevQBCg==~-1~-1~-1;
+        Domain=.cisco.com; Path=/; Expires=Wed, 25 Sep 2024 02:43:24 GMT; Max-Age=31536000;
+        Secure
+      - bm_sz=D1741537F476F52B101B76EA605C494E~YAAQhIp4aM2gRMqKAQAAb7NezxXdG0lNLJNKZIQ635v5B5DYr7dt5/IFSmKZXYWjbAnMu2Ry3qkxkiI9iNMuKbEseE2gzKTBpeGLZvtmyzduivMgrDw6PHLIshMScSDLc76T2GcrcVjHlc4u/TGwd6q/BGOYWPae5PTBP1gwdIvR8JN5wBy3LPa0rKRvegvQbbIecvE3sNe98eWn8YYegbxrZpbG+CKS6AlhjBohWjctyP7JEXKB9W57vYzdcCngJjj/5eu3MudQQXioDquftsRNIbibOH1VDz01101iGe+eiQ==~4600626~4602162;
+        Domain=.cisco.com; Path=/; Expires=Tue, 26 Sep 2023 06:43:24 GMT; Max-Age=14400
+      Strict-Transport-Security:
+      - max-age=315360000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Robots-Tag:
+      - noindex,nofollow
+      content-security-policy-report-only:
+      - 'default-src ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; connect-src
+        ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com *.oktacdn.com
+        *.mixpanel.com *.mapbox.com app.pendo.io data.pendo.io pendo-static-5634101834153984.storage.googleapis.com
+        pendo-static-5391521872216064.storage.googleapis.com *.mtls.okta.com ciscoid.kerberos.okta.com
+        https://oinmanager.okta.com data:; script-src ''unsafe-inline'' ''unsafe-eval''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; style-src ''unsafe-inline''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com app.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com;
+        frame-src ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com login.okta.com
+        api-dbbfec7f.duosecurity.com; img-src ''self'' ciscoid.okta.com id.cisco.com
+        *.oktacdn.com *.tiles.mapbox.com *.mapbox.com app.pendo.io data.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com
+        data: blob:; font-src ''self'' ciscoid.okta.com id.cisco.com data: *.oktacdn.com
+        fonts.gstatic.com; frame-ancestors ''self'''
+      p3p:
+      - CP="HONK"
+      x-content-type-options:
+      - nosniff
+      x-okta-request-id:
+      - ZRJFTBXO8LscWvCaEDvi9wAAAWg
+      x-rate-limit-limit:
+      - '60000'
+      x-rate-limit-remaining:
+      - '56704'
+      x-rate-limit-reset:
+      - '1695696220'
+      x-xss-protection:
+      - '0'
     status:
       code: 200
       message: OK
@@ -61,33 +110,81 @@ interactions:
       Content-Type:
       - application/x-www-form-urlencoded;charset=UTF-8
       Cookie:
-      - PF=aoTbcieaqEqlGkB1qyLUKD
+      - _abck=B9B105C1E285822908CE1BC9CFAC58D9~-1~YAAQhIp4aMygRMqKAQAAb7NezwqOjljrfU/V49m+KT6H3grXvnMhmZEmwHhY7Ej9iePASzH9Dq5QZK0vFRR4by7SvQgLZrQBBLI0vzdvHS3RiCRGYmEhHYjryrF71732IKAhJBNT9X+fw0/pdsMOzZcG8wFKayCyEOFEI6PSL+eAr/ZcWfGZxtvfbxlZN7RDqbE1x//6nxYqPaloKXvrFmhbSCtcQ9NFyN7H/EuOCfWjcRYi1tmSCXGknDGv9v6mZlwRrQuo9RSMYU2Dq9LBq4Zo2Nad7jOLd1nUmlLma8OAWnMjuRrb8cuc31HmguiNaKWkwQr8Pj1xrkaaLiDlpRcbYjMfSF7zo/obWy1zE3FbYYBuevQBCg==~-1~-1~-1;
+        bm_sz=D1741537F476F52B101B76EA605C494E~YAAQhIp4aM2gRMqKAQAAb7NezxXdG0lNLJNKZIQ635v5B5DYr7dt5/IFSmKZXYWjbAnMu2Ry3qkxkiI9iNMuKbEseE2gzKTBpeGLZvtmyzduivMgrDw6PHLIshMScSDLc76T2GcrcVjHlc4u/TGwd6q/BGOYWPae5PTBP1gwdIvR8JN5wBy3LPa0rKRvegvQbbIecvE3sNe98eWn8YYegbxrZpbG+CKS6AlhjBohWjctyP7JEXKB9W57vYzdcCngJjj/5eu3MudQQXioDquftsRNIbibOH1VDz01101iGe+eiQ==~4600626~4602162;
+        JSESSIONID=5DA5B3A462D4440D76E7CE39680E2457
       User-Agent:
-      - python-requests/2.27.1
+      - python-requests/2.31.0
     method: POST
-    uri: https://cloudsso.cisco.com/as/token.oauth2
+    uri: https://id.cisco.com/oauth2/default/v1/token
   response:
     body:
-      string: '{"access_token":"5a2rD5E56kC30qaQ6Ttc6z4Xtdvm","token_type":"Bearer","expires_in":3599}'
+      string: '{"token_type":"Bearer","expires_in":3600,"access_token":"eyJraWQiOiJUV3lfd0piZUhMUjJrb1NZQWZpTnZPeGptWExPM3NKNTdBTUk0UGEySzRRIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULkw3MUZOWVlFNFJPdEFLR3hxWVVlemZ3QVFJNk5hSWwwdjYwVlFESml4WmciLCJpc3MiOiJodHRwczovL2lkLmNpc2NvLmNvbS9vYXV0aDIvZGVmYXVsdCIsImF1ZCI6ImFwaTovL2RlZmF1bHQiLCJpYXQiOjE2OTU2OTYyMDUsImV4cCI6MTY5NTY5OTgwNSwiY2lkIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIiwic2NwIjpbImN1c3RvbXNjb3BlIl0sImFjY2Vzc19sZXZlbCI6MSwic3ViIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIiwiZnVsbF9uYW1lIjoibnVsbCBudWxsIiwiYXpwIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIn0.Y7_RLKQj3j5BzRDkYLXwItOPMPo4mxzFUQAn_3AuMi25tUeKMeXdWvmoXoM5zwRkx2lcd7mwxUMrC1o83rZ8uRg5LmDxfneM2SnvHoSdbPWk2KZxYYjfml9JIML9IrdmYJlqT_HuGdytu4jC4FE_MWK33PPddT0b-Ixx5avXMMqK2F_fpB5euLU2h92-iL1yrdA7KHA1p-c1LPnKFHOjAkr5DGZ5yMXmo7xGnUkbd5RQ5-poHKJNfoITfbKOAOsbGWtubJn4HDZlk-NWOoiiMeWxM8DMKR0zj5oI6ZL25zaPLqp7j1ViR2-7wRR9DTh1npDeexgdFp1n9JCdF_bdlQ","scope":"customscope"}'
     headers:
-      Access-Control-Allow-Origin:
-      - '*'
       Cache-Control:
-      - no-cache, no-store
+      - max-age=0, no-cache, no-store
       Connection:
-      - Keep-Alive
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '704'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
       Content-Type:
-      - application/json;charset=utf-8
+      - application/json
       Date:
-      - Thu, 10 Feb 2022 04:29:19 GMT
+      - Tue, 26 Sep 2023 02:43:25 GMT
       Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Keep-Alive:
-      - timeout=2, max=999
+      - Tue, 26 Sep 2023 02:43:25 GMT
       Pragma:
       - no-cache
-      Transfer-Encoding:
-      - chunked
+      Server:
+      - nginx
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=15
+      - origin; dur=135
+      - ak_p; desc="1695696204825_1752730244_130238361_15002_13458_87_179_-";dur=1
+      Set-Cookie:
+      - sid="";Version=1;Path=/;Max-Age=0
+      - autolaunch_triggered=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      - JSESSIONID=60C05CEA6C13CDC7A61E888F3E5A6010; Path=/; Secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=315360000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Robots-Tag:
+      - noindex,nofollow
+      content-security-policy-report-only:
+      - 'default-src ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; connect-src
+        ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com *.oktacdn.com
+        *.mixpanel.com *.mapbox.com app.pendo.io data.pendo.io pendo-static-5634101834153984.storage.googleapis.com
+        pendo-static-5391521872216064.storage.googleapis.com *.mtls.okta.com ciscoid.kerberos.okta.com
+        https://oinmanager.okta.com data:; script-src ''unsafe-inline'' ''unsafe-eval''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; style-src ''unsafe-inline''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com app.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com;
+        frame-src ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com login.okta.com
+        api-dbbfec7f.duosecurity.com; img-src ''self'' ciscoid.okta.com id.cisco.com
+        *.oktacdn.com *.tiles.mapbox.com *.mapbox.com app.pendo.io data.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com
+        data: blob:; font-src ''self'' ciscoid.okta.com id.cisco.com data: *.oktacdn.com
+        fonts.gstatic.com; frame-ancestors ''self'''
+      p3p:
+      - CP="HONK"
+      x-content-type-options:
+      - nosniff
+      x-okta-request-id:
+      - ZRJFTRXO8LscWvCaEDvjAgAAAWg
+      x-rate-limit-limit:
+      - '60000'
+      x-rate-limit-remaining:
+      - '56642'
+      x-rate-limit-reset:
+      - '1695696220'
+      x-xss-protection:
+      - '0'
     status:
       code: 200
       message: OK
@@ -102,10 +199,13 @@ interactions:
       - DUMMY
       Connection:
       - keep-alive
+      Cookie:
+      - _abck=B9B105C1E285822908CE1BC9CFAC58D9~-1~YAAQhIp4aMygRMqKAQAAb7NezwqOjljrfU/V49m+KT6H3grXvnMhmZEmwHhY7Ej9iePASzH9Dq5QZK0vFRR4by7SvQgLZrQBBLI0vzdvHS3RiCRGYmEhHYjryrF71732IKAhJBNT9X+fw0/pdsMOzZcG8wFKayCyEOFEI6PSL+eAr/ZcWfGZxtvfbxlZN7RDqbE1x//6nxYqPaloKXvrFmhbSCtcQ9NFyN7H/EuOCfWjcRYi1tmSCXGknDGv9v6mZlwRrQuo9RSMYU2Dq9LBq4Zo2Nad7jOLd1nUmlLma8OAWnMjuRrb8cuc31HmguiNaKWkwQr8Pj1xrkaaLiDlpRcbYjMfSF7zo/obWy1zE3FbYYBuevQBCg==~-1~-1~-1;
+        bm_sz=D1741537F476F52B101B76EA605C494E~YAAQhIp4aM2gRMqKAQAAb7NezxXdG0lNLJNKZIQ635v5B5DYr7dt5/IFSmKZXYWjbAnMu2Ry3qkxkiI9iNMuKbEseE2gzKTBpeGLZvtmyzduivMgrDw6PHLIshMScSDLc76T2GcrcVjHlc4u/TGwd6q/BGOYWPae5PTBP1gwdIvR8JN5wBy3LPa0rKRvegvQbbIecvE3sNe98eWn8YYegbxrZpbG+CKS6AlhjBohWjctyP7JEXKB9W57vYzdcCngJjj/5eu3MudQQXioDquftsRNIbibOH1VDz01101iGe+eiQ==~4600626~4602162
       User-Agent:
-      - python-requests/2.27.1
+      - python-requests/2.31.0
     method: GET
-    uri: https://api.cisco.com/sn2info/v2/identifiers/orderable/serial_numbers/FOC0717W107,FOC11517LEX,FOC0737Y43K?page_index=1&pageIndex=1
+    uri: https://apix.cisco.com/sn2info/v2/identifiers/orderable/serial_numbers/FOC0717W107,FOC11517LEX,FOC0737Y43K?page_index=1&pageIndex=1
   response:
     body:
       string: '{"serial_numbers":[{"sr_no":"FOC11517LEX","orderable_pid_list":[{"orderable_pid":"HWIC-4ESW","pillar_code":"1","pillar_description":"TAC
@@ -121,11 +221,11 @@ interactions:
       Cache-Control:
       - private
       Date:
-      - Thu, 10 Feb 2022 04:29:19 GMT
+      - Tue, 26 Sep 2023 02:43:25 GMT
       Transfer-Encoding:
       - chunked
       X-Mashery-Message-ID:
-      - 61524ce3-e964-4d05-b960-0dcdd2e36bbb
+      - d7e6950d-630b-499e-9b7c-6a30865ca1f8
       access-control-allow-credentials:
       - 'true'
       access-control-allow-headers:
@@ -135,15 +235,17 @@ interactions:
       - GET, POST, PUT, DELETE, PATCH, OPTIONS
       content-type:
       - application/json;charset=UTF-8
-      server:
-      - Apache-Coyote/1.1
       set-cookie:
-      - 2e3b7c7c3322598b3ab8148ccdebc7c8=ccab14508f51dca65622a34f5e2e7003; path=/;
-        HttpOnly; Secure
+      - 2e3b7c7c3322598b3ab8148ccdebc7c8=044566682bb90d006f4eea80e615f583; path=/;
+        HttpOnly; Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload;
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-observed:
+      - '77'
       x-rp-ssl-name:
-      - cae-prd-alln-prt-ext-kube-rp-1.cisco.com
+      - prd-alln-101-8zrsp-dedicated0-ext-kube-rp-1b-64m89
     status:
       code: 200
       message: OK

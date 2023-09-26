@@ -15,33 +15,82 @@ interactions:
       Content-Type:
       - application/x-www-form-urlencoded;charset=UTF-8
       User-Agent:
-      - python-requests/2.27.1
+      - python-requests/2.31.0
     method: POST
-    uri: https://cloudsso.cisco.com/as/token.oauth2
+    uri: https://id.cisco.com/oauth2/default/v1/token
   response:
     body:
-      string: '{"access_token":"RrrfVTLafpSUClTftYwbmGZoz0oJ","token_type":"Bearer","expires_in":3599}'
+      string: '{"token_type":"Bearer","expires_in":3600,"access_token":"eyJraWQiOiJUV3lfd0piZUhMUjJrb1NZQWZpTnZPeGptWExPM3NKNTdBTUk0UGEySzRRIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULll0NmN5eUF1bGxORmZGWHR4c2xfeDNmdVk4X25SNkRsZGFta29QQV9Ca3MiLCJpc3MiOiJodHRwczovL2lkLmNpc2NvLmNvbS9vYXV0aDIvZGVmYXVsdCIsImF1ZCI6ImFwaTovL2RlZmF1bHQiLCJpYXQiOjE2OTU2OTYxNDQsImV4cCI6MTY5NTY5OTc0NCwiY2lkIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIiwic2NwIjpbImN1c3RvbXNjb3BlIl0sImFjY2Vzc19sZXZlbCI6MSwic3ViIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIiwiZnVsbF9uYW1lIjoibnVsbCBudWxsIiwiYXpwIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIn0.pPE2gEs2MHushUnWTVVBgfMDIoWjOFL99arXW02LltzxFN_ez0vy0q-UKTQ6cPp0PrfnfeXHXtOceo9ybGDBL2r1VXMF4RUxxmn7StRaGw0VpXMTFNFPQdSvYF7X0CxOjLMxchRDNXfAnFsUh0O4xyUaDHFNkjbuGgMCV46lHIxhnbUtmR9qk54Ct5F_7Tm3W2Ipwn9d9QIWFRtKO676vuXbKrQt1RlS_Sa2PS002E2VO2y3RNPkdrk8IH45IoWWg5_HmuDMKFIhy9-obtfWPgdIu6tifCQdqvOOuq-yGx7TtpCVTsfM2GAMiH1y8UVi5xcMsk4IENVIl6sxnZp-xw","scope":"customscope"}'
     headers:
-      Access-Control-Allow-Origin:
-      - '*'
       Cache-Control:
-      - no-cache, no-store
+      - max-age=0, no-cache, no-store
       Connection:
-      - Keep-Alive
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '700'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
       Content-Type:
-      - application/json;charset=utf-8
+      - application/json
       Date:
-      - Thu, 10 Feb 2022 02:01:05 GMT
+      - Tue, 26 Sep 2023 02:42:24 GMT
       Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Keep-Alive:
-      - timeout=2, max=997
+      - Tue, 26 Sep 2023 02:42:24 GMT
       Pragma:
       - no-cache
+      Server:
+      - nginx
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=27
+      - origin; dur=132
+      - ak_p; desc="1695696144495_1752730244_130065280_16452_8942_82_159_-";dur=1
       Set-Cookie:
-      - PF=cS3cTZO0tVGIjIo8oER6a7;Path=/;Secure;HttpOnly;SameSite=None
-      Transfer-Encoding:
-      - chunked
+      - sid="";Version=1;Path=/;Max-Age=0
+      - autolaunch_triggered=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      - JSESSIONID=AA1019F146072A19A470B4C0C5CF1D02; Path=/; Secure; HttpOnly
+      - _abck=1C584509EDD32345C13FD4F6D6FE356A~-1~YAAQhIp4aKaXRMqKAQAAzMldzwongBLyBvil2XePltYwc7Cf13yElHj9+UEjLjBmvCZs48XsYPVu+yyw0ym2zFBWyB6v+Ews8r5e/8pkmaVNrg1PFgTus2RlBscUuq/t2w+wchJs5aSs5aS7IeFbxEXUNv0k1J45L1ifhEG9x0AmL0Vg+l4xjdDG+wgB60i4J5SI2Mm+XSTKWB3iQ/Sy7JCeNp9rsMduNBeCuDwsMHQoGNakVJLyfUFd14lQL4Vvv/zyWHObPBQkTqz/2duzpCQ7iEWkn1jr7CZW6A74Y0amgXSHs1Gb9B5f69dQ5xNGTyOpvkP//GF8GregIWqHoKDkwk4Tc6sP64uXsksIKsHj00ZUlN1pMw==~-1~-1~-1;
+        Domain=.cisco.com; Path=/; Expires=Wed, 25 Sep 2024 02:42:24 GMT; Max-Age=31536000;
+        Secure
+      - bm_sz=37435E72A0278E12158D37876DCEE415~YAAQhIp4aKeXRMqKAQAAzMldzxV9mvY1xYwi768OUSoGkBwclutU8ysdKLh7odgR2khdPwXB5237ofsb+p4WeH3+zbaa8NJ9O3BUZxzfIR1Q/yDbb6UbwpHuitic7boukjn6R2pAKirTsygevTpvTEHJ5JnDKtZ7FtOOFS9frP8ebJD8E46vBhYI4/cl1C/gwTq6uEG13eXBqQtnVT5gKEo1yKcFpIGXG9HbHMFCqw4WHsiWzd+DuYnoXSbdLJHe9vNjtB3IoSOMxDmcWO09Tstx5NNCYNA6d0rEwUv7XOqr1Q==~4272696~4600119;
+        Domain=.cisco.com; Path=/; Expires=Tue, 26 Sep 2023 06:42:24 GMT; Max-Age=14400
+      Strict-Transport-Security:
+      - max-age=315360000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Robots-Tag:
+      - noindex,nofollow
+      content-security-policy-report-only:
+      - 'default-src ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; connect-src
+        ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com *.oktacdn.com
+        *.mixpanel.com *.mapbox.com app.pendo.io data.pendo.io pendo-static-5634101834153984.storage.googleapis.com
+        pendo-static-5391521872216064.storage.googleapis.com *.mtls.okta.com ciscoid.kerberos.okta.com
+        https://oinmanager.okta.com data:; script-src ''unsafe-inline'' ''unsafe-eval''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; style-src ''unsafe-inline''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com app.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com;
+        frame-src ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com login.okta.com
+        api-dbbfec7f.duosecurity.com; img-src ''self'' ciscoid.okta.com id.cisco.com
+        *.oktacdn.com *.tiles.mapbox.com *.mapbox.com app.pendo.io data.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com
+        data: blob:; font-src ''self'' ciscoid.okta.com id.cisco.com data: *.oktacdn.com
+        fonts.gstatic.com; frame-ancestors ''self'''
+      p3p:
+      - CP="HONK"
+      x-content-type-options:
+      - nosniff
+      x-okta-request-id:
+      - ZRJFEIiE8hZbjlBnmmgfAQAABj8
+      x-rate-limit-limit:
+      - '60000'
+      x-rate-limit-remaining:
+      - '57323'
+      x-rate-limit-reset:
+      - '1695696160'
+      x-xss-protection:
+      - '0'
     status:
       code: 200
       message: OK
@@ -61,33 +110,81 @@ interactions:
       Content-Type:
       - application/x-www-form-urlencoded;charset=UTF-8
       Cookie:
-      - PF=cS3cTZO0tVGIjIo8oER6a7
+      - _abck=1C584509EDD32345C13FD4F6D6FE356A~-1~YAAQhIp4aKaXRMqKAQAAzMldzwongBLyBvil2XePltYwc7Cf13yElHj9+UEjLjBmvCZs48XsYPVu+yyw0ym2zFBWyB6v+Ews8r5e/8pkmaVNrg1PFgTus2RlBscUuq/t2w+wchJs5aSs5aS7IeFbxEXUNv0k1J45L1ifhEG9x0AmL0Vg+l4xjdDG+wgB60i4J5SI2Mm+XSTKWB3iQ/Sy7JCeNp9rsMduNBeCuDwsMHQoGNakVJLyfUFd14lQL4Vvv/zyWHObPBQkTqz/2duzpCQ7iEWkn1jr7CZW6A74Y0amgXSHs1Gb9B5f69dQ5xNGTyOpvkP//GF8GregIWqHoKDkwk4Tc6sP64uXsksIKsHj00ZUlN1pMw==~-1~-1~-1;
+        bm_sz=37435E72A0278E12158D37876DCEE415~YAAQhIp4aKeXRMqKAQAAzMldzxV9mvY1xYwi768OUSoGkBwclutU8ysdKLh7odgR2khdPwXB5237ofsb+p4WeH3+zbaa8NJ9O3BUZxzfIR1Q/yDbb6UbwpHuitic7boukjn6R2pAKirTsygevTpvTEHJ5JnDKtZ7FtOOFS9frP8ebJD8E46vBhYI4/cl1C/gwTq6uEG13eXBqQtnVT5gKEo1yKcFpIGXG9HbHMFCqw4WHsiWzd+DuYnoXSbdLJHe9vNjtB3IoSOMxDmcWO09Tstx5NNCYNA6d0rEwUv7XOqr1Q==~4272696~4600119;
+        JSESSIONID=AA1019F146072A19A470B4C0C5CF1D02
       User-Agent:
-      - python-requests/2.27.1
+      - python-requests/2.31.0
     method: POST
-    uri: https://cloudsso.cisco.com/as/token.oauth2
+    uri: https://id.cisco.com/oauth2/default/v1/token
   response:
     body:
-      string: '{"access_token":"f0jgWzuEY8362QUMgHfi8KivFKBB","token_type":"Bearer","expires_in":3599}'
+      string: '{"token_type":"Bearer","expires_in":3600,"access_token":"eyJraWQiOiJUV3lfd0piZUhMUjJrb1NZQWZpTnZPeGptWExPM3NKNTdBTUk0UGEySzRRIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULlh5cjVLYVNuT2xjdEotZWtKdmlNeXZUNHZGQ082ZVZtNjRUT0lJemJYbEEiLCJpc3MiOiJodHRwczovL2lkLmNpc2NvLmNvbS9vYXV0aDIvZGVmYXVsdCIsImF1ZCI6ImFwaTovL2RlZmF1bHQiLCJpYXQiOjE2OTU2OTYxNDUsImV4cCI6MTY5NTY5OTc0NSwiY2lkIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIiwic2NwIjpbImN1c3RvbXNjb3BlIl0sImFjY2Vzc19sZXZlbCI6MSwic3ViIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIiwiZnVsbF9uYW1lIjoibnVsbCBudWxsIiwiYXpwIjoiYXFweGJ0cnlmZGZ0eGU2NGo5YXZidWcyIn0.EmdMpPHvhadw5SsMqkKQRA8cS_lHA4RoFBmPchlZ2By2RG9Mv8nV_OSFDQ2vLZHelyVJ6VKAPblqFkBo5kbJmsVRZFCe6TsZy8-KmpZD_0MwHVp_R-C4Gys5AXGawlaIMgqdFefiSb6pRMM0wqMi2eP_PRocywulh1YQgUU4_1NHrZOk5sysUTgS_05tX2hc5QQXbmRR8GhefLZRowUZgCwwlW2IDAXwrE6P5XZgt3heug75KZzw3vm43P-S60mFpcSrx3jd4WgwAxBPshgWlnbhvlF0hZNHVw2S2YObHDB5t5EbqwwTShmQRG4JCjdKX_FLaIK5mu4ILctGXjtQ-A","scope":"customscope"}'
     headers:
-      Access-Control-Allow-Origin:
-      - '*'
       Cache-Control:
-      - no-cache, no-store
+      - max-age=0, no-cache, no-store
       Connection:
-      - Keep-Alive
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '703'
+      Content-Security-Policy:
+      - frame-ancestors 'self'
       Content-Type:
-      - application/json;charset=utf-8
+      - application/json
       Date:
-      - Thu, 10 Feb 2022 02:01:05 GMT
+      - Tue, 26 Sep 2023 02:42:25 GMT
       Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Keep-Alive:
-      - timeout=2, max=995
+      - Tue, 26 Sep 2023 02:42:25 GMT
       Pragma:
       - no-cache
-      Transfer-Encoding:
-      - chunked
+      Server:
+      - nginx
+      Server-Timing:
+      - cdn-cache; desc=MISS
+      - edge; dur=113
+      - origin; dur=332
+      - ak_p; desc="1695696145028_1752730244_130066739_44430_10066_83_152_-";dur=1
+      Set-Cookie:
+      - sid="";Version=1;Path=/;Max-Age=0
+      - autolaunch_triggered=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      - JSESSIONID=8DD47594FCC78093CBDED2F0EEEAFC02; Path=/; Secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=315360000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Robots-Tag:
+      - noindex,nofollow
+      content-security-policy-report-only:
+      - 'default-src ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; connect-src
+        ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com *.oktacdn.com
+        *.mixpanel.com *.mapbox.com app.pendo.io data.pendo.io pendo-static-5634101834153984.storage.googleapis.com
+        pendo-static-5391521872216064.storage.googleapis.com *.mtls.okta.com ciscoid.kerberos.okta.com
+        https://oinmanager.okta.com data:; script-src ''unsafe-inline'' ''unsafe-eval''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com; style-src ''unsafe-inline''
+        ''self'' ciscoid.okta.com id.cisco.com *.oktacdn.com app.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com;
+        frame-src ''self'' ciscoid.okta.com ciscoid-admin.okta.com id.cisco.com login.okta.com
+        api-dbbfec7f.duosecurity.com; img-src ''self'' ciscoid.okta.com id.cisco.com
+        *.oktacdn.com *.tiles.mapbox.com *.mapbox.com app.pendo.io data.pendo.io cdn.pendo.io
+        pendo-static-5634101834153984.storage.googleapis.com pendo-static-5391521872216064.storage.googleapis.com
+        data: blob:; font-src ''self'' ciscoid.okta.com id.cisco.com data: *.oktacdn.com
+        fonts.gstatic.com; frame-ancestors ''self'''
+      p3p:
+      - CP="HONK"
+      x-content-type-options:
+      - nosniff
+      x-okta-request-id:
+      - ZRJFEeC8573ytmlriBpBeAAAAis
+      x-rate-limit-limit:
+      - '60000'
+      x-rate-limit-remaining:
+      - '57275'
+      x-rate-limit-reset:
+      - '1695696160'
+      x-xss-protection:
+      - '0'
     status:
       code: 200
       message: OK
@@ -102,64 +199,49 @@ interactions:
       - DUMMY
       Connection:
       - keep-alive
+      Cookie:
+      - _abck=1C584509EDD32345C13FD4F6D6FE356A~-1~YAAQhIp4aKaXRMqKAQAAzMldzwongBLyBvil2XePltYwc7Cf13yElHj9+UEjLjBmvCZs48XsYPVu+yyw0ym2zFBWyB6v+Ews8r5e/8pkmaVNrg1PFgTus2RlBscUuq/t2w+wchJs5aSs5aS7IeFbxEXUNv0k1J45L1ifhEG9x0AmL0Vg+l4xjdDG+wgB60i4J5SI2Mm+XSTKWB3iQ/Sy7JCeNp9rsMduNBeCuDwsMHQoGNakVJLyfUFd14lQL4Vvv/zyWHObPBQkTqz/2duzpCQ7iEWkn1jr7CZW6A74Y0amgXSHs1Gb9B5f69dQ5xNGTyOpvkP//GF8GregIWqHoKDkwk4Tc6sP64uXsksIKsHj00ZUlN1pMw==~-1~-1~-1;
+        bm_sz=37435E72A0278E12158D37876DCEE415~YAAQhIp4aKeXRMqKAQAAzMldzxV9mvY1xYwi768OUSoGkBwclutU8ysdKLh7odgR2khdPwXB5237ofsb+p4WeH3+zbaa8NJ9O3BUZxzfIR1Q/yDbb6UbwpHuitic7boukjn6R2pAKirTsygevTpvTEHJ5JnDKtZ7FtOOFS9frP8ebJD8E46vBhYI4/cl1C/gwTq6uEG13eXBqQtnVT5gKEo1yKcFpIGXG9HbHMFCqw4WHsiWzd+DuYnoXSbdLJHe9vNjtB3IoSOMxDmcWO09Tstx5NNCYNA6d0rEwUv7XOqr1Q==~4272696~4600119
       User-Agent:
-      - python-requests/2.27.1
+      - python-requests/2.31.0
     method: GET
-    uri: https://api.cisco.com/case/v3/cases/contracts/contract_ids/92511831?status_flag=O&page_index=1
+    uri: https://apix.cisco.com/case/v3/cases/contracts/contract_ids/92511831?status_flag=O&page_index=1
   response:
     body:
-      string: '{"pagination_response_record":{"last_index":1,"page_index":1,"page_records":20,"self_link":"https://api.cisco.com/case/v3/cases/contracts/contract_ids/92511831?page_index=1&sort_by=UPDATED_DATE&status_flag=O","title":"Get
-        Cases By Contract Id","total_records":20},"cases":[{"item_entry_id":1,"user_id":"kgerrits","case_id":"692659470","title":"Cisco
-        CUBE HA Version 03.16.02.S stopped working after uplink GW reloading","severity":"3","contact_name":"Kees
-        Gerritsen","status_flag":"O","status":"Customer Pending","creation_date":"2021-12-02T14:03:07.000Z","updated_date":"2022-01-24T08:12:42.000Z","serial_number":"FXS2011Q3V5","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":2,"user_id":"nfong","case_id":"692883818","title":"ASR1004
-        ESP20 on sngidc-gem-wag-gw3 showing offline","severity":"3","contact_name":"Norman
-        Fong","status_flag":"O","status":"Close Pending","creation_date":"2022-01-16T22:19:01.000Z","updated_date":"2022-01-31T14:14:44.000Z","serial_number":"FOX1624GG2B","contract_id":"92511831","rmas":["802039029"],"bugs":[]},{"item_entry_id":3,"user_id":"pbhadori","case_id":"692740305","title":"++
-        Cisco IT saw a major outage and wanted TAC engineer to look into the FTDs","severity":"1","contact_name":"Prashant
-        Bhadoria","status_flag":"O","status":"Cisco Pending","creation_date":"2021-12-15T18:53:09.000Z","updated_date":"2022-01-31T19:18:35.000Z","serial_number":"JMX2208L018","contract_id":"92511831","rmas":[],"bugs":["CSCum03297","CSCvv53700","CSCvy97368","CSCvz62646","CSCvx07524"]},{"item_entry_id":4,"user_id":"nfong","case_id":"692858503","title":"Multiple
-        SDWAN branch sites down","severity":"3","contact_name":"Norman Fong","status_flag":"O","status":"Cisco
-        Pending","creation_date":"2022-01-11T21:47:25.000Z","updated_date":"2022-02-02T17:53:09.000Z","serial_number":"FXS2237Q0P9","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":5,"user_id":"wisantos","case_id":"692780414","title":"CPU
-        Mixed Mode install failure [CISCO SYSTEMS INC]","severity":"3","contact_name":"William
-        Santos","status_flag":"O","status":"Close Pending","creation_date":"2021-12-22T18:49:50.000Z","updated_date":"2022-02-07T17:25:57.000Z","serial_number":"FDO24390DJT","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":6,"user_id":"whouse","case_id":"692723310","title":"NWSBWAN-277
-        - SDWAN - Per-Tunnel QoS does not seem to be working","severity":"3","contact_name":"Anthony
-        House","status_flag":"O","status":"Customer Pending","creation_date":"2021-12-13T23:50:32.000Z","updated_date":"2022-02-07T17:59:40.000Z","serial_number":"","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":7,"user_id":"priyades","case_id":"692933496","title":"alln01-fab3-int-fw2
-        went into error state","severity":"3","contact_name":"Priyank Desai","status_flag":"O","status":"Cisco
-        Pending","creation_date":"2022-01-25T06:38:49.000Z","updated_date":"2022-02-08T03:44:19.000Z","serial_number":"FLM2249064T","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":8,"user_id":"frotthie","case_id":"693018536","title":"root-cause
-        find for outage on aer01-mda1-cci-gw1, ASR1006","severity":"3","contact_name":"Fredric
-        Rotthier","status_flag":"O","status":"Cisco Pending","creation_date":"2022-02-08T11:35:22.000Z","updated_date":"2022-02-08T13:43:20.000Z","serial_number":"FXS1820Q3CQ","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":9,"user_id":"madede","case_id":"692577799","title":"ISE
-        v3.1 API Network Access - Authorization Rules","severity":"4","contact_name":"Maria
-        Dede","status_flag":"O","status":"Cisco Pending","creation_date":"2021-11-18T15:39:39.000Z","updated_date":"2022-02-08T14:31:41.000Z","serial_number":"","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":10,"user_id":"irolea","case_id":"693019607","title":"Console
-        port not working","severity":"3","contact_name":"Ilinca Rolea","status_flag":"O","status":"Customer
-        Pending","creation_date":"2022-02-08T14:29:16.000Z","updated_date":"2022-02-08T15:21:17.000Z","serial_number":"FDO2518M2W6","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":11,"user_id":"rkunthir","case_id":"693019753","title":"We
-        have below ASA devices , one of the showing unreachable but the devices seems
-        to be up. Please find some basic logs.","severity":"3","contact_name":"Rashid
-        Kunthiriyatt","status_flag":"O","status":"Customer Pending","creation_date":"2022-02-08T14:46:20.000Z","updated_date":"2022-02-08T22:09:02.000Z","serial_number":"JAD1834013F","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":12,"user_id":"sheerens","case_id":"692873682","title":"FTD
-        Failover issue","severity":"3","contact_name":"Steve Heerensperger","status_flag":"O","status":"Cisco
-        Pending","creation_date":"2022-01-13T20:08:29.000Z","updated_date":"2022-02-09T03:42:58.000Z","serial_number":"FLM2247030H","contract_id":"92511831","rmas":[],"bugs":["CSCvf70573","CSCvm94545"]},{"item_entry_id":13,"user_id":"dprasant","case_id":"693019860","title":"FTD
-        6.6.5.1 // High LINA CPU after upgrade.","severity":"3","contact_name":"Prasanth
-        Damodaran","status_flag":"O","status":"Customer Pending","creation_date":"2022-02-08T14:55:33.000Z","updated_date":"2022-02-09T12:16:38.000Z","serial_number":"JMX2210L03L","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":14,"user_id":"ppuchals","case_id":"692991529","title":"ASR1002-HX//17.6.1a//Unable
-        to install thousand eyes","severity":"3","contact_name":"Peter Puchalski","status_flag":"O","status":"Cisco
-        Pending","creation_date":"2022-02-03T06:37:32.000Z","updated_date":"2022-02-09T12:59:08.000Z","serial_number":"FXS2432Q1EH","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":15,"user_id":"madede","case_id":"693019595","title":"Switches
-        fail downloading requested SGTs that have been deleted from ISE","severity":"3","contact_name":"Maria
-        Dede","status_flag":"O","status":"Customer Pending","creation_date":"2022-02-08T14:27:48.000Z","updated_date":"2022-02-09T14:05:26.000Z","serial_number":"SAL1627FUAH","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":16,"user_id":"sheerens","case_id":"693019098","title":"FMC
-        reflects inaccurate FTD device status","severity":"3","contact_name":"Steve
-        Heerensperger","status_flag":"O","status":"Cisco Pending","creation_date":"2022-02-08T13:19:30.000Z","updated_date":"2022-02-09T14:32:35.000Z","serial_number":"WZP23250HM0","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":17,"user_id":"ppuchals","case_id":"692900876","title":"C8300
-        SDWAN DNS lookup problem","severity":"3","contact_name":"Peter Puchalski","status_flag":"O","status":"Cisco
-        Pending","creation_date":"2022-01-19T11:02:09.000Z","updated_date":"2022-02-09T15:17:15.000Z","serial_number":"FLM250411A7","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":18,"user_id":"smatiulb","case_id":"692922188","title":"Security
-        Module 1 is in failed state of ftd device.","severity":"3","contact_name":"Shaikh
-        Matiul Bari","status_flag":"O","status":"Customer Pending","creation_date":"2022-01-22T11:42:12.000Z","updated_date":"2022-02-09T19:50:01.000Z","serial_number":"JMX2403L04X","contract_id":"92511831","rmas":["802070333"],"bugs":[]},{"item_entry_id":19,"user_id":"dprasant","case_id":"692888301","title":"FTD
-        6.6.0/ Block 256 and 9344 depletion /Instability","severity":"3","contact_name":"Prasanth
-        Damodaran","status_flag":"O","status":"Customer Pending","creation_date":"2022-01-17T16:35:35.000Z","updated_date":"2022-02-09T20:51:32.000Z","serial_number":"JMX2210L03L","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":20,"user_id":"pangli","case_id":"692597153","title":"SDWAN
-        outage, BFD session at multi sites are down now","severity":"3","contact_name":"Jonny
-        Li","status_flag":"O","status":"Cisco Pending","creation_date":"2021-11-21T07:32:11.000Z","updated_date":"2022-02-09T23:16:37.000Z","serial_number":"FXS2236Q04B","contract_id":"92511831","rmas":[],"bugs":["CSCwa29191"]}]}'
+      string: '{"pagination_response_record":{"last_index":1,"page_index":1,"page_records":10,"self_link":"https://api.cisco.com/case/v3/cases/contracts/contract_ids/92511831?page_index=1&sort_by=UPDATED_DATE&status_flag=O","title":"Get
+        Cases By Contract Id","total_records":10},"cases":[{"item_entry_id":1,"user_id":"tzboril","case_id":"695988093","title":"FMC4500
+        to FMC4600 migration failed - Error restoring health metrics [CiscoIT]","severity":"3","contact_name":"Tomas
+        Zboril","status_flag":"O","status":"Cisco Pending","creation_date":"2023-08-11T08:22:37.000Z","updated_date":"2023-09-13T09:57:38.000Z","serial_number":"WMP270500GT","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":2,"user_id":"madede","case_id":"696113895","title":"ISE
+        3.1P7 - endpoint in purge exception was purged","severity":"3","contact_name":"Maria
+        Dede","status_flag":"O","status":"Cisco Pending","creation_date":"2023-09-06T12:00:04.000Z","updated_date":"2023-09-15T07:08:59.000Z","serial_number":"","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":3,"user_id":"byordano","case_id":"695975138","title":"Firepower
+        4110 | 2.12(0.432) | Logical Device FTD is in \"Security module fault\" State
+        | INC...5088324","severity":"3","contact_name":"Bogdan Yordanov","status_flag":"O","status":"Customer
+        Pending","creation_date":"2023-08-09T09:56:37.000Z","updated_date":"2023-09-16T22:43:57.000Z","serial_number":"FCZ2215M00A","contract_id":"92511831","rmas":[],"bugs":["CSCvx85690"]},{"item_entry_id":4,"user_id":"jleombru","case_id":"695980773","title":"Firepower
+        4150 | FTD v7.0.5 (b72) | FX-OS v2.10.1 (b1400) | NSEL Initiator Octets fields
+        displaying unexpected large number","severity":"3","contact_name":"Jake Leombruni","status_flag":"O","status":"Customer
+        Pending","creation_date":"2023-08-10T06:05:48.000Z","updated_date":"2023-09-20T06:34:30.000Z","serial_number":"","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":5,"user_id":"ccorneil","case_id":"695887893","title":"Anyconnect
+        Disconnects Mac IPv6 LL - correction of the routing table has failed","severity":"3","contact_name":"Callum
+        Corneille","status_flag":"O","status":"Close Pending","creation_date":"2023-07-24T08:46:17.000Z","updated_date":"2023-09-20T18:05:26.000Z","serial_number":"JMX2533X06F","contract_id":"92511831","rmas":[],"bugs":["CSCwe35649"]},{"item_entry_id":6,"user_id":"iqchaman","case_id":"695803322","title":"C9407R
+        |  IOS-XE 17.9.3 | SUP-1 module 4 is dead | Cisco IT | INC*4934780","severity":"3","contact_name":"Iqbalahmed
+        Chamanshaikh","status_flag":"O","status":"Customer Pending","creation_date":"2023-07-06T15:02:56.000Z","updated_date":"2023-09-21T06:55:05.000Z","serial_number":"JAE224912LT","contract_id":"92511831","rmas":["803097457","802988948"],"bugs":[]},{"item_entry_id":7,"user_id":"sesunny","case_id":"696186650","title":"Getting
+        Continous Logs on Nexus 7K for  SYSMGR-2-LAST_CORE_BASIC_TRACE: : PID XXXX
+        with message non-sysmgr(non-sysmgr) crashed, core will be saved","severity":"3","contact_name":"Sejmon
+        Sunny","status_flag":"O","status":"Cisco Pending","creation_date":"2023-09-20T08:54:01.000Z","updated_date":"2023-09-25T13:02:42.000Z","serial_number":"FXS2416Q0C2","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":8,"user_id":"srealla","case_id":"696198764","title":"SMR
+        card failure on ONS device","severity":"3","contact_name":"Sreekantha Reddy
+        Alla","status_flag":"O","status":"Close Pending","creation_date":"2023-09-21T21:02:21.000Z","updated_date":"2023-09-25T17:04:40.000Z","serial_number":"SAL18401Q6Q","contract_id":"92511831","rmas":["803124413"],"bugs":[]},{"item_entry_id":9,"user_id":"sashank2","case_id":"696195502","title":"RTP1-FAB1-INT-FTD
+        | ACP Deploy Caused Mass Outage","severity":"3","contact_name":"Santhosh Shankar","status_flag":"O","status":"Customer
+        Pending","creation_date":"2023-09-21T12:50:40.000Z","updated_date":"2023-09-26T00:52:04.000Z","serial_number":"FLM2247030H","contract_id":"92511831","rmas":[],"bugs":[]},{"item_entry_id":10,"user_id":"tatagami","case_id":"696079090","title":"SSL
+        command disappear after reload","severity":"3","contact_name":"Takeshi Tagami","status_flag":"O","status":"Customer
+        Pending","creation_date":"2023-08-30T05:25:17.000Z","updated_date":"2023-09-26T02:08:53.000Z","serial_number":"JMX2440L018","contract_id":"92511831","rmas":[],"bugs":[]}]}'
     headers:
       Cache-Control:
       - private
       Date:
-      - Thu, 10 Feb 2022 02:01:06 GMT
+      - Tue, 26 Sep 2023 02:42:28 GMT
       Transfer-Encoding:
       - chunked
       X-Mashery-Message-ID:
-      - 1bbe92c7-1373-4c2c-8dd9-2e070227254c
+      - 4efb9be6-fd97-4d19-977a-d577bc59c3fb
       access-control-allow-credentials:
       - 'true'
       access-control-allow-headers:
@@ -171,15 +253,17 @@ interactions:
       - (null)
       content-type:
       - application/json;charset=UTF-8
-      server:
-      - Apache-Coyote/1.1
       set-cookie:
-      - 2e3b7c7c3322598b3ab8148ccdebc7c8=ccab14508f51dca65622a34f5e2e7003; path=/;
-        HttpOnly; Secure
+      - 2e3b7c7c3322598b3ab8148ccdebc7c8=044566682bb90d006f4eea80e615f583; path=/;
+        HttpOnly; Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload;
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-observed:
+      - '79'
       x-rp-ssl-name:
-      - cae-prd-alln-prt-ext-kube-rp-1.cisco.com
+      - prd-alln-101-8zrsp-dedicated0-ext-kube-rp-1b-64m89
     status:
       code: 200
       message: OK
