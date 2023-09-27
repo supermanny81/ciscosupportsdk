@@ -26,8 +26,7 @@ interactions:
       - max-age=0, no-cache, no-store
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
+      
       Content-Length:
       - '704'
       Content-Security-Policy:
@@ -125,8 +124,7 @@ interactions:
       - max-age=0, no-cache, no-store
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
+      
       Content-Length:
       - '705'
       Content-Security-Policy:
