@@ -9,7 +9,8 @@ from ciscosupportsdk.apisession import ApiError
 @pytest.mark.usefixtures("vcr_config")
 class TestApiSession:
     @pytest.mark.skip(
-        "Expected an OAuth failure, need to investigate why this behavior changed."
+        "Expected an OAuth failure, need to investigate "
+        "why this behavior changed."
     )
     def test_auth_failure(self):
         print(ApiSession("USE", "ME"))
