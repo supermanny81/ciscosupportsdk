@@ -53,6 +53,9 @@ jobs:
       - name: Run bandit
         run: poetry run bandit .
       - name: Run pip-audit
+        # Upgrade the environment's seed build tools first so their own
+        # advisories (e.g. the runner-provisioned pip/setuptools) do not fail
+        # the audit of the project's actual dependencies.
         run: |
-          poetry run pip install --upgrade pip
+          poetry run pip install --upgrade pip setuptools
           poetry run pip-audit
