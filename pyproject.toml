@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ciscosupportsdk"
-version = "0.2.1"
+version = "0.2.2"
 description = "Cisco Support APIs allow Cisco Partner Support Services (PSS) partners and Cisco Smart Net Total Care (SNTC) customers to programmatically access and consume Cisco Support data in the cloud in a simple, secure, and scalable manner."
 authors = ["Manny Garcia <supermanny@icloud.com>"]
 license = "MIT"
@@ -11,31 +11,38 @@ repository = "https://github.com/supermanny81/ciscosupportapi"
 include = ["LICENSE.txt"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.11"
 requests = "^2.27.1"
 Authlib = "^1.2.1"
 pydantic = "^1.9.0"
 
-[tool.poetry.dev-dependencies]
-black = "^22.1.0"
+[tool.poetry.group.dev.dependencies]
+black = "^26.3.1"
 isort = "^5.10.1"
-pytest = "^7.0.0"
+pytest = "^9.0.3"
 pytest-cov = "^3.0.0"
 pytest-recording = "^0.13.0"
-Sphinx = "^4.4.0"
-sphinx-autobuild = "^2021.3.14"
+Sphinx = "^7.0.0"
+sphinx-autobuild = "^2024.2.4"
 flake8 = "^4.0.1"
 bandit = "^1.7.3"
-safety = "^2.3.5"
-vcrpy = "^5.1.0"
+pip-audit = "^2.7.0"
+vcrpy = "^8.2.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.pytest.ini_options]
+# The api/*_test.py modules import the shared fixtures module via
+# `from fixtures import *`. Put its directory on sys.path explicitly so
+# collection does not depend on ordering (pytest 8+ no longer inserts it
+# implicitly).
+pythonpath = ["tests/ciscosupportsdk"]
+
 [tool.isort]
 # make it compatible with black
-profile = "black" 
+profile = "black"
 line_length = 79
 
 [tool.black]
