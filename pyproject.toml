@@ -36,9 +36,16 @@ vcrpy = "^8.2.1"
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.pytest.ini_options]
+# The api/*_test.py modules import the shared fixtures module via
+# `from fixtures import *`. Put its directory on sys.path explicitly so
+# collection does not depend on ordering (pytest 8+ no longer inserts it
+# implicitly).
+pythonpath = ["tests/ciscosupportsdk"]
+
 [tool.isort]
 # make it compatible with black
-profile = "black" 
+profile = "black"
 line_length = 79
 
 [tool.black]
