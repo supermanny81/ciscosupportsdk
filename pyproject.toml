@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ciscosupportsdk"
-version = "0.2.1"
+version = "0.2.2"
 description = "Cisco Support APIs allow Cisco Partner Support Services (PSS) partners and Cisco Smart Net Total Care (SNTC) customers to programmatically access and consume Cisco Support data in the cloud in a simple, secure, and scalable manner."
 authors = ["Manny Garcia <supermanny@icloud.com>"]
 license = "MIT"
@@ -22,11 +22,14 @@ isort = "^5.10.1"
 pytest = "^7.0.0"
 pytest-cov = "^3.0.0"
 pytest-recording = "^0.13.0"
-Sphinx = "^4.4.0"
-sphinx-autobuild = "^2021.3.14"
+Sphinx = "^7.0.0"
+sphinx-autobuild = "^2024.2.4"
 flake8 = "^4.0.1"
 bandit = "^1.7.3"
 safety = "^2.3.5"
+# safety 2.x imports pkg_resources, which setuptools removed in 81.
+# Keep setuptools below that until safety is upgraded.
+setuptools = "<81"
 vcrpy = "^5.1.0"
 
 [build-system]
