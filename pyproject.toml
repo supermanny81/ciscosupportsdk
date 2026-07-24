@@ -26,10 +26,7 @@ Sphinx = "^7.0.0"
 sphinx-autobuild = "^2024.2.4"
 flake8 = "^4.0.1"
 bandit = "^1.7.3"
-safety = "^2.3.5"
-# safety 2.x imports pkg_resources, which setuptools removed in 81.
-# Keep setuptools below that until safety is upgraded.
-setuptools = "<81"
+pip-audit = "^2.7.0"
 vcrpy = "^8.2.1"
 
 [build-system]

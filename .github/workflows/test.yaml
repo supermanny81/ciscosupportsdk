@@ -52,9 +52,7 @@ jobs:
         run: poetry run flake8 .
       - name: Run bandit
         run: poetry run bandit .
-      - name: Run saftey
-        # Advisory only: safety 2.x flags transitive toolchain CVEs (e.g. the
-        # runner's pip) that cannot be resolved from pyproject.toml. Keep the
-        # scan visible without failing the build on non-actionable findings.
-        continue-on-error: true
-        run: poetry run safety check
+      - name: Run pip-audit
+        run: |
+          poetry run pip install --upgrade pip
+          poetry run pip-audit
