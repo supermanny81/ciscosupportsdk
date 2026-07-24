@@ -11,15 +11,15 @@ repository = "https://github.com/supermanny81/ciscosupportapi"
 include = ["LICENSE.txt"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.11"
 requests = "^2.27.1"
 Authlib = "^1.2.1"
 pydantic = "^1.9.0"
 
 [tool.poetry.group.dev.dependencies]
-black = "^22.1.0"
+black = "^26.3.1"
 isort = "^5.10.1"
-pytest = "^7.0.0"
+pytest = "^9.0.3"
 pytest-cov = "^3.0.0"
 pytest-recording = "^0.13.0"
 Sphinx = "^7.0.0"
@@ -30,7 +30,7 @@ safety = "^2.3.5"
 # safety 2.x imports pkg_resources, which setuptools removed in 81.
 # Keep setuptools below that until safety is upgraded.
 setuptools = "<81"
-vcrpy = "^5.1.0"
+vcrpy = "^8.2.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
