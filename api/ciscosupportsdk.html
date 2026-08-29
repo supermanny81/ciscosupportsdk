@@ -62,18 +62,184 @@ in a hierarchical structure.</p>
 <p>Cisco Automated Software Distribution service provides software
 information and download URLs to assist you in upgrading your
 device/application to the latest version.</p>
+<p>Unlike the other Support APIs, ASD takes its inputs as a JSON request
+body over POST rather than as path parameters.</p>
+<p>A download is a two step flow: call one of the metadata methods to get
+image GUIDs and a <code class="docutils literal notranslate"><span class="pre">metadata_trans_id</span></code>, then pass both to
+<a class="reference internal" href="#ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_download_urls" title="ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_download_urls"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_download_urls()</span></code></a>. If the response carries an <code class="docutils literal notranslate"><span class="pre">acceptance_form</span></code>,
+the K9 or EULA agreement still has to be accepted – post it with
+<a class="reference internal" href="#ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.accept_k9_agreement" title="ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.accept_k9_agreement"><code class="xref py py-meth docutils literal notranslate"><span class="pre">accept_k9_agreement()</span></code></a> or <a class="reference internal" href="#ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.accept_eula_agreement" title="ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.accept_eula_agreement"><code class="xref py py-meth docutils literal notranslate"><span class="pre">accept_eula_agreement()</span></code></a> and retry.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_bug_details">
-<span class="sig-name descname"><span class="pre">get_bug_details</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bug_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_bug_details" title="Link to this definition">¶</a></dt>
-<dd><p>Returns detailed information for the specified bug ID or IDs.</p>
+<dt class="sig sig-object py" id="ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.accept_eula_agreement">
+<span class="sig-name descname"><span class="pre">accept_eula_agreement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ComplianceStatus</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">ComplianceStatus.ACCEPTED</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decline_comments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">AsdAgreementAck</span></span></span><a class="headerlink" href="#ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.accept_eula_agreement" title="Link to this definition">¶</a></dt>
+<dd><p>Records the user’s response to the EULA.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Param<span class="colon">:</span></dt>
-<dd class="field-odd"><p>bug_ids: list[str]: Identifier of the bug or bugs for which
-to return detailed information. A maximum of five (5) bug IDs can
-be submitted separated by a comma.</p>
+<dd class="field-odd"><p>file_names: list[str]: Images the response applies to.</p>
+</dd>
+<dt class="field-even">Param<span class="colon">:</span></dt>
+<dd class="field-even"><p>status: ComplianceStatus: Accepted or Declined.</p>
+</dd>
+<dt class="field-odd">Param<span class="colon">:</span></dt>
+<dd class="field-odd"><p>decline_comments: str: Required when declining.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>Bug</p>
+<dd class="field-even"><p>AsdAgreementAck</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.accept_k9_agreement">
+<span class="sig-name descname"><span class="pre">accept_k9_agreement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ComplianceStatus</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">ComplianceStatus.ACCEPTED</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confirm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONFIRM_CHECKED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bus_function</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BusinessFunction</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">BusinessFunction.COMM_OR_CIVIL</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gov_mil_countries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GOV_OR_MIL_COUNTRIES_NO'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decline_comments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">AsdAgreementAck</span></span></span><a class="headerlink" href="#ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.accept_k9_agreement" title="Link to this definition">¶</a></dt>
+<dd><p>Records the user’s response to the K9 agreement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param<span class="colon">:</span></dt>
+<dd class="field-odd"><p>file_names: list[str]: Images the response applies to.</p>
+</dd>
+<dt class="field-even">Param<span class="colon">:</span></dt>
+<dd class="field-even"><p>status: ComplianceStatus: Accepted or Declined.</p>
+</dd>
+<dt class="field-odd">Param<span class="colon">:</span></dt>
+<dd class="field-odd"><p>confirm: str: Confirmation checkbox value.</p>
+</dd>
+<dt class="field-even">Param<span class="colon">:</span></dt>
+<dd class="field-even"><p>bus_function: BusinessFunction: Business function declaration.</p>
+</dd>
+<dt class="field-odd">Param<span class="colon">:</span></dt>
+<dd class="field-odd"><p>gov_mil_countries: str: Government/military country
+declaration.</p>
+</dd>
+<dt class="field-even">Param<span class="colon">:</span></dt>
+<dd class="field-even"><p>decline_comments: str: Required when declining.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>AsdAgreementAck</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_download_urls">
+<span class="sig-name descname"><span class="pre">get_download_urls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mdf_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata_trans_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_guids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">AsdDownloadResponse</span></span></span><a class="headerlink" href="#ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_download_urls" title="Link to this definition">¶</a></dt>
+<dd><p>Returns sessionized download URLs for the specified images.</p>
+<p>The whole response is returned rather than just the downloads,
+because <code class="docutils literal notranslate"><span class="pre">acceptance_form</span></code> has to be inspected: when it is populated
+the K9 or EULA agreement must be accepted before the URLs are usable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pid: str: Product identifier the images belong to.</p>
+</dd>
+<dt class="field-even">Param<span class="colon">:</span></dt>
+<dd class="field-even"><p>mdf_id: str: MDF identifier from the metadata response.</p>
+</dd>
+<dt class="field-odd">Param<span class="colon">:</span></dt>
+<dd class="field-odd"><p>metadata_trans_id: str: <code class="docutils literal notranslate"><span class="pre">metadata_trans_id</span></code> returned by the
+metadata call that produced these image GUIDs.</p>
+</dd>
+<dt class="field-even">Param<span class="colon">:</span></dt>
+<dd class="field-even"><p>image_guids: list[str]: Image GUIDs to download.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>AsdDownloadResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_downloads">
+<span class="sig-name descname"><span class="pre">get_downloads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mdf_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata_trans_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_guids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">AsdDownload</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_downloads" title="Link to this definition">¶</a></dt>
+<dd><p>Convenience wrapper over <a class="reference internal" href="#ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_download_urls" title="ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_download_urls"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_download_urls()</span></code></a> that yields just
+the download entries.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Iterable[AsdDownload]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_eula_agreement">
+<span class="sig-name descname"><span class="pre">get_eula_agreement</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">AsdAgreement</span></span></span><a class="headerlink" href="#ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_eula_agreement" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the EULA text and the current acceptance state for the
+authenticated user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>AsdAgreement</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_k9_agreement">
+<span class="sig-name descname"><span class="pre">get_k9_agreement</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">AsdAgreement</span></span></span><a class="headerlink" href="#ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_k9_agreement" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the K9 (strong encryption) agreement text and the current
+acceptance state for the authenticated user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>AsdAgreement</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_software_by_pid_and_image">
+<span class="sig-name descname"><span class="pre">get_software_by_pid_and_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">per_page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">AsdMetadata</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_software_by_pid_and_image" title="Link to this definition">¶</a></dt>
+<dd><p>Returns software metadata for a product ID and image name or names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pid: str: Product identifier to return software for.</p>
+</dd>
+<dt class="field-even">Param<span class="colon">:</span></dt>
+<dd class="field-even"><p>image_names: list[str]: Image names to return metadata for.</p>
+</dd>
+<dt class="field-odd">Param<span class="colon">:</span></dt>
+<dd class="field-odd"><p>per_page: int: Number of records to return per page.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Iterable[AsdMetadata]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_software_by_pid_and_release">
+<span class="sig-name descname"><span class="pre">get_software_by_pid_and_release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_release_version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_release_version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'latest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">per_page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">AsdMetadata</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_software_by_pid_and_release" title="Link to this definition">¶</a></dt>
+<dd><p>Returns software metadata for a product ID and release version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pid: str: Product identifier to return software for.</p>
+</dd>
+<dt class="field-even">Param<span class="colon">:</span></dt>
+<dd class="field-even"><p>current_release_version: str: Release currently running on
+the device, for example <code class="docutils literal notranslate"><span class="pre">5.4.3</span></code>.</p>
+</dd>
+<dt class="field-odd">Param<span class="colon">:</span></dt>
+<dd class="field-odd"><p>output_release_version: str: Release to return metadata for;
+<code class="docutils literal notranslate"><span class="pre">latest</span></code> returns the most recent release.</p>
+</dd>
+<dt class="field-even">Param<span class="colon">:</span></dt>
+<dd class="field-even"><p>per_page: int: Number of records to return per page.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Iterable[AsdMetadata]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_software_status_by_image">
+<span class="sig-name descname"><span class="pre">get_software_status_by_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">AsdMetadataResponse</span></span></span><a class="headerlink" href="#ciscosupportsdk.api.asd.AutomatedSoftwareDistributionApi.get_software_status_by_image" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the current status of the specified image or images.</p>
+<p>Unlike the other metadata endpoints this one is not paginated, and
+the full response is returned so that <code class="docutils literal notranslate"><span class="pre">invalid_images</span></code> – the names
+the service did not recognise – is available to the caller.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param<span class="colon">:</span></dt>
+<dd class="field-odd"><p>image_names: list[str]: Image names to look up.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>AsdMetadataResponse</p>
 </dd>
 </dl>
 </dd></dl>
@@ -283,7 +449,7 @@ sorted.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ciscosupportsdk.api.case.CaseApi.get_cases_by_contract_id">
-<span class="sig-name descname"><span class="pre">get_cases_by_contract_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contract_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_created_from</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_created_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_flag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CaseStatusFlag</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">CaseStatusFlag.OPEN</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Case</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.case.CaseApi.get_cases_by_contract_id" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_cases_by_contract_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contract_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_created_from</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_created_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_flag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CaseStatusFlag</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">CaseStatusFlag.OPEN</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SortCaseBy</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">SortCaseBy.UPDATED_DATE</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Case</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.case.CaseApi.get_cases_by_contract_id" title="Link to this definition">¶</a></dt>
 <dd><p>Returns summary information for cases associated with the specified
 contract or contracts.</p>
 <dl class="field-list simple">
@@ -305,12 +471,16 @@ Note: The maximum date range currently supported is 90 days.</p>
 <dd class="field-even"><p>status_flag: CaseStatusFlag: Return only cases associated
 with the specified status.</p>
 </dd>
+<dt class="field-odd">Param<span class="colon">:</span></dt>
+<dd class="field-odd"><p>sort_by: SortCaseBy: Order in which the results should be
+sorted.</p>
+</dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ciscosupportsdk.api.case.CaseApi.get_cases_by_user_id">
-<span class="sig-name descname"><span class="pre">get_cases_by_user_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_created_from</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_created_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_flag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CaseStatusFlag</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">CaseStatusFlag.OPEN</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Case</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.case.CaseApi.get_cases_by_user_id" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_cases_by_user_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_created_from</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_created_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_flag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CaseStatusFlag</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">CaseStatusFlag.OPEN</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SortCaseBy</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">SortCaseBy.UPDATED_DATE</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Case</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ciscosupportsdk.api.case.CaseApi.get_cases_by_user_id" title="Link to this definition">¶</a></dt>
 <dd><p>Returns summary information for cases associated with the specified
 contract or contracts.</p>
 <dl class="field-list simple">
@@ -331,6 +501,10 @@ Note: The maximum date range currently supported is 90 days.</p>
 <dt class="field-even">Param<span class="colon">:</span></dt>
 <dd class="field-even"><p>status_flag: CaseStatusFlag: Return only cases associated
 with the specified status.</p>
+</dd>
+<dt class="field-odd">Param<span class="colon">:</span></dt>
+<dd class="field-odd"><p>sort_by: SortCaseBy: Order in which the results should be
+sorted.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -602,6 +776,12 @@ currently, multiple user IDs are not supported.</p>
 </section>
 <section id="module-ciscosupportsdk.api.softwaresuggestion">
 <span id="suggestion"></span><h3>suggestion<a class="headerlink" href="#module-ciscosupportsdk.api.softwaresuggestion" title="Link to this heading">¶</a></h3>
+<dl class="py data">
+<dt class="sig sig-object py" id="ciscosupportsdk.api.softwaresuggestion.MAX_SUPPORTED_FEATURES">
+<span class="sig-prename descclassname"><span class="pre">ciscosupportsdk.api.softwaresuggestion.</span></span><span class="sig-name descname"><span class="pre">MAX_SUPPORTED_FEATURES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#ciscosupportsdk.api.softwaresuggestion.MAX_SUPPORTED_FEATURES" title="Link to this definition">¶</a></dt>
+<dd><p>The API accepts at most 10 feature names, within a 512 character budget.</p>
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ciscosupportsdk.api.softwaresuggestion.</span></span><span class="sig-name descname"><span class="pre">SoftwareSuggestionApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ApiSession</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi" title="Link to this definition">¶</a></dt>
@@ -751,6 +931,7 @@ here for convenience and references the same API endpoint.</p>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-ciscosupportsdk.api.softwaresuggestion">suggestion</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ciscosupportsdk.api.softwaresuggestion.MAX_SUPPORTED_FEATURES"><code class="docutils literal notranslate"><span class="pre">MAX_SUPPORTED_FEATURES</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ciscosupportsdk.api.softwaresuggestion.SoftwareSuggestionApi"><code class="docutils literal notranslate"><span class="pre">SoftwareSuggestionApi</span></code></a></li>
 </ul>
 </li>
