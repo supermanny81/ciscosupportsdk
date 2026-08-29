@@ -1,0 +1,57 @@
+{
+  "bugs": [
+    {
+      "id": "1",
+      "base_pid": "WS-C3560-48PS-S",
+      "bug_id": "CSCvz13185",
+      "headline": "CISCO-INNOLIGHT vendor SFP-10G-ER-S is not showing DOM data on WS-C3560CX-12PD-S",
+      "description": "<B>Symptom:</B>\nCISCO-INNOLIGHT vendor SFP-10G-ER-S is not showing DOM data in WS-C3560CX-12PD-S.\nWhen tested with a different vendor SFP, it works fine.\n\n<B>Conditions:</B>\nIssue ...",
+      "severity": "3",
+      "status": "F",
+      "behavior_changed": "false",
+      "last_modified_date": "2023-09-22",
+      "product": "3560",
+      "known_affected_releases": "15.2(4)M6.02",
+      "known_fixed_releases": "",
+      "support_case_count": "2"
+    },
+    {
+      "id": "2",
+      "base_pid": "WS-C3560-48PS-S",
+      "bug_id": "CSCtk13113",
+      "headline": "Optimizing CPU Utilization of Hulc Running config on Standalone switches",
+      "description": "\n\n<B>Symptom:</B>\nCPU utilization of Hulc Running Config process goes high periodically as the config size increases\n\n<B>Conditions:</B>\nAs the config size increase , we can see th ...",
+      "severity": "3",
+      "status": "F",
+      "behavior_changed": "",
+      "last_modified_date": "2023-09-22",
+      "product": "3560",
+      "known_affected_releases": "12.2(55)SE",
+      "known_fixed_releases": "12.2(58)SE 15.0(04.01)SID 15.2(04.00)ST 15.2(04.00.64a)E",
+      "support_case_count": "19"
+    },
+    {
+      "id": "3",
+      "base_pid": "WS-C3560-48PS-S",
+      "bug_id": "CSCtj76880",
+      "headline": "RSPAN causes port to go into BKN state due to PVID inconsistency",
+      "description": "\n\n<B>Symptom:</B>\nPort goes into spanning tree inconsistent ( BKN ) state due to PVID inconsistency.\n\n<B>Conditions:</B>\nRSPAN configured to monitor a vlan. Both the RSPAN vlan and ...",
+      "severity": "3",
+      "status": "F",
+      "behavior_changed": "",
+      "last_modified_date": "2023-09-22",
+      "product": "3560",
+      "known_affected_releases": "12.2(55)SE",
+      "known_fixed_releases": "12.2(55)SE3 12.2(58)SE 15.0(04.01)SID 15.2(04.00)ST 15.2(04.00.64a)E 16.1.0 16.1.1 16.1.2 16.1.3 16.10.1 16.10.1a 16.10.1b 16.10.1c 16.10.1d 16.10.1e 16.10.1i 16.10.1s 16.11.1 16.2 ...",
+      "support_case_count": "28"
+    }
+  ],
+  "pagination_response_record": {
+    "last_index": 1,
+    "page_index": 1,
+    "page_records": 3,
+    "self_link": "https://api.cisco.com/bug/v2.0/bugs/products/product_id/WS-C3560-48PS-S?page_index=1&modified_date=2&sort_by=severity",
+    "title": "Bug API - Get Bugs by Base Product Id",
+    "total_records": 3
+  }
+}

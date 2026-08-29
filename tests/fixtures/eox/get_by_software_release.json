@@ -1,0 +1,509 @@
+[
+  {
+    "PaginationResponseRecord": {
+      "PageIndex": 1,
+      "LastIndex": 3,
+      "TotalRecords": 9,
+      "PageRecords": 3
+    },
+    "EOXRecord": [
+      {
+        "EOLProductID": "S72CK91-12214S",
+        "ProductIDDescription": "Cisco 7200 Series IOS IP SECURED SHELL 3DES",
+        "ProductBulletinNumber": "EOL4108",
+        "LinkToProductBulletinURL": "http://www.cisco.com/en/US/products/hw/routers/ps341/prod_eol_notice0900aecd8049f17a.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2006-05-19",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2006-11-17",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "2007-11-17",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2011-02-12",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2011-11-16",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2007-11-17",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2006-06-13",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "Cisco 7200 Series IOS IP SSH 3DES",
+          "MigrationOption": "Enter PID(s)",
+          "MigrationProductId": "S72CK91-12228SB",
+          "MigrationProductName": "",
+          "MigrationStrategy": "",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "ShowEOXBySoftware",
+        "EOXInputValue": "input1=12.2,IOS"
+      },
+      {
+        "EOLProductID": "S75AR1K91-12225S",
+        "ProductIDDescription": "Cisco RSPx Series IOS ENTERPRISE/SNASW SECURED SHELL 3DES",
+        "ProductBulletinNumber": "EOL5005",
+        "LinkToProductBulletinURL": "http://www.cisco.com/en/US/products/sw/iosswrel/ps1838/prod_eol_notice0900aecd804be5cf.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2006-06-12",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2006-12-11",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "2007-12-11",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2011-03-08",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2011-12-10",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2007-12-11",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2007-02-09",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "",
+          "MigrationOption": "See Migration Section",
+          "MigrationProductId": "",
+          "MigrationProductName": "",
+          "MigrationStrategy": "Customers using the Cisco ONS 15500 Series are encouraged to migrate to Cisco IOS Software Release 12.2SV.  Customers using Release 12.2S on other current Cisco IOS Software-mainta ...",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "ShowEOXBySoftware",
+        "EOXInputValue": "input1=12.2,IOS"
+      },
+      {
+        "EOLProductID": "S75CHK91-12225S",
+        "ProductIDDescription": "Cisco RSPx Series IOS IP/FW/IDS SECURED SHELL 3DES",
+        "ProductBulletinNumber": "EOL5005",
+        "LinkToProductBulletinURL": "http://www.cisco.com/en/US/products/sw/iosswrel/ps1838/prod_eol_notice0900aecd804be5cf.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2006-06-12",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2006-12-11",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "2007-12-11",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2011-03-08",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2011-12-10",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2007-12-11",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2007-02-09",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "",
+          "MigrationOption": "See Migration Section",
+          "MigrationProductId": "",
+          "MigrationProductName": "",
+          "MigrationStrategy": "Customers using the Cisco ONS 15500 Series are encouraged to migrate to Cisco IOS Software Release 12.2SV.  Customers using Release 12.2S on other current Cisco IOS Software-mainta ...",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "ShowEOXBySoftware",
+        "EOXInputValue": "input1=12.2,IOS"
+      }
+    ]
+  },
+  {
+    "PaginationResponseRecord": {
+      "PageIndex": 2,
+      "LastIndex": 3,
+      "TotalRecords": 9,
+      "PageRecords": 3
+    },
+    "EOXRecord": [
+      {
+        "EOLProductID": "S72AR1K91-12214S",
+        "ProductIDDescription": "Cisco 7200 Series IOS ENTERPRISE/SNASW SECURE SHELL 3DES",
+        "ProductBulletinNumber": "EOL4108",
+        "LinkToProductBulletinURL": "http://www.cisco.com/en/US/products/hw/routers/ps341/prod_eol_notice0900aecd8049f17a.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2006-05-19",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2006-11-17",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "2007-11-17",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2011-02-12",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2011-11-16",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2007-11-17",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2006-06-13",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "Cisco 7200 Series IOS ENTERPRISE/SNASW SSH 3DES",
+          "MigrationOption": "Enter PID(s)",
+          "MigrationProductId": "S72AR1K91-12228SB",
+          "MigrationProductName": "",
+          "MigrationStrategy": "",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "ShowEOXBySoftware",
+        "EOXInputValue": "input1=12.2,IOS"
+      },
+      {
+        "EOLProductID": "S72ZK91-12214S",
+        "ProductIDDescription": "Cisco 7200 Series IOS SERVICE PROVIDER/SECURE SHELL 3DES",
+        "ProductBulletinNumber": "EOL4108",
+        "LinkToProductBulletinURL": "http://www.cisco.com/en/US/products/hw/routers/ps341/prod_eol_notice0900aecd8049f17a.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2006-05-19",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2006-11-17",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "2007-11-17",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2011-02-12",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2011-11-16",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2007-11-17",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2006-06-13",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "Cisco 7200 Series IOS SERVICE PROVIDER/SSH 3DES",
+          "MigrationOption": "Enter PID(s)",
+          "MigrationProductId": "S72ZK91-12228SB",
+          "MigrationProductName": "",
+          "MigrationStrategy": "",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "ShowEOXBySoftware",
+        "EOXInputValue": "input1=12.2,IOS"
+      },
+      {
+        "EOLProductID": "S75BS-12225S",
+        "ProductIDDescription": "Cisco RSPx Series IOS DESKTOP/IBM",
+        "ProductBulletinNumber": "EOL5005",
+        "LinkToProductBulletinURL": "http://www.cisco.com/en/US/products/sw/iosswrel/ps1838/prod_eol_notice0900aecd804be5cf.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2006-06-12",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2006-12-11",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "2007-12-11",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2011-03-08",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2011-12-10",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2007-12-11",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2007-02-09",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "",
+          "MigrationOption": "See Migration Section",
+          "MigrationProductId": "",
+          "MigrationProductName": "",
+          "MigrationStrategy": "Customers using the Cisco ONS 15500 Series are encouraged to migrate to Cisco IOS Software Release 12.2SV.  Customers using Release 12.2S on other current Cisco IOS Software-mainta ...",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "ShowEOXBySoftware",
+        "EOXInputValue": "input1=12.2,IOS"
+      }
+    ]
+  },
+  {
+    "PaginationResponseRecord": {
+      "PageIndex": 3,
+      "LastIndex": 3,
+      "TotalRecords": 9,
+      "PageRecords": 3
+    },
+    "EOXRecord": [
+      {
+        "EOLProductID": "S17Q7V8K8-12208T",
+        "ProductIDDescription": "Cisco 1700 IOS IP/ADSL/IPX/AT/IBM/VOX/FW/IDS PLUS IPSEC 56",
+        "ProductBulletinNumber": "2192",
+        "LinkToProductBulletinURL": "http://www.cisco.com/en/US/products/sw/iosswrel/ps1839/prod_eol_notice09186a0080186d83.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2003-05-30",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2003-11-28",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "2004-11-27",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "2006-11-27",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2008-02-23",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2008-11-26",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2004-11-27",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2012-07-02",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "",
+          "MigrationOption": "See Migration Section",
+          "MigrationProductId": "",
+          "MigrationProductName": "",
+          "MigrationStrategy": "Customers are encouraged to migrate to the MIGRATION/REPLACEMENT PRODUCT NAME. Information about this product can be found at: URL FOR THE MIGRATION/REPLACEMENT PRODUCT WEB SITE ON ...",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "ShowEOXBySoftware",
+        "EOXInputValue": "input1=12.2,IOS"
+      },
+      {
+        "EOLProductID": "S17Q7V8K8-12215T=",
+        "ProductIDDescription": "Cisco 1700 IOS IP/ADSL/IPX/AT/IBM/VOX/FW/IDS PLUS IPSEC 56",
+        "ProductBulletinNumber": "2192",
+        "LinkToProductBulletinURL": "http://www.cisco.com/en/US/products/sw/iosswrel/ps1839/prod_eol_notice09186a0080186d83.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2003-05-30",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2003-11-28",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "2004-11-27",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "2006-11-27",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2008-02-23",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2008-11-26",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2004-11-27",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2012-07-02",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "",
+          "MigrationOption": "See Migration Section",
+          "MigrationProductId": "",
+          "MigrationProductName": "",
+          "MigrationStrategy": "Customers are encouraged to migrate to the MIGRATION/REPLACEMENT PRODUCT NAME. Information about this product can be found at: URL FOR THE MIGRATION/REPLACEMENT PRODUCT WEB SITE ON ...",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "ShowEOXBySoftware",
+        "EOXInputValue": "input1=12.2,IOS"
+      },
+      {
+        "EOLProductID": "S242CM2PV-12213T=",
+        "ProductIDDescription": "Cisco 2400 Series IOS IP/ATM/VOIP/VOATM",
+        "ProductBulletinNumber": "2192",
+        "LinkToProductBulletinURL": "http://www.cisco.com/en/US/products/sw/iosswrel/ps1839/prod_eol_notice09186a0080186d83.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2003-05-30",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2003-11-28",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "2004-11-27",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "2006-11-27",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2008-02-23",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2008-11-26",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2004-11-27",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2012-07-02",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "",
+          "MigrationOption": "See Migration Section",
+          "MigrationProductId": "",
+          "MigrationProductName": "",
+          "MigrationStrategy": "Customers are encouraged to migrate to the MIGRATION/REPLACEMENT PRODUCT NAME. Information about this product can be found at: URL FOR THE MIGRATION/REPLACEMENT PRODUCT WEB SITE ON ...",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "ShowEOXBySoftware",
+        "EOXInputValue": "input1=12.2,IOS"
+      }
+    ]
+  }
+]

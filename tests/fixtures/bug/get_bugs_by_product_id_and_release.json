@@ -1,0 +1,11 @@
+{
+  "bugs": [],
+  "pagination_response_record": {
+    "last_index": 0,
+    "page_index": 1,
+    "page_records": 0,
+    "self_link": "https://api.cisco.com/bug/v2.0/bugs/products/product_id/WS-C3560-48PS-S/software_releases/15.2(03)E01?page_index=1&modified_date=2&sort_by=modified_date",
+    "title": "Bug API - Get Bugs by a Base Product Id and Software Releases",
+    "total_records": 0
+  }
+}

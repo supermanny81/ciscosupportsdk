@@ -10,12 +10,15 @@ class PrintableEnum(Enum):
 
 
 class PaginationResponseRecord(BaseModel):
-    title: str
-    page_index: int = Field(..., alias="pageIndex")
-    last_index: int = Field(..., alias="lastIndex")
-    total_records: int = Field(..., alias="totalRecords")
-    page_records: int = Field(..., alias="pageRecords")
-    self_link: str = Field(..., alias="selfLink")
+    # Pagination blocks are occasionally returned partially populated. The
+    # index fields default to 1 so that a missing block reads as "a single
+    # page of results" rather than failing validation.
+    title: Optional[str] = None
+    page_index: int = Field(1, alias="pageIndex")
+    last_index: int = Field(1, alias="lastIndex")
+    total_records: Optional[int] = Field(None, alias="totalRecords")
+    page_records: Optional[int] = Field(None, alias="pageRecords")
+    self_link: Optional[str] = Field(None, alias="selfLink")
 
     class Config:
         allow_population_by_field_name = True

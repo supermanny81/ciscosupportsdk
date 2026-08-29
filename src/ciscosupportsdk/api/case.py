@@ -10,7 +10,7 @@ from ciscosupportsdk.models.case import (
     CaseSummaryResponse,
     SortCaseBy,
 )
-from ciscosupportsdk.validate import CheckSize
+from ciscosupportsdk.validate import CheckSize, check_date_range
 
 SERVICE_BASE_URL = "/case/v3/cases"
 
@@ -41,7 +41,7 @@ class CaseApi(object):
         :param: sort_by: SortCaseBy: Order in which the results should be
             sorted.
         """
-        path = f"{SERVICE_BASE_URL}/case_ids/" f"{','.join(case_ids)}"
+        path = f"{SERVICE_BASE_URL}/case_ids/{','.join(case_ids)}"
         params = {"sort_by": sort_by}
 
         yield from self._session.enumerate_results(
@@ -65,6 +65,7 @@ class CaseApi(object):
         date_created_from: str = None,
         date_created_to: str = None,
         status_flag: CaseStatusFlag = CaseStatusFlag.OPEN,
+        sort_by: SortCaseBy = SortCaseBy.UPDATED_DATE,
     ) -> Iterable[Case]:
         """
         Returns summary information for cases associated with the specified
@@ -80,7 +81,12 @@ class CaseApi(object):
             Note: The maximum date range currently supported is 90 days.
         :param: status_flag: CaseStatusFlag: Return only cases associated
             with the specified status.
+        :param: sort_by: SortCaseBy: Order in which the results should be
+            sorted.
         """
+        check_date_range(
+            date_created_from, date_created_to, 90, "%Y-%m-%dT%H:%M:%SZ"
+        )
         path = (
             f"{SERVICE_BASE_URL}/contracts/contract_ids/"
             f"{','.join(contract_ids)}"
@@ -89,6 +95,7 @@ class CaseApi(object):
             "date_created_from": date_created_from,
             "date_created_to": date_created_to,
             "status_flag": status_flag,
+            "sort_by": sort_by,
         }
         yield from self._session.enumerate_results(
             CaseResponse, path, query_params=params
@@ -101,6 +108,7 @@ class CaseApi(object):
         date_created_from: str = None,
         date_created_to: str = None,
         status_flag: CaseStatusFlag = CaseStatusFlag.OPEN,
+        sort_by: SortCaseBy = SortCaseBy.UPDATED_DATE,
     ) -> Iterable[Case]:
         """
         Returns summary information for cases associated with the specified
@@ -116,12 +124,18 @@ class CaseApi(object):
             Note: The maximum date range currently supported is 90 days.
         :param: status_flag: CaseStatusFlag: Return only cases associated
             with the specified status.
+        :param: sort_by: SortCaseBy: Order in which the results should be
+            sorted.
         """
-        path = f"{SERVICE_BASE_URL}/users/user_ids/" f"{','.join(user_ids)}"
+        check_date_range(
+            date_created_from, date_created_to, 90, "%Y-%m-%dT%H:%M:%SZ"
+        )
+        path = f"{SERVICE_BASE_URL}/users/user_ids/{','.join(user_ids)}"
         params = {
             "date_created_from": date_created_from,
             "date_created_to": date_created_to,
             "status_flag": status_flag,
+            "sort_by": sort_by,
         }
         yield from self._session.enumerate_results(
             CaseResponse, path, query_params=params

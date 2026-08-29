@@ -29,9 +29,7 @@ class ProductInformationApi(object):
         Returns product information associated with the specified serial ]
         number or numbers.
         """
-        path = (
-            f"{SERVICE_BASE_URL}/serial_numbers/" f"{','.join(serial_numbers)}"
-        )
+        path = f"{SERVICE_BASE_URL}/serial_numbers/{','.join(serial_numbers)}"
         yield from self._session.enumerate_results(
             ProductInformationResponse, path
         )
@@ -44,7 +42,7 @@ class ProductInformationApi(object):
         Returns product information associated with the specified product
         identifier or identifiers.
         """
-        path = f"{SERVICE_BASE_URL}/product_ids/" f"{','.join(product_ids)}"
+        path = f"{SERVICE_BASE_URL}/product_ids/{','.join(product_ids)}"
         yield from self._session.enumerate_results(
             ProductInformationResponse, path
         )
@@ -59,7 +57,5 @@ class ProductInformationApi(object):
         framework (MDF) identifiers associated with the specified product
         identifier or identifiers.
         """
-        path = (
-            f"{SERVICE_BASE_URL}/product_ids_mdf/" f"{','.join(product_ids)}"
-        )
+        path = f"{SERVICE_BASE_URL}/product_ids_mdf/{','.join(product_ids)}"
         yield from self._session.enumerate_results(ProductMDFResponse, path)
