@@ -9,70 +9,75 @@ from ciscosupportsdk.models.common import (
     PaginationResponseRecord,
 )
 
+# The Software Suggestion API omits empty and null fields from its responses
+# entirely, so every field below carries a default. ``errorDetailsResponse`` in
+# particular is only present when a lookup failed, which is the exception
+# rather than the rule.
+
 
 class Product(BaseModel):
     base_pid: Optional[str] = Field(None, alias="basePID")
-    mdf_id: str = Field(..., alias="mdfId")
-    product_name: str = Field(..., alias="productName")
-    software_type: str = Field(..., alias="softwareType")
+    mdf_id: Optional[str] = Field(None, alias="mdfId")
+    product_name: Optional[str] = Field(None, alias="productName")
+    software_type: Optional[str] = Field(None, alias="softwareType")
 
 
 class Image(BaseModel):
-    name: str = Field(..., alias="imageName")
-    size: str = Field(..., alias="imageSize")
+    name: Optional[str] = Field(None, alias="imageName")
+    size: Optional[str] = Field(None, alias="imageSize")
     feature_set: Optional[str] = Field(None, alias="featureSet")
-    description: Optional[str]
-    required_dram: str = Field(..., alias="requiredDRAM")
-    required_flash: str = Field(..., alias="requiredFlash")
+    description: Optional[str] = None
+    required_dram: Optional[str] = Field(None, alias="requiredDRAM")
+    required_flash: Optional[str] = Field(None, alias="requiredFlash")
 
 
 class ErrorDetails(BaseModel):
-    error_code: str = Field(..., alias="errorCode")
-    error_description: str = Field(..., alias="errorDescription")
-    suggested_action: str = Field(..., alias="suggestedAction")
-    input_identifier: str = Field(..., alias="inputIdentifier")
+    error_code: Optional[str] = Field(None, alias="errorCode")
+    error_description: Optional[str] = Field(None, alias="errorDescription")
+    suggested_action: Optional[str] = Field(None, alias="suggestedAction")
+    input_identifier: Optional[str] = Field(None, alias="inputIdentifier")
 
 
 class Suggestion(BaseModel):
-    id: str
-    is_suggested: bool = Field(..., alias="isSuggested")
-    release_format1: str = Field(..., alias="releaseFormat1")
-    release_format2: str = Field(..., alias="releaseFormat2")
-    release_date: str = Field(..., alias="releaseDate")
-    major_release: str = Field(..., alias="majorRelease")
-    release_train: str = Field(..., alias="releaseTrain")
-    release_life_cycle: str = Field(..., alias="releaseLifeCycle")
-    rel_display_name: str = Field(..., alias="relDispName")
-    train_display_name: str = Field(..., alias="trainDispName")
-    images: Optional[List[Image]]
+    id: Optional[str] = None
+    is_suggested: Optional[bool] = Field(None, alias="isSuggested")
+    release_format1: Optional[str] = Field(None, alias="releaseFormat1")
+    release_format2: Optional[str] = Field(None, alias="releaseFormat2")
+    release_date: Optional[str] = Field(None, alias="releaseDate")
+    major_release: Optional[str] = Field(None, alias="majorRelease")
+    release_train: Optional[str] = Field(None, alias="releaseTrain")
+    release_life_cycle: Optional[str] = Field(None, alias="releaseLifeCycle")
+    rel_display_name: Optional[str] = Field(None, alias="relDispName")
+    train_display_name: Optional[str] = Field(None, alias="trainDispName")
+    images: List[Image] = Field(default_factory=list)
     error_details_response: Optional[ErrorDetails] = Field(
-        ..., alias="errorDetailsResponse"
+        None, alias="errorDetailsResponse"
     )
 
 
 class Suggestions(BaseModel):
-    id: str
-    product: Product
-    suggestions: List[Suggestion]
+    id: Optional[str] = None
+    product: Optional[Product] = None
+    suggestions: List[Suggestion] = Field(default_factory=list)
 
 
 class SuggestionsByProductResponse(BaseModel, CamelCaseApi):
-    pagination_response_record: PaginationResponseRecord = Field(
-        ..., alias="paginationResponseRecord"
+    pagination_response_record: Optional[PaginationResponseRecord] = Field(
+        None, alias="paginationResponseRecord"
     )
-    items: List[Suggestions] = Field(..., alias="productList")
-    status: str
+    items: List[Suggestions] = Field(default_factory=list, alias="productList")
+    status: Optional[str] = None
     error_details_response: Optional[ErrorDetails] = Field(
-        ..., alias="errorDetailsResponse"
+        None, alias="errorDetailsResponse"
     )
 
 
 class CompatableSoftwareResponse(BaseModel, CamelCaseApi):
-    pagination_response_record: PaginationResponseRecord = Field(
-        ..., alias="paginationResponseRecord"
+    pagination_response_record: Optional[PaginationResponseRecord] = Field(
+        None, alias="paginationResponseRecord"
     )
-    items: List[Suggestion] = Field(..., alias="suggestions")
-    status: str
+    items: List[Suggestion] = Field(default_factory=list, alias="suggestions")
+    status: Optional[str] = None
     error_details_response: Optional[ErrorDetails] = Field(
-        ..., alias="errorDetailsResponse"
+        None, alias="errorDetailsResponse"
     )

@@ -1,0 +1,11 @@
+{
+  "bugs": [],
+  "pagination_response_record": {
+    "last_index": 0,
+    "page_index": 1,
+    "page_records": 0,
+    "self_link": "https://api.cisco.com/bug/v2.0/bugs/product_series/Cisco 5500 Series Wireless Controllers/fixed_in_releases/7.6(100.6)?page_index=1&modified_date=5&sort_by=modified_date",
+    "title": "Bug API - Get Bugs by Product Series and Fixed In Software Releases",
+    "total_records": 0
+  }
+}

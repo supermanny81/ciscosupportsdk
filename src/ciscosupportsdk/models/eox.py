@@ -76,76 +76,98 @@ EoX Response Types
 
 
 class EoxError(BaseModel):
-    error_id: str = Field(None, alias="ErrorID")
-    error_description: str = Field(None, alias="ErrorDescription")
-    error_data_type: str = Field(None, alias="ErrorDataType")
-    error_data_value: str = Field(None, alias="ErrorDataValue")
+    error_id: Optional[str] = Field(None, alias="ErrorID")
+    error_description: Optional[str] = Field(None, alias="ErrorDescription")
+    error_data_type: Optional[str] = Field(None, alias="ErrorDataType")
+    error_data_value: Optional[str] = Field(None, alias="ErrorDataValue")
 
 
 class PaginationResponseRecord(BaseModel):
-    page_index: int = Field(..., alias="PageIndex")
-    last_index: int = Field(..., alias="LastIndex")
-    total_records: int = Field(..., alias="TotalRecords")
-    page_records: int = Field(..., alias="PageRecords")
+    page_index: int = Field(1, alias="PageIndex")
+    last_index: int = Field(1, alias="LastIndex")
+    total_records: Optional[int] = Field(None, alias="TotalRecords")
+    page_records: Optional[int] = Field(None, alias="PageRecords")
 
 
 class EoxDate(BaseModel):
-    value: str
-    date_format: str = Field(None, alias="dateFormat")
+    value: Optional[str] = None
+    date_format: Optional[str] = Field(None, alias="dateFormat")
 
     def to_date(self) -> datetime.date:
-        d = self.value if self.value != "" else "2099-01-01"
+        d = self.value if self.value else "2099-01-01"
         return datetime.strptime(d, "%Y-%m-%d").date()
 
 
 class EoxMigrationDetails(BaseModel):
-    pid_active_flag: str = Field(..., alias="PIDActiveFlag")
-    migration_information: str = Field(..., alias="MigrationInformation")
-    migration_option: str = Field(..., alias="MigrationOption")
-    migration_product_id: str = Field(..., alias="MigrationProductId")
-    migration_product_name: str = Field(..., alias="MigrationProductName")
-    migration_strategy: str = Field(..., alias="MigrationStrategy")
-    migration_product_info_url: str = Field(
-        ..., alias="MigrationProductInfoURL"
+    pid_active_flag: Optional[str] = Field(None, alias="PIDActiveFlag")
+    migration_information: Optional[str] = Field(
+        None, alias="MigrationInformation"
+    )
+    migration_option: Optional[str] = Field(None, alias="MigrationOption")
+    migration_product_id: Optional[str] = Field(
+        None, alias="MigrationProductId"
+    )
+    migration_product_name: Optional[str] = Field(
+        None, alias="MigrationProductName"
+    )
+    migration_strategy: Optional[str] = Field(None, alias="MigrationStrategy")
+    migration_product_info_url: Optional[str] = Field(
+        None, alias="MigrationProductInfoURL"
     )
 
 
 class EoxRecord(BaseModel):
-    eol_product_id: str = Field(..., alias="EOLProductID")
-    product_id_description: str = Field(..., alias="ProductIDDescription")
-    product_bulletin_number: str = Field(..., alias="ProductBulletinNumber")
-    link_to_product_bulletin_url: str = Field(
-        ..., alias="LinkToProductBulletinURL"
-    )  # noqa
-    eox_external_announcement_date: EoxDate = Field(
-        ..., alias="EOXExternalAnnouncementDate"
+    # Records for products with no migration path, or that were queried by an
+    # attribute that does not apply, omit whole blocks from the payload, so
+    # every field defaults.
+    eol_product_id: Optional[str] = Field(None, alias="EOLProductID")
+    product_id_description: Optional[str] = Field(
+        None, alias="ProductIDDescription"
     )
-    end_of_sale_date: EoxDate = Field(..., alias="EndOfSaleDate")
-    end_of_sw_maintenance_releases: EoxDate = Field(
-        ..., alias="EndOfSWMaintenanceReleases"
+    product_bulletin_number: Optional[str] = Field(
+        None, alias="ProductBulletinNumber"
+    )
+    link_to_product_bulletin_url: Optional[str] = Field(
+        None, alias="LinkToProductBulletinURL"
+    )  # noqa
+    eox_external_announcement_date: Optional[EoxDate] = Field(
+        None, alias="EOXExternalAnnouncementDate"
+    )
+    end_of_sale_date: Optional[EoxDate] = Field(None, alias="EndOfSaleDate")
+    end_of_sw_maintenance_releases: Optional[EoxDate] = Field(
+        None, alias="EndOfSWMaintenanceReleases"
     )
     end_of_security_vul_support_date: Optional[EoxDate] = Field(
         None, alias="EndOfSecurityVulSupportDate"
     )
-    end_of_routine_failure_analysis_date: EoxDate = Field(
-        ..., alias="EndOfRoutineFailureAnalysisDate"
+    end_of_routine_failure_analysis_date: Optional[EoxDate] = Field(
+        None, alias="EndOfRoutineFailureAnalysisDate"
     )
-    end_of_service_contract_renewal: EoxDate = Field(
-        ..., alias="EndOfServiceContractRenewal"
+    end_of_service_contract_renewal: Optional[EoxDate] = Field(
+        None, alias="EndOfServiceContractRenewal"
     )
-    last_date_of_support: EoxDate = Field(..., alias="LastDateOfSupport")
-    end_of_svc_attach_date: EoxDate = Field(..., alias="EndOfSvcAttachDate")
-    updated_time_stamp: EoxDate = Field(..., alias="UpdatedTimeStamp")
-    eox_migration_details: EoxMigrationDetails = Field(
-        ..., alias="EOXMigrationDetails"
+    last_date_of_support: Optional[EoxDate] = Field(
+        None, alias="LastDateOfSupport"
     )
-    eox_input_type: str = Field(..., alias="EOXInputType")
-    eox_input_value: str = Field(..., alias="EOXInputValue")
+    end_of_svc_attach_date: Optional[EoxDate] = Field(
+        None, alias="EndOfSvcAttachDate"
+    )
+    updated_time_stamp: Optional[EoxDate] = Field(
+        None, alias="UpdatedTimeStamp"
+    )
+    eox_migration_details: Optional[EoxMigrationDetails] = Field(
+        None, alias="EOXMigrationDetails"
+    )
+    eox_input_type: Optional[str] = Field(None, alias="EOXInputType")
+    eox_input_value: Optional[str] = Field(None, alias="EOXInputValue")
     eox_error: Optional[EoxError] = Field(None, alias="EOXError")
 
 
 class EoxResponse(BaseModel):
     pagination_response_record: PaginationResponseRecord = Field(
-        ..., alias="PaginationResponseRecord"
+        default_factory=PaginationResponseRecord,
+        alias="PaginationResponseRecord",
     )
-    eox_record: List[EoxRecord] = Field(..., alias="EOXRecord")
+    eox_record: List[EoxRecord] = Field(
+        default_factory=list, alias="EOXRecord"
+    )

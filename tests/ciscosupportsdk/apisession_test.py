@@ -1,33 +1,37 @@
 import pytest
-from authlib.integrations.base_client.errors import OAuthError
+
+from ciscosupportsdk.apisession import ApiError, ApiSession
 from fixtures import *  # noqa
 
-from ciscosupportsdk.api import ApiSession
-from ciscosupportsdk.apisession import ApiError
 
-
-@pytest.mark.usefixtures("vcr_config")
 class TestApiSession:
-    @pytest.mark.skip(
-        "Expected an OAuth failure, need to investigate "
-        "why this behavior changed."
-    )
-    def test_auth_failure(self):
-        print(ApiSession("USE", "ME"))
-        with pytest.raises(OAuthError):
-            print(ApiSession("NOT_A_KEY", "NOT_A_SECRET"))
+    def test_auth_success(self, api_factory):
+        _, client = api_factory([])
 
-    @pytest.mark.vcr()
-    def test_auth_success(self, CS_API_KEY, CS_API_SECRET):
-        ApiSession(CS_API_KEY, CS_API_SECRET)
+        # The session fetches exactly one token when it is constructed.
+        assert client.token_fetches == 1
 
-    @pytest.mark.vcr()
-    def test_api_error(self, CS_API_KEY, CS_API_SECRET):
-        api = ApiSession(CS_API_KEY, CS_API_SECRET)
+    def test_api_error(self, api_factory):
+        api, _ = api_factory("apisession/api_error", status_code=400)
+
         with pytest.raises(ApiError):
-            api._get(
+            api._session._get(
                 "/bug/v2.0/bugs/product_name/"
                 "Cisco Unified Communications Manager "
                 "(CallManager)/fixed_in_releases",
                 params={},
             )
+
+    def test_error_payload_is_surfaced(self, api_factory):
+        api, _ = api_factory("apisession/api_error", status_code=400)
+
+        with pytest.raises(ApiError, match="400"):
+            api._session._get("/bug/v2.0/bugs/bug_ids/CSCxx00000", params={})
+
+    def test_base_url_is_applied(self, monkeypatch):
+        client = install(monkeypatch, as_responses([{}]))  # noqa: F405
+        session = ApiSession("id", "secret", base_url="https://example.test")
+
+        session._get("/thing", {})
+
+        assert client.urls[0] == "https://example.test/thing"

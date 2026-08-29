@@ -1,0 +1,11 @@
+{
+  "pagination_response_record": {
+    "last_index": 1,
+    "page_index": 1,
+    "page_records": 0,
+    "self_link": "https://apix.cisco.com/case/v3/cases/users/user_ids/testuser?page_index=1&sort_by=UPDATED_DATE&status_flag=O",
+    "title": "Get Cases By User Id",
+    "total_records": 0
+  },
+  "cases": []
+}

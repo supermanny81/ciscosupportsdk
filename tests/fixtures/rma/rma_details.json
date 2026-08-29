@@ -1,0 +1,131 @@
+{
+  "APIPagination": {
+    "pageIndex": "1",
+    "lastIndex": "1",
+    "totalRecords": "1",
+    "pageRecords": "1",
+    "title": "Service Order RMA API",
+    "selfLink": "https://api.cisco.com/return/v1.0/returns/rma_numbers/800000001"
+  },
+  "returns": {
+    "RmaRecord": [
+      {
+        "rmaNo": 800000001,
+        "status": "Closed",
+        "orderDate": "2021-11-14",
+        "caseId": "600000003",
+        "requestedShipDate": "2021-11-14",
+        "originator": "ORIGINATOR",
+        "allowPartialShipment": "",
+        "failureClass": "Operational Failure",
+        "failureCode": "HW Fail - Ether Port",
+        "contractId": "10000001",
+        "serviceLevel": "Premium Parts & Labor - 4 Hour",
+        "customerRefInfo": {
+          "customerPONumber": "13112021-27957",
+          "origSalesOrderNumber": "800000001",
+          "customerRefNumber": "",
+          "customerProvidedSN": ""
+        },
+        "shipToInfo": {
+          "customerName": "EXAMPLE CUSTOMER LTD",
+          "address1": "SEZ UNIT, CESSNA BUSINESS PARK KADUBEESANAHALLI VILLAGE, VARTHUR HOBLI MARATHAHALLI, OUTER RING ROAD",
+          "address2": "",
+          "address3": "",
+          "address4": "",
+          "city": "BANGALORE",
+          "state": "KA",
+          "country": "IN",
+          "postalCode": "560103",
+          "stateProv": "KA",
+          "siteUseId": "731985932",
+          "ackUserId": "tgulgund",
+          "ackPhone": "918044297683",
+          "ackEmail": "someone@example.com",
+          "ackName": "Touseef Ahmed Gulgundi",
+          "shipToContactName": "Himanshu Reshamdalal",
+          "shipToContactPhone": "917760877451",
+          "shipToContactEmail": "someone@example.com"
+        },
+        "billToInfo": {
+          "customerName": "CISCO SYSTEMS INTERNAL CONTRACTS",
+          "address1": "170 WEST TASMAN DRIVE",
+          "address2": "",
+          "address3": "",
+          "address4": "",
+          "city": "EXAMPLE CITY",
+          "state": "",
+          "country": "US",
+          "postalCode": "95134",
+          "stateProv": "CA",
+          "siteUseId": "417798624"
+        },
+        "replacementParts": {
+          "trackingInfo": {
+            "trackingNumber": "9120871623",
+            "courierList": "DHL",
+            "shipDate": "2021-11-16"
+          },
+          "partsLineDetails": [
+            {
+              "partsLineRef": "2",
+              "partsLineStatus": "Closed",
+              "partsTransactionType": "ARPRM-SHIP-US",
+              "shippedPartNo": "QSFP-100G-SM-SR=",
+              "partsDescription": "100GBASE CWDM4 Lite QSFP Transceiver, 2km over SMF, 10-60C",
+              "partsQtyAuth": "1",
+              "partsScheduledShipTime": "2021-11-14",
+              "partsqtyShipped": "1",
+              "partsShipDate": "2021-11-16",
+              "partsShipmentWarehouse": "BLR",
+              "partsDispatchStatus": "DISPATCHED",
+              "shippedSerialID": "FNS21510WHD"
+            }
+          ]
+        },
+        "returnLines": {
+          "returnParts": [
+            {
+              "returnLineRef": "1",
+              "returnLineStatus": "Closed",
+              "returnTransactionType": "ARPRM-RETURN-US",
+              "receivedPartNo": "QSFP-100G-SM-SR=",
+              "returnDescription": "100GBASE CWDM4 Lite QSFP Transceiver, 2km over SMF, 10-60C",
+              "returnQtyAuth": "1",
+              "returnToCiscoBy": "2021-11-24",
+              "reqturnQtyReceived": "1",
+              "returnDateReceived": "2021-12-08",
+              "returnWarehouse": "IN1",
+              "receivedSerialNumber": "FNS21510WHD"
+            }
+          ]
+        },
+        "laborDetails": {
+          "fieldEngineerName": "",
+          "fieldEngineerPhone": "",
+          "fieldEngineerOnRouteTime": "",
+          "fieldEngineerArrivedTime": "",
+          "fieldEngineerReleasedTime": "",
+          "laborLines": [
+            {
+              "laborTaskNumber": "",
+              "laborStatus": "",
+              "primaryProductFamily": "",
+              "laborScheduledTime": "",
+              "laborDispatch": "",
+              "laborDispatchOrCancellationNotes": ""
+            }
+          ]
+        },
+        "notes": {
+          "addlComments": "",
+          "failureDescription": "Created by ORIGINATOR at 2021/11/14 16:47:15\r\nUDLD errors are observed on the port",
+          "fieldEngineerInstructions": "",
+          "partDeliveryInstructions": "",
+          "partialShipmentNote": "Created by ORIGINATOR at 2021/11/14 16:47:15\r\nPartial Ship",
+          "specialInstructions": "Created by ORIGINATOR at 2021/11/14 16:47:15\r\nDO NOT DISPATCH. This is a Reconciliation RMA for TEMPORARY SERVICE ORDER NUMBER: 13112021-27957\r\nPlease update RMA as follows:\r\nPart ..."
+        }
+      }
+    ]
+  }
+}

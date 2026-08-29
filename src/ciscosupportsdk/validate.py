@@ -1,3 +1,4 @@
+from datetime import datetime
 from enum import Enum
 from functools import wraps
 from inspect import signature
@@ -39,7 +40,7 @@ class CheckSize(object):
                 sig = signature(original_func)
                 for name, _ in sig.parameters.items():
                     if name == self.field:
-                        if type(args[pos]) == list:
+                        if isinstance(args[pos], list):
                             _list = args[pos]
                             break
                     pos += 1
@@ -74,3 +75,44 @@ class CheckSize(object):
             return original_func(*args, **kwargs)
 
         return wrappee
+
+
+def check_date_range(
+    from_date: str,
+    to_date: str,
+    max_days: int,
+    date_format: str = "%Y-%m-%d",
+) -> None:
+    """Validates that a from/to date pair spans no more than ``max_days``.
+
+    Several Cisco Support APIs cap how wide a date range may be (30 days for
+    RMAs, 90 days for cases). Validating locally turns a server-side error
+    into a clear, immediate one.
+
+    :param: from_date: str: start of the range, ``None`` skips the check
+    :param: to_date: str: end of the range, ``None`` skips the check
+    :param: max_days: int: widest permitted range, in days
+    :param: date_format: str: strptime format the API expects
+    """
+    if from_date is None or to_date is None:
+        return
+
+    try:
+        start = datetime.strptime(from_date, date_format)
+        end = datetime.strptime(to_date, date_format)
+    except ValueError as exc:
+        raise ValueError(
+            f"Dates must be formatted as {date_format}: {exc}"
+        ) from exc
+
+    if end < start:
+        raise ValueError(
+            f"End date ({to_date}) precedes start date ({from_date})."
+        )
+
+    span = (end - start).days
+    if span > max_days:
+        raise ValueError(
+            f"Date range of {span} days exceeds the maximum "
+            f"supported range of {max_days} days."
+        )

@@ -1,0 +1,23 @@
+{
+  "cases": [
+    {
+      "item_entry_id": 1,
+      "user_id": "caseuser",
+      "case_id": "600000001",
+      "title": "rtp campus (rtp10-cd-dtbb-gw1) and others - Not able to respond to RS from a supplicant device in IPv6 - Mostly noticed on MAC",
+      "severity": "3",
+      "contact_name": "Case Contact",
+      "status_flag": "C",
+      "status": "Closed",
+      "creation_date": "2021-09-30T14:46:09.000Z",
+      "updated_date": "2022-03-03T15:54:45.000Z",
+      "serial_number": "CAT5555EEEE",
+      "contract_id": "10000002",
+      "technology_name": "LAN Switching",
+      "sub_technology_name": "Cat9500",
+      "rmas": [],
+      "bugs": []
+    }
+  ],
+  "count": 1
+}

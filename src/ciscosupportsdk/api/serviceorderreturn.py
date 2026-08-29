@@ -7,6 +7,7 @@ from ciscosupportsdk.models.serviceorderreturn import (
     RmaResponse,
     User,
 )
+from ciscosupportsdk.validate import check_date_range
 
 SERVICE_BASE_URL = "/return/v1.0/returns"
 
@@ -57,7 +58,7 @@ class ServiceOrderReturnApi(object):
             currently, multiple user IDs are not supported.
         :rtype: Iterable[Rma]
         """
-        # TODO: Input validation on query parameter fields.
+        check_date_range(from_date, to_date, 30)
         path = f"{SERVICE_BASE_URL}/users/user_ids/{user_id}"
         params = {
             "fromDate": from_date,
@@ -66,19 +67,25 @@ class ServiceOrderReturnApi(object):
             "sortBy": sort_by,
         }
         json = self._session._get(path, params)
-        if "APIError" in json["OrderList"]:
+        if "APIError" in json.get("OrderList", {}):
             raise ApiError(json["OrderList"]["APIError"])
         rma_user_resp = RmaByUserResponse(**json)
 
         for user in rma_user_resp.order_list.users:
             yield user
-        page_data = rma_user_resp.order_list.pagination_response_record
-        index = page_data.page_index
 
-        while page_data.page_index < page_data.page_records:
-            index += 1
-            params["pageIndex"] = index
+        # Walk the remaining pages. ``page_data`` has to be re-read on every
+        # iteration, and the stop condition is the last page index -- comparing
+        # against the per-page record count never terminates.
+        page_data = rma_user_resp.order_list.pagination_response_record
+        while page_data is not None and (
+            page_data.page_index < page_data.last_index
+        ):
+            params["pageIndex"] = page_data.page_index + 1
             json = self._session._get(path, params)
+            if "APIError" in json.get("OrderList", {}):
+                raise ApiError(json["OrderList"]["APIError"])
             rma_user_resp = RmaByUserResponse(**json)
             for user in rma_user_resp.order_list.users:
                 yield user
+            page_data = rma_user_resp.order_list.pagination_response_record
