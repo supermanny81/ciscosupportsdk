@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ciscosupportsdk"
-version = "0.2.2"
+version = "0.3.0"
 description = "Cisco Support APIs allow Cisco Partner Support Services (PSS) partners and Cisco Smart Net Total Care (SNTC) customers to programmatically access and consume Cisco Support data in the cloud in a simple, secure, and scalable manner."
 authors = ["Manny Garcia <supermanny@icloud.com>"]
 license = "MIT"
@@ -17,17 +17,14 @@ Authlib = "^1.2.1"
 pydantic = "^1.9.0"
 
 [tool.poetry.group.dev.dependencies]
-black = "^26.3.1"
-isort = "^5.10.1"
 pytest = "^9.0.3"
 pytest-cov = "^3.0.0"
-pytest-recording = "^0.13.0"
 Sphinx = "^7.0.0"
 sphinx-autobuild = "^2024.2.4"
-flake8 = "^4.0.1"
+flake8 = "^7.3.0"
 bandit = "^1.7.3"
 pip-audit = "^2.7.0"
-vcrpy = "^8.2.1"
+ruff = "^0.14"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -38,15 +35,21 @@ build-backend = "poetry.core.masonry.api"
 # `from fixtures import *`. Put its directory on sys.path explicitly so
 # collection does not depend on ordering (pytest 8+ no longer inserts it
 # implicitly).
-pythonpath = ["tests/ciscosupportsdk"]
+pythonpath = ["src", "tests/ciscosupportsdk"]
 
-[tool.isort]
-# make it compatible with black
-profile = "black"
-line_length = 79
-
-[tool.black]
+[tool.ruff]
 line-length = 79
+
+[tool.ruff.lint]
+# Import sorting only; flake8 still handles linting. Adding "E", "W" and
+# "F" here would let ruff take that over as well.
+select = ["I"]
+
+[tool.ruff.lint.isort]
+# The api/*_test.py modules import the shared test helpers as top level
+# modules via the pythonpath setting below; treat them as first party so
+# they are grouped with the SDK's own imports rather than third party ones.
+known-first-party = ["ciscosupportsdk", "fakes", "fixtures"]
 
 [tool.coverage.report]
 exclude_lines = [

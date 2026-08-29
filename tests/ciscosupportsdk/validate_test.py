@@ -1,6 +1,10 @@
 import pytest
 
-from ciscosupportsdk.validate import CheckSize, CheckSizeOperation
+from ciscosupportsdk.validate import (
+    CheckSize,
+    CheckSizeOperation,
+    check_date_range,
+)
 
 
 class TestValidate(object):
@@ -67,3 +71,32 @@ class TestValidate(object):
                 pass
 
             f()
+
+
+class TestCheckDateRange(object):
+    def test_accepts_a_range_within_the_limit(self):
+        check_date_range("2024-01-01", "2024-01-20", 30)
+
+    def test_skips_when_either_bound_is_missing(self):
+        check_date_range(None, "2024-01-20", 30)
+        check_date_range("2024-01-01", None, 30)
+
+    def test_rejects_a_range_wider_than_the_limit(self):
+        with pytest.raises(ValueError, match="exceeds the maximum"):
+            check_date_range("2024-01-01", "2024-03-01", 30)
+
+    def test_rejects_an_inverted_range(self):
+        with pytest.raises(ValueError, match="precedes start date"):
+            check_date_range("2024-02-01", "2024-01-01", 30)
+
+    def test_rejects_a_malformed_date(self):
+        with pytest.raises(ValueError, match="must be formatted"):
+            check_date_range("01/01/2024", "20/01/2024", 30)
+
+    def test_honours_an_alternate_format(self):
+        check_date_range(
+            "2024-01-01T00:00:00Z",
+            "2024-03-01T00:00:00Z",
+            90,
+            "%Y-%m-%dT%H:%M:%SZ",
+        )

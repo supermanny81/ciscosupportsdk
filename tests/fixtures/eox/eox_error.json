@@ -1,0 +1,6 @@
+{
+  "EOXError": {
+    "ErrorID": "SSA_ERR_010",
+    "ErrorDescription": "The serialNumbers value specified is invalid. Please correct the serialNumbers value and try again."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "serial_numbers": [
+    {
+      "sr_no": "SAL1234ABCD",
+      "is_covered": "YES",
+      "coverage_end_date": "2023-12-31",
+      "sr_no_owner": "YES"
+    }
+  ]
+}

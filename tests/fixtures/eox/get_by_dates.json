@@ -1,0 +1,509 @@
+[
+  {
+    "PaginationResponseRecord": {
+      "PageIndex": 1,
+      "LastIndex": 3,
+      "TotalRecords": 9,
+      "PageRecords": 3
+    },
+    "EOXRecord": [
+      {
+        "EOLProductID": "1002414",
+        "ProductIDDescription": "Screw Pan HD M3X8 Torx T-10 Sems Zinc",
+        "ProductBulletinNumber": "EOL11075",
+        "LinkToProductBulletinURL": "http://www.cisco.com/c/en/us/products/collateral/video/digistar-ethernet-over-coax-eoc-homeplug-av-system/eos-eol-notice-c51-737590.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2016-07-18",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2017-01-16",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "2018-01-16",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2021-04-13",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2022-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2018-01-16",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2016-07-20",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "",
+          "MigrationOption": "No Replacement Available",
+          "MigrationProductId": "",
+          "MigrationProductName": "",
+          "MigrationStrategy": "",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "showEoXByDates",
+        "EOXInputValue": "2022-01-01 , 2022-01-31 , EO_LAST_SUPPORT_DATE"
+      },
+      {
+        "EOLProductID": "1030326",
+        "ProductIDDescription": "FOSC-B-BSK-Dual-5BAND-4SKIP0-2039-DTP-UGEXP-SA-NC",
+        "ProductBulletinNumber": "EOL11070",
+        "LinkToProductBulletinURL": "http://www.cisco.com/c/en/us/products/collateral/video/optical-passive-components/eos-eol-notice-c51-737555.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2016-07-11",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2017-01-09",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "2018-01-09",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2021-04-06",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2022-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2018-01-09",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2016-07-12",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "",
+          "MigrationOption": "No Replacement Available",
+          "MigrationProductId": "",
+          "MigrationProductName": "",
+          "MigrationStrategy": "",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "showEoXByDates",
+        "EOXInputValue": "2022-01-01 , 2022-01-31 , EO_LAST_SUPPORT_DATE"
+      },
+      {
+        "EOLProductID": "1030327",
+        "ProductIDDescription": "FOSC-B-BSK-Dual-5BAND-4SKIP0-4059-DTP-UGEXP-SA-NC",
+        "ProductBulletinNumber": "EOL11070",
+        "LinkToProductBulletinURL": "http://www.cisco.com/c/en/us/products/collateral/video/optical-passive-components/eos-eol-notice-c51-737555.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2016-07-11",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2017-01-09",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "2018-01-09",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2021-04-06",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2022-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2018-01-09",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2016-07-12",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "",
+          "MigrationOption": "No Replacement Available",
+          "MigrationProductId": "",
+          "MigrationProductName": "",
+          "MigrationStrategy": "",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "showEoXByDates",
+        "EOXInputValue": "2022-01-01 , 2022-01-31 , EO_LAST_SUPPORT_DATE"
+      }
+    ]
+  },
+  {
+    "PaginationResponseRecord": {
+      "PageIndex": 2,
+      "LastIndex": 3,
+      "TotalRecords": 9,
+      "PageRecords": 3
+    },
+    "EOXRecord": [
+      {
+        "EOLProductID": "ISE-ADV-3YR-100",
+        "ProductIDDescription": "Cisco ISE 3-Yr 100 EndPoint Advanced License",
+        "ProductBulletinNumber": "EOL12664",
+        "LinkToProductBulletinURL": "https://www.cisco.com/c/en/us/products/collateral/security/identity-services-engine/eos-eol-notice-c51-741171.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2018-08-02",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2019-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "2020-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2019-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2022-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2019-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2018-08-03",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "Cisco ISE Plus License,Cisco ISE Apex License",
+          "MigrationOption": "Enter PID(s)",
+          "MigrationProductId": "L-ISE-PLS-LIC=",
+          "MigrationProductName": "",
+          "MigrationStrategy": "",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "showEoXByDates",
+        "EOXInputValue": "2022-01-01 , 2022-01-31 , EO_LAST_SUPPORT_DATE"
+      },
+      {
+        "EOLProductID": "ISE-ADV-3YR-10K",
+        "ProductIDDescription": "Cisco ISE 3-Yr 10K EndPoint Advanced License",
+        "ProductBulletinNumber": "EOL12664",
+        "LinkToProductBulletinURL": "https://www.cisco.com/c/en/us/products/collateral/security/identity-services-engine/eos-eol-notice-c51-741171.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2018-08-02",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2019-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "2020-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2019-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2022-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2019-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2018-08-03",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "Cisco ISE Plus License,Cisco ISE Apex License",
+          "MigrationOption": "Enter PID(s)",
+          "MigrationProductId": "L-ISE-APX-LIC=",
+          "MigrationProductName": "",
+          "MigrationStrategy": "",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "showEoXByDates",
+        "EOXInputValue": "2022-01-01 , 2022-01-31 , EO_LAST_SUPPORT_DATE"
+      },
+      {
+        "EOLProductID": "ISE-ADV-3YR-10K",
+        "ProductIDDescription": "Cisco ISE 3-Yr 10K EndPoint Advanced License",
+        "ProductBulletinNumber": "EOL12664",
+        "LinkToProductBulletinURL": "https://www.cisco.com/c/en/us/products/collateral/security/identity-services-engine/eos-eol-notice-c51-741171.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2018-08-02",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2019-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "2020-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2019-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2022-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2019-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2018-08-03",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "Cisco ISE Plus License,Cisco ISE Apex License",
+          "MigrationOption": "Enter PID(s)",
+          "MigrationProductId": "L-ISE-PLS-LIC=",
+          "MigrationProductName": "",
+          "MigrationStrategy": "",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "showEoXByDates",
+        "EOXInputValue": "2022-01-01 , 2022-01-31 , EO_LAST_SUPPORT_DATE"
+      }
+    ]
+  },
+  {
+    "PaginationResponseRecord": {
+      "PageIndex": 3,
+      "LastIndex": 3,
+      "TotalRecords": 9,
+      "PageRecords": 3
+    },
+    "EOXRecord": [
+      {
+        "EOLProductID": "PUS-TL1-PRX-OPC",
+        "ProductIDDescription": "Integration Module for OPC",
+        "ProductBulletinNumber": "EOL12635",
+        "LinkToProductBulletinURL": "https://www.cisco.com/c/en/us/products/collateral/video/interactive-experience-manager/eos-eol-notice-c51-741166.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2018-07-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2019-01-29",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "2020-01-29",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2021-04-26",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2022-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2020-01-29",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2018-08-02",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "",
+          "MigrationOption": "No Replacement Available",
+          "MigrationProductId": "",
+          "MigrationProductName": "",
+          "MigrationStrategy": "",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "showEoXByDates",
+        "EOXInputValue": "2022-01-01 , 2022-01-31 , EO_LAST_SUPPORT_DATE"
+      },
+      {
+        "EOLProductID": "PUS-TL1-PRX-SNMP",
+        "ProductIDDescription": "Integration Module for Advanced SNMP",
+        "ProductBulletinNumber": "EOL12635",
+        "LinkToProductBulletinURL": "https://www.cisco.com/c/en/us/products/collateral/video/interactive-experience-manager/eos-eol-notice-c51-741166.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2018-07-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2019-01-29",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "2020-01-29",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2021-04-26",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2022-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2020-01-29",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2018-08-02",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "",
+          "MigrationOption": "No Replacement Available",
+          "MigrationProductId": "",
+          "MigrationProductName": "",
+          "MigrationStrategy": "",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "showEoXByDates",
+        "EOXInputValue": "2022-01-01 , 2022-01-31 , EO_LAST_SUPPORT_DATE"
+      },
+      {
+        "EOLProductID": "PUS-TL2-PRX-PENDIN",
+        "ProductIDDescription": "Integration Module for Telephony Systems (Tier 2)",
+        "ProductBulletinNumber": "EOL12631",
+        "LinkToProductBulletinURL": "https://www.cisco.com/c/en/us/products/collateral/video/interactive-experience-manager/eos-eol-notice-c51-741167.html",
+        "EOXExternalAnnouncementDate": {
+          "value": "2018-07-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSaleDate": {
+          "value": "2019-01-29",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSWMaintenanceReleases": {
+          "value": "2020-01-29",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSecurityVulSupportDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfRoutineFailureAnalysisDate": {
+          "value": "",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfServiceContractRenewal": {
+          "value": "2021-04-26",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "LastDateOfSupport": {
+          "value": "2022-01-31",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EndOfSvcAttachDate": {
+          "value": "2020-01-29",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "UpdatedTimeStamp": {
+          "value": "2018-08-02",
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "EOXMigrationDetails": {
+          "PIDActiveFlag": "Y",
+          "MigrationInformation": "",
+          "MigrationOption": "No Replacement Available",
+          "MigrationProductId": "",
+          "MigrationProductName": "",
+          "MigrationStrategy": "",
+          "MigrationProductInfoURL": ""
+        },
+        "EOXInputType": "showEoXByDates",
+        "EOXInputValue": "2022-01-01 , 2022-01-31 , EO_LAST_SUPPORT_DATE"
+      }
+    ]
+  }
+]

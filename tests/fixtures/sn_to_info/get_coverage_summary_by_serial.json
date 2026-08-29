@@ -1,0 +1,43 @@
+{
+  "pagination_response_record": {
+    "last_index": 1,
+    "page_index": 1,
+    "page_records": 1,
+    "self_link": "https://api.cisco.com/sn2info/v2/coverage/summary/serial_numbers/SAL1234ABCD?page_index=1",
+    "title": "Get Coverage Summary by Serial Numbers - SN2INFO API",
+    "total_records": 1
+  },
+  "serial_numbers": [
+    {
+      "base_pid_list": [
+        {
+          "base_pid": "C9410R"
+        }
+      ],
+      "contract_site_customer_name": "EXAMPLE CUSTOMER NETWORK",
+      "contract_site_address1": "1 EXAMPLE STREET",
+      "contract_site_city": "EXAMPLE CITY",
+      "contract_site_state_province": "CA",
+      "contract_site_country": "US",
+      "covered_product_line_end_date": "2023-12-31",
+      "id": "1",
+      "is_covered": "YES",
+      "orderable_pid_list": [
+        {
+          "item_description": "Cisco Catalyst 9400 Series 10 slot chassis",
+          "item_position": "P",
+          "item_type": "CHASSIS",
+          "orderable_pid": "C9410R",
+          "pillar_code": "1,2,3"
+        }
+      ],
+      "parent_sr_no": "",
+      "service_contract_number": "10000002",
+      "service_line_descr": "CX LEVEL 2 8X5XNBD",
+      "sr_no": "SAL1234ABCD",
+      "warranty_end_date": "2029-04-09",
+      "warranty_type": "WARR-ELTD-LIFE-HW",
+      "warranty_type_description": "http://www.cisco.com/go/warranty"
+    }
+  ]
+}

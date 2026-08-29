@@ -1,0 +1,54 @@
+{
+  "serial_numbers": [
+    {
+      "sr_no": "FOC2222BBBB",
+      "orderable_pid_list": [
+        {
+          "orderable_pid": "HWIC-4ESW",
+          "pillar_code": "1",
+          "pillar_description": "TAC SUPPORT"
+        },
+        {
+          "orderable_pid": "HWIC-4ESW",
+          "pillar_code": "3",
+          "pillar_description": "SOFTWARE SUPPORT"
+        },
+        {
+          "orderable_pid": "HWIC-4ESW",
+          "pillar_code": "5",
+          "pillar_description": "DOES NOT APPLY"
+        }
+      ]
+    },
+    {
+      "sr_no": "FOC3333CCCC",
+      "orderable_pid_list": [
+        {
+          "orderable_pid": "WS-C2950-24",
+          "pillar_code": "1",
+          "pillar_description": "TAC SUPPORT"
+        },
+        {
+          "orderable_pid": "WS-C2950-24",
+          "pillar_code": "5",
+          "pillar_description": "DOES NOT APPLY"
+        },
+        {
+          "orderable_pid": "WS-C2950-24",
+          "pillar_code": "3",
+          "pillar_description": "SOFTWARE SUPPORT"
+        }
+      ]
+    },
+    {
+      "sr_no": "FOC1111AAAA",
+      "orderable_pid_list": [
+        {
+          "orderable_pid": "WS-C2950C-24",
+          "pillar_code": "",
+          "pillar_description": ""
+        }
+      ]
+    }
+  ]
+}

@@ -12,7 +12,6 @@ cs = CiscoSupportAPI(CS_API_KEY, CS_API_SECRET)
 for eox_item in cs.eox.get_by_dates(
     "2022-01-01", "2022-01-31", [EoxAttrib.EO_LAST_SUPPORT_DATE]
 ):
-
     print(f"{eox_item.eol_product_id} {eox_item.end_of_sale_date}")
 
 # find EoX by product IDs
