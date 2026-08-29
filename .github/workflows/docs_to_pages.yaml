@@ -11,14 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@v7
       with:
         fetch-depth: 0
     - name: Set up Python 3.11
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v7
       with:
         python-version: "3.11"
-    - uses: abatilo/actions-poetry@v2.3.0
+    - uses: abatilo/actions-poetry@v4
     - name: Install
       run: poetry install
     - name: Build documentation
@@ -30,7 +30,7 @@ jobs:
         cp -r _build/* ../gh-pages/        
     - name: Deploy documentation
       if: ${{ github.event_name == 'push' }}
-      uses: JamesIves/github-pages-deploy-action@v4.2.5
+      uses: JamesIves/github-pages-deploy-action@v4.9.0
       with:
         branch: gh-pages
         folder: gh-pages
