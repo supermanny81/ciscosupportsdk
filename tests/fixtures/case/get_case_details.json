@@ -1,0 +1,53 @@
+{
+  "caseDetail": {
+    "user_id": "caseuser",
+    "case_id": "600000001",
+    "title": "rtp campus (rtp10-cd-dtbb-gw1) and others - Not able to respond to RS from a supplicant device in IPv6 - Mostly noticed on MAC",
+    "severity": "3",
+    "status": "Closed",
+    "creation_date": "2021-09-30T14:46:09.000Z",
+    "updated_date": "2022-03-03T15:54:45.000Z",
+    "serial_number": "CAT5555EEEE",
+    "contract_id": "10000002",
+    "contact_user_id": "caseuser",
+    "preferred_contact_method": "Email",
+    "contact_email_ids": [
+      "someone@example.com"
+    ],
+    "contact_business_phone_numbers": [
+      "+15550100"
+    ],
+    "contact_mobile_phone_numbers": [],
+    "owner_name": "Case Owner",
+    "owner_email": "someone@example.com",
+    "close_date": "2022-03-03T15:54:39.000Z",
+    "technology_name": "LAN Switching",
+    "sub_technology_name": "Cat9500",
+    "tracking_number": "",
+    "problem_code_name": "Configuration Assistance",
+    "request_type": "Diagnose and Fix my Problem",
+    "rmas": [],
+    "bugs": [],
+    "notes": [
+      {
+        "note": "",
+        "note_detail": "Closed",
+        "created_by": "Case Owner",
+        "creation_date": "2022-03-03T15:54:45.000Z"
+      },
+      {
+        "note": "",
+        "note_detail": "<https://csone.my.salesforce.com/ui/support/servicedesk/ServiceDeskPage#/a1O6R00000AKccYUAT >\n<https://meetingnotes.cisco.com/index.html?caseId=1131499187&srId=600000001 >\n \nCollab ...",
+        "created_by": "Case Owner",
+        "creation_date": "2022-03-03T15:54:42.000Z"
+      },
+      {
+        "note": "",
+        "note_detail": "Router solicitation was being suppressed by RA Guard after configuring the switch with the following configs we are now seeing the router solicitation messages forwarding:\n\nconfig ...",
+        "created_by": "Case Owner",
+        "creation_date": "2022-03-03T15:54:22.000Z"
+      }
+    ],
+    "contact_name": "Case Contact"
+  }
+}

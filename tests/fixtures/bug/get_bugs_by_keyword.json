@@ -1,0 +1,54 @@
+{
+  "bugs": [
+    {
+      "id": "1",
+      "bug_id": "CSCvt43974",
+      "headline": "Serviceability improvement: Netconf SSH - fatal libcrypto error when SSH to netconf port",
+      "description": "<B>Symptom:</B>\nWhen attempting to connect to a IOS-XE device through netconf port (default 830), you will receive the following error:\n\nssh_dispatch_run_fatal: Connection to IP_AD ...",
+      "severity": "2",
+      "status": "F",
+      "behavior_changed": "false",
+      "last_modified_date": "2023-09-10",
+      "product": "ewlc",
+      "known_affected_releases": "17.3.1",
+      "known_fixed_releases": "17.10.1 17.10.1a 17.10.1b 17.3.1 17.3.1a 17.3.1w 17.3.1x 17.3.1z 17.3.2 17.3.2a 17.3.3 17.3.3a 17.3.4 17.3.4a 17.3.4b 17.3.4c 17.3.5 17.3.5a 17.3.5b 17.3.6 17.4.1 17.4.1a 17.4.1b 1 ...",
+      "support_case_count": "106"
+    },
+    {
+      "id": "2",
+      "bug_id": "CSCvx27079",
+      "headline": "CMX in Non-FIPS mode cannot connect to the controller in FIPS mode. Certificate Validation Error.",
+      "description": "<B>Symptom:</B>\nCMX performs two operations when adding a 9800 controller:\n1) It opens an SSH session to the 9800 controller to configure AAA parameters required for NMSP session\n2 ...",
+      "severity": "2",
+      "status": "F",
+      "behavior_changed": "false",
+      "last_modified_date": "2023-09-08",
+      "product": "ewlc",
+      "known_affected_releases": "17.3.2a",
+      "known_fixed_releases": "16.12.10 16.12.6 16.12.6a 16.12.7 16.12.8 16.12.9 17.10.1 17.10.1a 17.10.1b 17.11.1 17.11.1a 17.12.1 17.12.1a 17.3.3 17.3.3a 17.3.4 17.3.4a 17.3.4b 17.3.4c 17.3.5 17.3.5a 17.3.5b 1 ...",
+      "support_case_count": "0"
+    },
+    {
+      "id": "3",
+      "bug_id": "CSCvw41482",
+      "headline": "SSH with Certificate authentication doesn't work after upgrade to 17.3.1",
+      "description": "<B>Symptom:</B>\nSSH session is being rejected with reason: Login Authentication Failed\n\nThe following debugs are being generated:\nOct  5 17:35:06.074 CDT: SSH2 0: Starting PKI sess ...",
+      "severity": "3",
+      "status": "F",
+      "behavior_changed": "false",
+      "last_modified_date": "2023-09-08",
+      "product": "all_pi_infra_iosxe",
+      "known_affected_releases": "17.3.1 17.3.1a 17.3.2",
+      "known_fixed_releases": "16.12.10 16.12.7 16.12.8 16.12.9 17.05.01c 17.10.1 17.10.1a 17.10.1b 17.11.1 17.11.1a 17.12.1 17.12.1a 17.3.3 17.3.3a 17.3.4 17.3.4a 17.3.4b 17.3.4c 17.3.5 17.3.5a 17.3.5b 17.3.6 1 ...",
+      "support_case_count": "3"
+    }
+  ],
+  "pagination_response_record": {
+    "last_index": 1,
+    "page_index": 1,
+    "page_records": 3,
+    "self_link": "https://api.cisco.com/bug/v2.0/bugs/keyword/IOS SSH PKI?page_index=1&modified_date=2&sort_by=modified_date",
+    "title": "Bug API - Search Bugs by Keyword",
+    "total_records": 3
+  }
+}

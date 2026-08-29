@@ -36,7 +36,7 @@ class BugApi(object):
             be submitted separated by a comma.
         :rtype: Bug
         """
-        path = f"{SERVICE_BASE_URL}/bug_ids/" f"{','.join(bug_ids)}"
+        path = f"{SERVICE_BASE_URL}/bug_ids/{','.join(bug_ids)}"
         yield from self._session.enumerate_results(
             ListOfBugs, path, paging=False
         )

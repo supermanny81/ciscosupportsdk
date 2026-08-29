@@ -1,0 +1,12 @@
+{
+  "APIError": {
+    "Error": [
+      {
+        "errorCode": "SVO_NO_RECORDS",
+        "errorDescription": "No order found for the given request.",
+        "suggestedAction": "No order found for the given request.",
+        "inputIdentifier": "800000002"
+      }
+    ]
+  }
+}

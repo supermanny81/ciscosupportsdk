@@ -1,4 +1,4 @@
-from typing import Any, List, Optional
+from typing import List, Optional
 
 from pydantic import BaseModel, Field
 
@@ -49,8 +49,8 @@ class Case(BaseModel):
 
 
 class CaseSummaryResponse(ApiResponse):
-    items: List[Case] = Field(..., alias="cases")
-    count: int
+    items: List[Case] = Field(default_factory=list, alias="cases")
+    count: Optional[int] = None
 
 
 """
@@ -81,11 +81,6 @@ class CaseDetail(Case):
     problem_code_name: Optional[str] = None
     request_type: Optional[str] = None
     notes: List[Note] = Field(default_factory=list)
-    # Stretch fields surfaced by the v3 detail endpoint when available. Their
-    # exact shape is not covered by the recorded fixtures, so they are typed
-    # permissively; refine once a confirmed payload is available.
-    rma_numbers: List[str] = Field(default_factory=list)
-    crashinfo: Optional[Any] = None
 
 
 class CaseDetailResponse(BaseModel):
@@ -98,4 +93,4 @@ Cases response
 
 
 class CaseResponse(ApiResponse):
-    items: List[Case] = Field(..., alias="cases")
+    items: List[Case] = Field(default_factory=list, alias="cases")

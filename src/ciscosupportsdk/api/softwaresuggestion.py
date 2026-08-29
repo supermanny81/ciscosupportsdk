@@ -11,6 +11,47 @@ from ciscosupportsdk.validate import CheckSize
 
 SERVICE_BASE_URL = "/software/suggestion/v2/suggestions"
 
+#: The API accepts at most 10 feature names, within a 512 character budget.
+MAX_SUPPORTED_FEATURES = 10
+MAX_SUPPORTED_FEATURES_LENGTH = 512
+
+
+def _compatible_params(
+    current_image: str,
+    current_release: str,
+    supported_features: list,
+    supported_hardware: list,
+) -> dict:
+    """Builds the query string for the "compatible" endpoints.
+
+    ``supportedFeatures`` and ``supportedHardware`` are multi-value inputs the
+    service expects as a single comma-separated value, not as repeated query
+    parameters.
+    """
+    if supported_features is not None:
+        if len(supported_features) > MAX_SUPPORTED_FEATURES:
+            raise ValueError(
+                f"Too many supported_features passed "
+                f"({len(supported_features)}), max allowable size "
+                f"{MAX_SUPPORTED_FEATURES}."
+            )
+        supported_features = ",".join(supported_features)
+        if len(supported_features) > MAX_SUPPORTED_FEATURES_LENGTH:
+            raise ValueError(
+                f"supported_features exceeds the maximum length of "
+                f"{MAX_SUPPORTED_FEATURES_LENGTH} characters."
+            )
+
+    if supported_hardware is not None:
+        supported_hardware = ",".join(supported_hardware)
+
+    return {
+        "currentImage": current_image,
+        "currentRelease": current_release,
+        "supportedFeatures": supported_features,
+        "supportedHardware": supported_hardware,
+    }
+
 
 class SoftwareSuggestionApi(object):
     """
@@ -35,8 +76,7 @@ class SoftwareSuggestionApi(object):
             suggested software releases. A maximum of 10 PIDs are allowed.
         """
         path = (
-            f"{SERVICE_BASE_URL}/software/productIds/"
-            f"{','.join(product_ids)}"
+            f"{SERVICE_BASE_URL}/software/productIds/{','.join(product_ids)}"
         )
         yield from self._session.enumerate_results(
             SuggestionsByProductResponse, path
@@ -54,8 +94,7 @@ class SoftwareSuggestionApi(object):
             suggested software releases. A maximum of 10 PIDs are allowed.
         """
         path = (
-            f"{SERVICE_BASE_URL}/releases/productIds/"
-            f"{','.join(product_ids)}"
+            f"{SERVICE_BASE_URL}/releases/productIds/{','.join(product_ids)}"
         )
         yield from self._session.enumerate_results(
             SuggestionsByProductResponse, path
@@ -77,12 +116,12 @@ class SoftwareSuggestionApi(object):
             software releases. A maximum of 10 mdf Ids are allowed.
         """
         path = f"{SERVICE_BASE_URL}/compatible/productId/{product_id}"
-        params = {
-            "currentImage": current_image,
-            "currentRelease": current_release,
-            "supportedFeatures": supported_features,
-            "supportedHardware": supported_hardware,
-        }
+        params = _compatible_params(
+            current_image,
+            current_release,
+            supported_features,
+            supported_hardware,
+        )
         yield from self._session.enumerate_results(
             CompatableSoftwareResponse, path, query_params=params
         )
@@ -98,7 +137,7 @@ class SoftwareSuggestionApi(object):
         :param: product_ids: list[str]: Base product IDs for which to return
             suggested software releases. A maximum of 10 PIDs are allowed.
         """
-        path = f"{SERVICE_BASE_URL}/software/mdfIds/" f"{','.join(mdf_ids)}"
+        path = f"{SERVICE_BASE_URL}/software/mdfIds/{','.join(mdf_ids)}"
         yield from self._session.enumerate_results(
             SuggestionsByProductResponse, path
         )
@@ -114,7 +153,7 @@ class SoftwareSuggestionApi(object):
         :param: product_ids: list[str]: Base product IDs for which to return
             suggested software releases. A maximum of 10 PIDs are allowed.
         """
-        path = f"{SERVICE_BASE_URL}/releases/mdfIds/" f"{','.join(mdf_ids)}"
+        path = f"{SERVICE_BASE_URL}/releases/mdfIds/{','.join(mdf_ids)}"
         yield from self._session.enumerate_results(
             SuggestionsByProductResponse, path
         )
@@ -135,12 +174,12 @@ class SoftwareSuggestionApi(object):
             software releases. A maximum of 10 mdf Ids are allowed.
         """
         path = f"{SERVICE_BASE_URL}/compatible/mdfId/{mdf_id}"
-        params = {
-            "currentImage": current_image,
-            "currentRelease": current_release,
-            "supportedFeatures": supported_features,
-            "supportedHardware": supported_hardware,
-        }
+        params = _compatible_params(
+            current_image,
+            current_release,
+            supported_features,
+            supported_hardware,
+        )
         yield from self._session.enumerate_results(
             CompatableSoftwareResponse, path, query_params=params
         )

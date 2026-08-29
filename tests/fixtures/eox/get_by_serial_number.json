@@ -1,0 +1,63 @@
+{
+  "PaginationResponseRecord": {
+    "PageIndex": 1,
+    "LastIndex": 1,
+    "TotalRecords": 1,
+    "PageRecords": 1
+  },
+  "EOXRecord": [
+    {
+      "EOLProductID": "CISCO1811W-AG-A/K9",
+      "ProductIDDescription": "Security Router with 802.11a+g FCC Compliant and Analog B/U",
+      "ProductBulletinNumber": "EOL5834",
+      "LinkToProductBulletinURL": "http://www.cisco.com/en/US/products/ps5853/prod_eol_notice0900aecd8066a188.html",
+      "EOXExternalAnnouncementDate": {
+        "value": "2007-06-12",
+        "dateFormat": "YYYY-MM-DD"
+      },
+      "EndOfSaleDate": {
+        "value": "2007-06-29",
+        "dateFormat": "YYYY-MM-DD"
+      },
+      "EndOfSWMaintenanceReleases": {
+        "value": "",
+        "dateFormat": "YYYY-MM-DD"
+      },
+      "EndOfSecurityVulSupportDate": {
+        "value": "",
+        "dateFormat": "YYYY-MM-DD"
+      },
+      "EndOfRoutineFailureAnalysisDate": {
+        "value": "2008-06-29",
+        "dateFormat": "YYYY-MM-DD"
+      },
+      "EndOfServiceContractRenewal": {
+        "value": "2012-03-07",
+        "dateFormat": "YYYY-MM-DD"
+      },
+      "LastDateOfSupport": {
+        "value": "2012-06-29",
+        "dateFormat": "YYYY-MM-DD"
+      },
+      "EndOfSvcAttachDate": {
+        "value": "2008-06-29",
+        "dateFormat": "YYYY-MM-DD"
+      },
+      "UpdatedTimeStamp": {
+        "value": "2011-01-03",
+        "dateFormat": "YYYY-MM-DD"
+      },
+      "EOXMigrationDetails": {
+        "PIDActiveFlag": "Y",
+        "MigrationInformation": "Security Router with 802.11a+g FCC Compliant and Analog B/U",
+        "MigrationOption": "Enter PID(s)",
+        "MigrationProductId": "CISCO1811W-AG-B/K9",
+        "MigrationProductName": "",
+        "MigrationStrategy": "",
+        "MigrationProductInfoURL": "http://www.cisco.com/en/US/products/hw/routers/products_promotion0900aecd8017150a.html"
+      },
+      "EOXInputType": "ShowEOXBySerialNumber",
+      "EOXInputValue": "FHK6666FFFF"
+    }
+  ]
+}

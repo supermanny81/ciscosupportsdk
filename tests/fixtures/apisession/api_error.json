@@ -1,0 +1,11 @@
+{
+  "ErrorResponse": {
+    "APIError": [
+      {
+        "ErrorCode": "API_MISSING_PARAMETERS",
+        "ErrorDescription": "A required parameter is missing",
+        "SuggestedAction": "Please consult the API documentation"
+      }
+    ]
+  }
+}

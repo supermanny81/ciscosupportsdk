@@ -55,23 +55,25 @@ class SortBy(PrintableEnum):
 
 
 class Bug(BaseModel):
-    id: str
-    base_pid: Optional[str] = None
-    behavior_changed: str
+    # The Bug API omits fields it has no value for, so only ``bug_id`` can be
+    # relied on to be present.
     bug_id: str
-    headline: str
+    id: Optional[str] = None
+    base_pid: Optional[str] = None
+    behavior_changed: Optional[str] = None
+    headline: Optional[str] = None
     description: Optional[str] = None
     product_series: Optional[str] = None
-    severity: str
-    status: str
+    severity: Optional[str] = None
+    status: Optional[str] = None
     duplicate_of: Optional[str] = None
     created_date: Optional[str] = None
-    last_modified_date: str
-    product: str
-    known_affected_releases: str
-    known_fixed_releases: str
-    support_case_count: str
+    last_modified_date: Optional[str] = None
+    product: Optional[str] = None
+    known_affected_releases: Optional[str] = None
+    known_fixed_releases: Optional[str] = None
+    support_case_count: Optional[str] = None
 
 
 class ListOfBugs(ApiResponse):
-    items: List[Bug] = Field(..., alias="bugs")
+    items: List[Bug] = Field(default_factory=list, alias="bugs")

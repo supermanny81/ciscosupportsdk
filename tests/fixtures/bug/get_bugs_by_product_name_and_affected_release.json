@@ -1,0 +1,173 @@
+[
+  {
+    "bugs": [
+      {
+        "id": "1",
+        "product_name": "Cisco Unity Connection Version 10.5",
+        "bug_id": "CSCvw93402",
+        "headline": "Year 2021 cannot be selected while fetching any report in Serviceability Report page",
+        "description": "<B>Symptom:</B>\nwill not get the option to select year 2021 in date section drop down list in any Reports under Serviceability Reports\n\n<B>Conditions:</B>\nimpacted all relaeses i.e ...",
+        "severity": "2",
+        "status": "F",
+        "behavior_changed": "false",
+        "last_modified_date": "2023-09-21",
+        "product": "connection",
+        "known_affected_releases": "10.5(2) 11.0 11.5 12.0 12.5 14.0",
+        "known_fixed_releases": "011.005(001.22001.002) 011.005(001.22001.003) 011.005(001.23900.001) 11.5(1)ES97 12.0(1)ES45 12.5(1)ES22 12.5(1.223) 14.0(0.263) 14.0(0.268) 14.0(0.285) CCM.011.005(001.22143.001) ...",
+        "support_case_count": "315"
+      },
+      {
+        "id": "2",
+        "product_name": "Cisco Unity Connection Version 10.5",
+        "bug_id": "CSCvy29659",
+        "headline": "Unity Connection Apache Axis2 Directory Traversal Vulnerability",
+        "description": "<B>Symptom:</B>\nThis product includes Third-party Software that is affected by the\nvulnerabilities identified by the following Common Vulnerability and\nExposures (CVE) IDs:\n\nCVE-20 ...",
+        "severity": "3",
+        "status": "F",
+        "behavior_changed": "false",
+        "last_modified_date": "2023-09-12",
+        "product": "connection",
+        "known_affected_releases": "14.0 14.0(1.220) 10.5(2)ES146 12.5(1.4)",
+        "known_fixed_releases": "12.5(1)ES38 12.5(1.465) 14.0(1)ES12 14.0(1)ES9 14.0(1.263) 14.0(1.265) 14.0(1.272) 14.0(1.273) 15.0(0.1005) 15.0(0.312) CUC.012.005(001.17900.018) CUC.014.000(001.12900.004) CUC.01 ...",
+        "support_case_count": "10"
+      },
+      {
+        "id": "3",
+        "product_name": "Cisco Unity Connection Version 10.5",
+        "bug_id": "CSCvv43563",
+        "headline": "Evaluation of connection for Apache Struts Aug20 vulnerabilities",
+        "description": "<B>Symptom:</B>\nThis bug has been filed to evaluate the product against the Apache Struts vulnerabilities identified by CVE IDs:\n\nCVE-2019-0230 - Double OGNL Evaluation Remote Code ...",
+        "severity": "2",
+        "status": "F",
+        "behavior_changed": "false",
+        "last_modified_date": "2023-09-06",
+        "product": "connection",
+        "known_affected_releases": "10.5(2) 11.5 12.0 12.5",
+        "known_fixed_releases": "011.005(001.21001.007) 011.005(001.21900.005) 11.5(1)ES94 11.5(1.2076) 12.5(1)ES22 12.5(1.211) 14.0(0.239) CCM.011.005(001.21900.026) CCM.011.005(001.21910.003) CCM.011.005(001.219 ...",
+        "support_case_count": "3"
+      }
+    ],
+    "pagination_response_record": {
+      "last_index": 3,
+      "page_index": 1,
+      "page_records": 3,
+      "self_link": "https://api.cisco.com/bug/v2.0/bugs/product_name/Cisco Unity Connection Version 10.5/affected_releases/10.5(2)?page_index=1&modified_date=5&sort_by=modified_date",
+      "title": "Bug API - Get Bugs by Product Name and Affected Software Releases",
+      "total_records": 9
+    }
+  },
+  {
+    "bugs": [
+      {
+        "id": "11",
+        "product_name": "Cisco Unity Connection Version 10.5",
+        "bug_id": "CSCvm96001",
+        "headline": "Improve DRS mechanism with increased DB lock time for UpdateMailboxStoreMapStatus",
+        "description": "\n\n<B>Symptom:</B>\n++ DRS backup fails on CONNECTION_MESSAGES_UNITYMBXDB feature, MESSAGES component with error code 1-Unknown MESSAGES Error\n++ Alert in syslogs:\n\n %UC_DRF-3-DRFFai ...",
+        "severity": "6",
+        "status": "O",
+        "behavior_changed": "",
+        "last_modified_date": "2023-08-23",
+        "product": "connection",
+        "known_affected_releases": "10.5(2) 11.0 11.5",
+        "known_fixed_releases": "",
+        "support_case_count": "6"
+      },
+      {
+        "id": "12",
+        "product_name": "Cisco Unity Connection Version 10.5",
+        "bug_id": "CSCvm68778",
+        "headline": "BYE received from Remote as Unity does not Stream RTP while recording in progress",
+        "description": "\n\n<B>Symptom:</B>\nRemote Devices Sending BYE for Longer Duration Recording as Unity does not Stream RTP to End Points when Recording in Process.\nUnderstanding is that Call is getti ...",
+        "severity": "6",
+        "status": "F",
+        "behavior_changed": "true",
+        "last_modified_date": "2023-08-09",
+        "product": "connection",
+        "known_affected_releases": "10.5(2) 11.5 12.0",
+        "known_fixed_releases": "10.5(2)ES138 11.5(1)ES65 12.0(1)ES24 12.5(0.298) 12.5(0.305) 12.5(1.3) CCM.010.005(002.18165.002) CCM.010.005(002.21900.013) CCM.011.005(001.16089.002) CCM.011.005(001.16900.016) C ...",
+        "support_case_count": "18"
+      },
+      {
+        "id": "13",
+        "product_name": "Cisco Unity Connection Version 10.5",
+        "bug_id": "CSCvp45521",
+        "headline": "Update Doc: Avoid Changing Name of Default  Notification device to prevent switch version failure",
+        "description": "\n\n<B>Symptom:</B>\nDefect opened to update the below link that should mention that default notification device name should not be changed instead Customer should create new devices ...",
+        "severity": "4",
+        "status": "F",
+        "behavior_changed": "true",
+        "last_modified_date": "2023-07-28",
+        "product": "connection",
+        "known_affected_releases": "10.5(2) 11.5 12.0 12.5",
+        "known_fixed_releases": "",
+        "support_case_count": "23"
+      }
+    ],
+    "pagination_response_record": {
+      "last_index": 3,
+      "page_index": 2,
+      "page_records": 3,
+      "self_link": "https://api.cisco.com/bug/v2.0/bugs/product_name/Cisco Unity Connection Version 10.5/affected_releases/10.5(2)?page_index=2&modified_date=5&sort_by=modified_date",
+      "title": "Bug API - Get Bugs by Product Name and Affected Software Releases",
+      "total_records": 9
+    }
+  },
+  {
+    "bugs": [
+      {
+        "id": "21",
+        "product_name": "Cisco Unity Connection Version 10.5",
+        "bug_id": "CSCvd90118",
+        "headline": "Cisco Unity Connection ImageID Parameter Unauthorized Access Vulnerability",
+        "description": "\n\n<B>Symptom:</B>\nA vulnerability in the ImageID parameter of Cisco Unity Connection could allow an unauthenticated, remote attacker to access files in arbitrary\nlocations on the f ...",
+        "severity": "2",
+        "status": "F",
+        "behavior_changed": "false",
+        "last_modified_date": "2023-05-10",
+        "product": "connection",
+        "known_affected_releases": "10.5(2)",
+        "known_fixed_releases": "012.000(000.224) 011.000(001.24071.001) CCM.011.000(001.24900.002) 011.005(001.1661) 012.000(000.233) CUP.011.005(001.16000.002) 012.000(000.230) 11.5(01)ES25 011.005(001.13900.030 ...",
+        "support_case_count": "3"
+      },
+      {
+        "id": "22",
+        "product_name": "Cisco Unity Connection Version 10.5",
+        "bug_id": "CSCvv32655",
+        "headline": "Cisco Unity Connection Information Disclosure Vulnerability",
+        "description": "<B>Symptom:</B>\nA vulnerability in the audit logging component of Cisco Unity Connection could allow an authenticated, remote attacker to view sensitive information in clear text o ...",
+        "severity": "3",
+        "status": "F",
+        "behavior_changed": "false",
+        "last_modified_date": "2023-04-12",
+        "product": "connection",
+        "known_affected_releases": "10.5(2) 11.5 12.0 12.5",
+        "known_fixed_releases": "",
+        "support_case_count": "7"
+      },
+      {
+        "id": "23",
+        "product_name": "Cisco Unity Connection Version 10.5",
+        "bug_id": "CSCvc63300",
+        "headline": "Switch version failed due to change in default device names.",
+        "description": "\n\n<B>Symptom:</B>\n\n\n<B>Conditions:</B>\nChanges made to default names of Notification devices, partitions, search scopes etc.\n\n<B>Workaround:</B>\nChange the value back to default na ...",
+        "severity": "6",
+        "status": "O",
+        "behavior_changed": "",
+        "last_modified_date": "2023-03-04",
+        "product": "connection",
+        "known_affected_releases": "10.5(2) 11.0",
+        "known_fixed_releases": "",
+        "support_case_count": "20"
+      }
+    ],
+    "pagination_response_record": {
+      "last_index": 3,
+      "page_index": 3,
+      "page_records": 3,
+      "self_link": "https://api.cisco.com/bug/v2.0/bugs/product_name/Cisco Unity Connection Version 10.5/affected_releases/10.5(2)?page_index=3&modified_date=5&sort_by=modified_date",
+      "title": "Bug API - Get Bugs by Product Name and Affected Software Releases",
+      "total_records": 9
+    }
+  }
+]

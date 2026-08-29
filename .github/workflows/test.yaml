@@ -44,14 +44,17 @@ jobs:
           poetry-version: ${{ matrix.poetry-version }}
       - name: Install dependencies
         run: poetry install
-      - name: Run black
-        run: poetry run black . --check
-      - name: Run isort
-        run: poetry run isort . --check-only
+      - name: Run ruff format
+        run: poetry run ruff format . --check
+      - name: Run ruff (imports)
+        run: poetry run ruff check .
       - name: Run flake8
         run: poetry run flake8 .
       - name: Run bandit
-        run: poetry run bandit .
+        # -r is required; without it bandit skips the directory and scans
+        # nothing. Scoped to src/ so pytest's asserts in tests/ are not
+        # reported as B101.
+        run: poetry run bandit -r src/
       - name: Run pip-audit
         # Upgrade the environment's seed build tools first so their own
         # advisories (e.g. the runner-provisioned pip/setuptools) do not fail

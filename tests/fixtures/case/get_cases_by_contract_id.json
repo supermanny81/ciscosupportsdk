@@ -1,0 +1,31 @@
+{
+  "pagination_response_record": {
+    "last_index": 1,
+    "page_index": 1,
+    "page_records": 1,
+    "self_link": "https://apix.cisco.com/case/v3/cases/contracts/contract_ids/10000001?page_index=1&sort_by=UPDATED_DATE&status_flag=O",
+    "title": "Get Cases By Contract Id",
+    "total_records": 1
+  },
+  "cases": [
+    {
+      "item_entry_id": 1,
+      "user_id": "contractuser",
+      "case_id": "600000002",
+      "title": "ASR-9901-RP not booting after upgrade from 25.4.2 to 26.2.1",
+      "severity": "3",
+      "contact_name": "Contract Contact",
+      "status_flag": "O",
+      "status": "Cisco Pending",
+      "creation_date": "2026-08-25T19:17:46.000Z",
+      "updated_date": "2026-08-29T03:58:21.000Z",
+      "serial_number": "FOC4444DDDD",
+      "contract_id": "10000001",
+      "rmas": [
+        "800000003",
+        "800000004"
+      ],
+      "bugs": []
+    }
+  ]
+}
