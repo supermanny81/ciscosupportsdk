@@ -2,7 +2,7 @@ from datetime import datetime
 from enum import Enum
 from typing import List, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 """
 EoX Request Types
@@ -60,14 +60,13 @@ class OSType(str, Enum):
 
 
 class SoftwareRelease(BaseModel):
+    model_config = ConfigDict(use_enum_values=True)
+
     os: OSType
     version: str
 
     def __str__(self) -> str:
         return f"{self.version},{self.os}"
-
-    class Config:
-        use_enum_values = True
 
 
 """
