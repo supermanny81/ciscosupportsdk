@@ -5,8 +5,14 @@ carries only the identifying field, otherwise perfectly ordinary responses
 raise ValidationError.
 """
 
+import importlib
+import pkgutil
+
+from pydantic import BaseModel
+
 from ciscosupportsdk.models.bug import ListOfBugs, Severity, SortBy
 from ciscosupportsdk.models.case import CaseStatusFlag
+from ciscosupportsdk.models.common import PaginationResponseRecord
 from ciscosupportsdk.models.eox import EoxResponse
 from ciscosupportsdk.models.productinformation import (
     ProductInformationResponse,
@@ -20,6 +26,12 @@ from ciscosupportsdk.models.softwaresuggestion import (
     CompatableSoftwareResponse,
     SuggestionsByProductResponse,
 )
+
+
+def _model_modules(package):
+    """Every module under ciscosupportsdk.models."""
+    for info in pkgutil.iter_modules(package.__path__):
+        yield importlib.import_module(f"{package.__name__}.{info.name}")
 
 
 class TestSparsePayloads:
@@ -171,3 +183,81 @@ class TestPrintableEnum:
         assert str(Severity.ONE) == "1"
         assert str(SortBy.SEVERITY) == "severity"
         assert str(CaseStatusFlag.OPEN) == "O"
+
+
+class TestPaginationResponseRecord:
+    """
+    Regression cover for the two reported issues:
+    sparse pagination blocks and population by field name.
+    """
+
+    def test_sparse_block_validates(self):
+        # A zero-record response omits most of the block. This used to raise
+        # ValidationError mid-generator, which callers could only tell apart
+        # from a malformed response by string-matching the exception.
+        record = PaginationResponseRecord(
+            **{"last_index": 1, "page_index": 1, "total_records": 0}
+        )
+
+        assert record.total_records == 0
+        assert record.page_records is None
+        assert record.self_link is None
+
+    def test_entirely_absent_block_validates(self):
+        record = PaginationResponseRecord()
+
+        # Defaulting the indices to 1 rather than None keeps a missing block
+        # meaning "one page of results", so the pagination comparison in
+        # ApiSession.enumerate_results stays a valid int comparison.
+        assert record.page_index == 1
+        assert record.last_index == 1
+
+    def test_populates_by_alias(self):
+        record = PaginationResponseRecord(
+            title="t",
+            pageIndex=2,
+            lastIndex=3,
+            totalRecords=30,
+            pageRecords=10,
+            selfLink="https://example.invalid",
+        )
+
+        assert (record.page_index, record.last_index) == (2, 3)
+
+    def test_populates_by_field_name(self):
+        # populate_by_name was configured through a v1 class-based Config,
+        # which pydantic v2 leaves inert -- so this raised ValidationError
+        # despite the config claiming otherwise.
+        record = PaginationResponseRecord(
+            title="t",
+            page_index=2,
+            last_index=3,
+            total_records=30,
+            page_records=10,
+            self_link="https://example.invalid",
+        )
+
+        assert (record.page_index, record.last_index) == (2, 3)
+
+
+class TestPydanticV2Compatibility:
+    def test_no_class_based_config_remains(self):
+        # Class-based Config is inert under v2 and removed in v3; every model
+        # must use model_config instead.
+        import ciscosupportsdk.models as models
+
+        offenders = []
+        for module in _model_modules(models):
+            for obj in vars(module).values():
+                if isinstance(obj, type) and issubclass(obj, BaseModel):
+                    if "Config" in vars(obj):
+                        offenders.append(f"{module.__name__}.{obj.__name__}")
+
+        assert offenders == []
+
+    def test_yes_no_strings_still_coerce_to_bool(self):
+        # The APIs send "YES"/"NO" rather than booleans; v2's coercion rules
+        # differ from v1's, so this is worth pinning.
+        payload = {"serial_numbers": [{"sr_no": "X", "is_covered": "NO"}]}
+
+        assert CoverageSummaryResponse(**payload).items[0].is_covered is False

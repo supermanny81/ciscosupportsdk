@@ -1,6 +1,6 @@
 [project]
 name = "ciscosupportsdk"
-version = "0.3.0"
+version = "0.4.0"
 description = "Cisco Support APIs allow Cisco Partner Support Services (PSS) partners and Cisco Smart Net Total Care (SNTC) customers to programmatically access and consume Cisco Support data in the cloud in a simple, secure, and scalable manner."
 authors = [{ name = "Manny Garcia", email = "supermanny@icloud.com" }]
 license = "MIT"
@@ -22,7 +22,7 @@ requires-python = ">=3.11,<4.0"
 dependencies = [
     "requests>=2.27.1,<3.0.0",
     "authlib>=1.2.1,<2.0.0",
-    "pydantic>=1.9.0,<2.0.0",
+    "pydantic>=2.0,<3.0.0",
 ]
 
 [project.urls]
