@@ -48,21 +48,22 @@ Installing and upgrading the **ciscosupportsdk** is easy with ``pip``
    # or to upgrade use...
    pip install ciscosupportsdk --upgrade
 
-If you want to setup a development environment, use ``poetry`` instead:
+If you want to setup a development environment, use ``uv`` instead:
 
 .. code-block:: console
 
-   # Install poetry using pipx
-   python -m pip install pipx
-   python -m pipx ensurepath
-   pipx install poetry
+   # Install uv (see https://docs.astral.sh/uv/ for other methods)
+   curl -LsSf https://astral.sh/uv/install.sh | sh
 
    # Clone repository
    git clone https://github.com/supermanny81/ciscosupportsdk.git
    cd ciscosupportsdk/
 
-   # Install dependencies
-   poetry install
+   # Install dependencies into a local .venv
+   uv sync
+
+   # Run the test suite
+   uv run pytest
 
 
 Examples
@@ -71,9 +72,9 @@ Looking for some sample usage?  Check out the examples_ folder!
 
 .. _support api: https://developer.cisco.com/docs/support-apis/
 .. |docs| image:: https://github.com/supermanny81/ciscosupportsdk/actions/workflows/docs_to_pages.yaml/badge.svg 
-   :target: https://github.com/supermanny81/ciscosupportapi/actions/workflows/docs_to_pages.yaml
+   :target: https://github.com/supermanny81/ciscosupportsdk/actions/workflows/docs_to_pages.yaml
 .. |coverage| image:: https://codecov.io/gh/supermanny81/ciscosupportsdk/branch/master/graph/badge.svg?token=CU4V95TVF1
-   :target: https://codecov.io/gh/supermanny81/ciscosupportapi
+   :target: https://codecov.io/gh/supermanny81/ciscosupportsdk
 .. |tests| image:: https://github.com/supermanny81/ciscosupportsdk/actions/workflows/test.yaml/badge.svg
    :target: https://github.com/supermanny81/ciscosupportsdk/actions/workflows/test.yaml
 .. |pypi| image:: https://badge.fury.io/py/ciscosupportsdk.svg

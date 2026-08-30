@@ -48,12 +48,12 @@ Indices and tables
 
 
 .. _support api: https://developer.cisco.com/docs/support-apis/
-.. |docs| image:: https://github.com/supermanny81/ciscosupportapi/actions/workflows/docs_to_pages.yaml/badge.svg 
-   :target: https://github.com/supermanny81/ciscosupportapi/actions/workflows/docs_to_pages.yaml
-.. |coverage| image:: https://codecov.io/gh/supermanny81/ciscosupportapi/branch/master/graph/badge.svg?token=CU4V95TVF1
-   :target: https://codecov.io/gh/supermanny81/ciscosupportapi
-.. |tests| image:: https://github.com/supermanny81/ciscosupportapi/actions/workflows/test.yaml/badge.svg
-   :target: https://github.com/supermanny81/ciscosupportapi/actions/workflows/test.yaml
+.. |docs| image:: https://github.com/supermanny81/ciscosupportsdk/actions/workflows/docs_to_pages.yaml/badge.svg 
+   :target: https://github.com/supermanny81/ciscosupportsdk/actions/workflows/docs_to_pages.yaml
+.. |coverage| image:: https://codecov.io/gh/supermanny81/ciscosupportsdk/branch/master/graph/badge.svg?token=CU4V95TVF1
+   :target: https://codecov.io/gh/supermanny81/ciscosupportsdk
+.. |tests| image:: https://github.com/supermanny81/ciscosupportsdk/actions/workflows/test.yaml/badge.svg
+   :target: https://github.com/supermanny81/ciscosupportsdk/actions/workflows/test.yaml
 .. |pypi| image:: https://badge.fury.io/py/ciscosupportsdk.svg
    :target: https://badge.fury.io/py/ciscosupportsdk
 .. |devnet| image:: https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg
