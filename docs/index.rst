@@ -54,8 +54,8 @@ Indices and tables
    :target: https://codecov.io/gh/supermanny81/ciscosupportsdk
 .. |tests| image:: https://github.com/supermanny81/ciscosupportsdk/actions/workflows/test.yaml/badge.svg
    :target: https://github.com/supermanny81/ciscosupportsdk/actions/workflows/test.yaml
-.. |pypi| image:: https://badge.fury.io/py/ciscosupportsdk.svg
-   :target: https://badge.fury.io/py/ciscosupportsdk
+.. |pypi| image:: https://img.shields.io/pypi/v/ciscosupportsdk.svg
+   :target: https://pypi.org/project/ciscosupportsdk/
 .. |devnet| image:: https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg
    :target: https://developer.cisco.com/codeexchange/github/repo/supermanny81/ciscosupportsdk
 .. _examples: https://github.com/supermanny81/ciscosupportsdk/tree/master/examples
