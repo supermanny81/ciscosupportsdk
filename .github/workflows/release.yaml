@@ -15,7 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Install uv
-        uses: astral-sh/setup-uv@v10
+        # Pinned exactly: setup-uv publishes no floating major tag
+        # past v6, so @v10 does not resolve.
+        uses: astral-sh/setup-uv@v10.0.1
         with:
           python-version: ${{ matrix.python-version }}
       - name: Build
