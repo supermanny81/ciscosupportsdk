@@ -1,34 +1,55 @@
-[tool.poetry]
+[project]
 name = "ciscosupportsdk"
 version = "0.3.0"
 description = "Cisco Support APIs allow Cisco Partner Support Services (PSS) partners and Cisco Smart Net Total Care (SNTC) customers to programmatically access and consume Cisco Support data in the cloud in a simple, secure, and scalable manner."
-authors = ["Manny Garcia <supermanny@icloud.com>"]
+authors = [{ name = "Manny Garcia", email = "supermanny@icloud.com" }]
 license = "MIT"
-keywords = ['cisco', 'cisco-support', 'python-sdk']
+license-files = ["LICENSE.txt"]
 readme = "README.rst"
-homepage = "https://supermanny81.github.io/ciscosupportapi/"
-repository = "https://github.com/supermanny81/ciscosupportapi"
-include = ["LICENSE.txt"]
+keywords = ["cisco", "cisco-support", "python-sdk"]
+# poetry-core synthesised these from `license` and the python constraint.
+# Hatchling does not, so they are declared explicitly to keep the PyPI page
+# unchanged. The MIT classifier is intentionally absent: PEP 639 supersedes
+# it with the License-Expression field emitted from `license` above.
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "requests>=2.27.1,<3.0.0",
+    "authlib>=1.2.1,<2.0.0",
+    "pydantic>=1.9.0,<2.0.0",
+]
 
-[tool.poetry.dependencies]
-python = "^3.11"
-requests = "^2.27.1"
-Authlib = "^1.2.1"
-pydantic = "^1.9.0"
+[project.urls]
+Homepage = "https://supermanny81.github.io/ciscosupportsdk/"
+Repository = "https://github.com/supermanny81/ciscosupportsdk"
 
-[tool.poetry.group.dev.dependencies]
-pytest = "^9.0.3"
-pytest-cov = "^3.0.0"
-Sphinx = "^7.0.0"
-sphinx-autobuild = "^2024.2.4"
-flake8 = "^7.3.0"
-bandit = "^1.7.3"
-pip-audit = "^2.7.0"
-ruff = "^0.14"
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3,<10.0.0",
+    "pytest-cov>=3.0.0,<4.0.0",
+    "sphinx>=7.0.0,<8.0.0",
+    "sphinx-autobuild>=2024.2.4,<2025.0.0",
+    "flake8>=7.3.0,<8.0.0",
+    "bandit>=1.7.3,<2.0.0",
+    "pip-audit>=2.7.0,<3.0.0",
+    "ruff>=0.14,<0.15",
+]
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ciscosupportsdk"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.rst", "LICENSE.txt"]
 
 [tool.pytest.ini_options]
 # The api/*_test.py modules import the shared fixtures module via
@@ -47,7 +68,7 @@ select = ["I"]
 
 [tool.ruff.lint.isort]
 # The api/*_test.py modules import the shared test helpers as top level
-# modules via the pythonpath setting below; treat them as first party so
+# modules via the pythonpath setting above; treat them as first party so
 # they are grouped with the SDK's own imports rather than third party ones.
 known-first-party = ["ciscosupportsdk", "fakes", "fixtures"]
 
@@ -63,12 +84,3 @@ show_missing = true
 [tool.coverage.run]
 branch = true
 parallel = true
-
-[tool.poetry.extras]
-docs = [
-    "Sphinx",
-    "sphinx-rtd-theme",
-    "sphinxcontrib-napoleon",
-    "sphinx.ext.viewcode",
-    "sphinx.ext.intersphinx"
-    ]

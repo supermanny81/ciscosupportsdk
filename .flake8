@@ -1,0 +1,9 @@
+[flake8]
+# Keep in step with [tool.ruff] line-length in pyproject.toml. flake8 cannot
+# read pyproject.toml, so this would otherwise rely on its default happening
+# to be 79.
+max-line-length = 79
+# uv creates the virtualenv inside the project directory, unlike poetry which
+# kept it under ~/Library/Caches. Without this, `flake8 .` lints every
+# installed dependency.
+extend-exclude = .venv,dist,build

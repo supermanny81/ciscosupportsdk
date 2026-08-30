@@ -10,21 +10,19 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ["3.11"]
-        poetry-version: [1.5.1]
         os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-python@v7
+      - name: Install uv
+        # Pinned exactly: setup-uv publishes no floating major tag
+        # past v6, so @v10 does not resolve.
+        uses: astral-sh/setup-uv@v10.0.1
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Run image
-        uses: abatilo/actions-poetry@v4
-        with:
-          poetry-version: ${{ matrix.poetry-version }}
+      - name: Build
+        run: uv build
       - name: Publish
         env:
-          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
-        run: |
-          poetry config pypi-token.pypi $PYPI_TOKEN
-          poetry publish --build
+          UV_PUBLISH_TOKEN: ${{ secrets.PYPI_TOKEN }}
+        run: uv publish

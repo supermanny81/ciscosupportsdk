@@ -7,22 +7,23 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ["3.11"]
-        poetry-version: [1.5.1]
         os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-python@v7
+      - name: Install uv
+        # Pinned exactly: setup-uv publishes no floating major tag
+        # past v6, so @v10 does not resolve.
+        uses: astral-sh/setup-uv@v10.0.1
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Run image
-        uses: abatilo/actions-poetry@v4
-        with:
-          poetry-version: ${{ matrix.poetry-version }}
+          enable-cache: true
       - name: Install dependencies
-        run: poetry install
+        # --locked fails the build if uv.lock is out of step with
+        # pyproject.toml, rather than silently resolving something else.
+        run: uv sync --locked --all-groups
       - name: Run tests
-        run: poetry run pytest --cov=./ --cov-report=xml
+        run: uv run pytest --cov=./ --cov-report=xml
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v7
   code-quality:
@@ -30,35 +31,32 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ["3.11"]
-        poetry-version: [1.5.1]
         os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-python@v7
+      - name: Install uv
+        # Pinned exactly: setup-uv publishes no floating major tag
+        # past v6, so @v10 does not resolve.
+        uses: astral-sh/setup-uv@v10.0.1
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Run image
-        uses: abatilo/actions-poetry@v4
-        with:
-          poetry-version: ${{ matrix.poetry-version }}
+          enable-cache: true
       - name: Install dependencies
-        run: poetry install
+        run: uv sync --locked --all-groups
       - name: Run ruff format
-        run: poetry run ruff format . --check
+        run: uv run ruff format . --check
       - name: Run ruff (imports)
-        run: poetry run ruff check .
+        run: uv run ruff check .
       - name: Run flake8
-        run: poetry run flake8 .
+        run: uv run flake8 .
       - name: Run bandit
         # -r is required; without it bandit skips the directory and scans
         # nothing. Scoped to src/ so pytest's asserts in tests/ are not
         # reported as B101.
-        run: poetry run bandit -r src/
+        run: uv run bandit -r src/
       - name: Run pip-audit
-        # Upgrade the environment's seed build tools first so their own
-        # advisories (e.g. the runner-provisioned pip/setuptools) do not fail
-        # the audit of the project's actual dependencies.
-        run: |
-          poetry run pip install --upgrade pip setuptools
-          poetry run pip-audit
+        # No seed-tool upgrade needed: unlike the poetry environment, the uv
+        # venv carries no pip or setuptools of its own, so their advisories
+        # cannot fail the audit of the project's actual dependencies.
+        run: uv run pip-audit
